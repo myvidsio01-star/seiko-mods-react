@@ -170,6 +170,7 @@ const watches = [
   { name: 'Royal Oak',      price: '300–400 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-royaloak.png',   filter: 'none' },
   { name: 'Nautilus',       price: '320–420 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png',   filter: 'none' },
   { name: 'Santos',         price: '300–400 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png',     filter: 'none' },
+  { name: 'Day-Date',       price: '300–400 €', stars: 3, tag: 'Prestige',    img: '/images/watch-daydate.png',    filter: 'none' },
 ]
 
 function StarRow({ count }) {

@@ -1,12 +1,13 @@
 {
   "mouvements": {
-    "nh35": { "nom": "NH35A", "desc": "Automatique · Date · 41h de réserve" },
-    "nh36": { "nom": "NH36A", "desc": "Automatique · Date + Jour · 41h de réserve" },
-    "nh38": { "nom": "NH38", "desc": "Automatique · Cœur ouvert · Sans date · 41h" },
-    "nh70": { "nom": "NH70", "desc": "Automatique · Skeleton · Mécanisme visible · 41h" },
-    "nh34": { "nom": "NH34", "desc": "Automatique · GMT · 4ème aiguille fuseau horaire" },
-    "vk63": { "nom": "VK63", "desc": "Quartz · Chronographe · 6 aiguilles", "allchinabuy": true },
-    "hangzhou": { "nom": "Hangzhou 2565A", "desc": "Automatique · Date · Alternative économique NH35" }
+    "nh35":      { "nom": "NH35A",         "desc": "Automatique · Date · 41h de réserve" },
+    "nh36":      { "nom": "NH36A",         "desc": "Automatique · Date + Jour · 41h de réserve" },
+    "nh38":      { "nom": "NH38",          "desc": "Automatique · Cœur ouvert · Sans date · 41h" },
+    "nh70":      { "nom": "NH70",          "desc": "Automatique · Skeleton · Mécanisme visible · 41h" },
+    "nh34":      { "nom": "NH34",          "desc": "Automatique · GMT · 4ème aiguille fuseau horaire" },
+    "vk63":      { "nom": "VK63",          "desc": "Quartz · Chronographe · 6 aiguilles", "allchinabuy": true },
+    "hangzhou":  { "nom": "Hangzhou 2565A","desc": "Automatique · Date · Alternative économique NH35" },
+    "miyota8285":{ "nom": "Miyota 8285",   "desc": "Automatique · Date + Jour · Day-Date · 42h de réserve" }
   },
 
   "modeles": [
@@ -18,10 +19,10 @@
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",      "hex": "#B8BBBA" },
-        { "id": "black",   "nom": "Black PVD",  "hex": "#222222" },
-        { "id": "or-rose", "nom": "Or Rose",    "hex": "#C9856A" },
-        { "id": "or",      "nom": "Or Jaune",   "hex": "#D4A437" }
+        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA" },
+        { "id": "black",   "nom": "Black PVD", "hex": "#222222" },
+        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A" },
+        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437" }
       ],
       "cadrans": {
         "modeles": [
@@ -29,16 +30,24 @@
           { "id": "yacht-master", "nom": "Yacht Master" }
         ],
         "couleurs": [
-          { "id": "noir",  "nom": "Noir",             "hex": "#111111" },
-          { "id": "bleu",  "nom": "Bleu Marine",      "hex": "#1B2F6E" },
-          { "id": "vert",  "nom": "Vert Forêt",       "hex": "#1B4332" },
-          { "id": "gris",  "nom": "Gris Anthracite",  "hex": "#3D3D3D" }
+          { "id": "noir",  "nom": "Noir",            "hex": "#111111" },
+          { "id": "bleu",  "nom": "Bleu Marine",     "hex": "#1B2F6E" },
+          { "id": "vert",  "nom": "Vert Forêt",      "hex": "#1B4332" },
+          { "id": "gris",  "nom": "Gris Anthracite", "hex": "#3D3D3D" }
         ],
         "styles": [
           { "id": "baton",  "nom": "Bâton" },
           { "id": "arabic", "nom": "Arabic" }
         ]
       },
+      "aiguilles": [
+        { "id": "mercedes",       "nom": "Mercedes" },
+        { "id": "baton",          "nom": "Bâton" },
+        { "id": "dauphine",       "nom": "Dauphine" },
+        { "id": "flocons-neige",  "nom": "Flocons de neige" },
+        { "id": "cathedrale",     "nom": "Cathédrale" },
+        { "id": "aquanaut",       "nom": "Aquanaut" }
+      ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
         { "id": "jubilee", "nom": "Jubilé" }
@@ -61,7 +70,7 @@
       ],
       "cadrans": {
         "modeles": [
-          { "id": "gmt",       "nom": "GMT Standard" }
+          { "id": "gmt", "nom": "GMT Standard" }
         ],
         "couleurs": [
           { "id": "noir", "nom": "Noir", "hex": "#111111" },
@@ -72,6 +81,11 @@
           { "id": "arabic", "nom": "Arabic" }
         ]
       },
+      "aiguilles": [
+        { "id": "gmt",      "nom": "GMT" },
+        { "id": "mercedes", "nom": "Mercedes" },
+        { "id": "baton",    "nom": "Bâton" }
+      ],
       "bracelets": [
         { "id": "oyster",    "nom": "Oyster Acier" },
         { "id": "jubilee",   "nom": "Jubilé" },
@@ -87,12 +101,12 @@
       "mouvements": ["nh35", "nh36", "nh38", "nh70"],
       "mouvementRecommande": "nh35",
       "boitiers": [
-        { "id": "acier",      "nom": "Acier",        "hex": "#B8BBBA" },
-        { "id": "black",      "nom": "Black PVD",    "hex": "#222222" },
-        { "id": "or",         "nom": "Or Jaune",     "hex": "#D4A437" },
-        { "id": "or-rose",    "nom": "Or Rose",      "hex": "#C9856A" },
-        { "id": "frosted",    "nom": "Frosted",      "hex": "#DADADA" },
-        { "id": "caoutchouc", "nom": "Caoutchouc",   "hex": "#2D2D2D" }
+        { "id": "acier",      "nom": "Acier",      "hex": "#B8BBBA" },
+        { "id": "black",      "nom": "Black PVD",  "hex": "#222222" },
+        { "id": "or",         "nom": "Or Jaune",   "hex": "#D4A437" },
+        { "id": "or-rose",    "nom": "Or Rose",    "hex": "#C9856A" },
+        { "id": "frosted",    "nom": "Frosted",    "hex": "#DADADA" },
+        { "id": "caoutchouc", "nom": "Caoutchouc", "hex": "#2D2D2D" }
       ],
       "cadrans": {
         "modeles": [
@@ -114,6 +128,12 @@
           { "id": "arabic",   "nom": "Arabic" }
         ]
       },
+      "aiguilles": [
+        { "id": "baton",      "nom": "Bâton" },
+        { "id": "mercedes",   "nom": "Mercedes" },
+        { "id": "dauphine",   "nom": "Dauphine" },
+        { "id": "cathedrale", "nom": "Cathédrale" }
+      ],
       "bracelets": [
         { "id": "integre",    "nom": "Intégré Acier" },
         { "id": "caoutchouc", "nom": "Caoutchouc" }
@@ -128,9 +148,9 @@
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",    "hex": "#B8BBBA" },
-        { "id": "black",   "nom": "Black",    "hex": "#222222" },
-        { "id": "or-rose", "nom": "Or Rose",  "hex": "#C9856A" }
+        { "id": "acier",   "nom": "Acier",   "hex": "#B8BBBA" },
+        { "id": "black",   "nom": "Black",   "hex": "#222222" },
+        { "id": "or-rose", "nom": "Or Rose", "hex": "#C9856A" }
       ],
       "cadrans": {
         "modeles": [
@@ -154,6 +174,12 @@
           { "id": "diamant",    "nom": "Diamant" }
         ]
       },
+      "aiguilles": [
+        { "id": "nautilus",  "nom": "Nautilus" },
+        { "id": "aquanaut",  "nom": "Aquanaut" },
+        { "id": "baton",     "nom": "Bâton" },
+        { "id": "mercedes",  "nom": "Mercedes" }
+      ],
       "bracelets": [
         { "id": "integre", "nom": "Intégré Acier" },
         { "id": "jubilee", "nom": "Jubilé" }
@@ -172,10 +198,10 @@
       ],
       "cadrans": {
         "modeles": [
-          { "id": "santos",    "nom": "Santos Standard" },
-          { "id": "fuck95",    "nom": "F*ck 9.5" },
-          { "id": "arabic",    "nom": "Arabic Dial" },
-          { "id": "skeleton",  "nom": "Skeleton" }
+          { "id": "santos",   "nom": "Santos Standard" },
+          { "id": "fuck95",   "nom": "F*ck 9.5" },
+          { "id": "arabic",   "nom": "Arabic Dial" },
+          { "id": "skeleton", "nom": "Skeleton" }
         ],
         "couleurs": [
           { "id": "blanc",     "nom": "Blanc",     "hex": "#F0EBE0" },
@@ -188,6 +214,11 @@
           { "id": "skeleton", "nom": "Skeleton" }
         ]
       },
+      "aiguilles": [
+        { "id": "santos",   "nom": "Santos" },
+        { "id": "baton",    "nom": "Bâton" },
+        { "id": "mercedes", "nom": "Mercedes" }
+      ],
       "bracelets": [
         { "id": "integre",    "nom": "Intégré Acier" },
         { "id": "caoutchouc", "nom": "Caoutchouc" }
@@ -222,9 +253,55 @@
           { "id": "arabic",       "nom": "Arabic" }
         ]
       },
+      "aiguilles": [
+        { "id": "daytona",          "nom": "Daytona" },
+        { "id": "daytona-nautilus", "nom": "Daytona Nautilus" }
+      ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
         { "id": "jubilee", "nom": "Jubilé" }
+      ]
+    },
+
+    {
+      "id": "daydate",
+      "nom": "Day-Date",
+      "prix": "300–400 €",
+      "image": "/images/watch-daydate.png",
+      "mouvements": ["miyota8285"],
+      "mouvementRecommande": "miyota8285",
+      "boitiers": [
+        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437" },
+        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A" },
+        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA" },
+        { "id": "black",   "nom": "Black PVD", "hex": "#222222" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "classique", "nom": "Classique" },
+          { "id": "diamant",   "nom": "Diamant" },
+          { "id": "arabic",    "nom": "Arabic Dial" }
+        ],
+        "couleurs": [
+          { "id": "champagne", "nom": "Champagne",  "hex": "#C8A86B" },
+          { "id": "blanc",     "nom": "Blanc",      "hex": "#F0EBE0" },
+          { "id": "noir",      "nom": "Noir",       "hex": "#111111" },
+          { "id": "bleu",      "nom": "Bleu",       "hex": "#1B2F6E" },
+          { "id": "vert",      "nom": "Vert Olive", "hex": "#4A5240" }
+        ],
+        "styles": [
+          { "id": "classique", "nom": "Classique" },
+          { "id": "arabic",    "nom": "Arabic" },
+          { "id": "diamant",   "nom": "Diamant" }
+        ]
+      },
+      "aiguilles": [
+        { "id": "daydate", "nom": "Day-Date" }
+      ],
+      "bracelets": [
+        { "id": "president", "nom": "Président" },
+        { "id": "jubilee",   "nom": "Jubilé" },
+        { "id": "oyster",    "nom": "Oyster Acier" }
       ]
     }
   ]

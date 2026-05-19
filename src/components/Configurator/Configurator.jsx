@@ -7,6 +7,7 @@ const TABS = [
   { id: 'boitier',  label: 'Boîtier' },
   { id: 'cadran',   label: 'Cadran' },
   { id: 'mouvement',label: 'Mouvement' },
+  { id: 'aiguilles',label: 'Aiguilles' },
   { id: 'bracelet', label: 'Bracelet' },
 ]
 
@@ -341,6 +342,7 @@ export default function Configurator({ onCommander }) {
     cadranCouleur: null,
     cadranStyle:   null,
     mouvement:     null,
+    aiguilles:     null,
     bracelet:      null,
   })
 
@@ -353,6 +355,7 @@ export default function Configurator({ onCommander }) {
         next.cadranCouleur = null
         next.cadranStyle   = null
         next.mouvement     = null
+        next.aiguilles     = null
         next.bracelet      = null
         if (val) setImgKey(k => k + 1)
       }
@@ -369,7 +372,7 @@ export default function Configurator({ onCommander }) {
     ? modele.mouvements.map(id => ({ id, ...mvtDefs[id] })).filter(Boolean)
     : []
 
-  const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.bracelet
+  const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.aiguilles && sel.bracelet
 
   function buildWaUrl() {
     const lines = [
@@ -379,6 +382,7 @@ export default function Configurator({ onCommander }) {
       `• Boîtier : ${sel.boitier?.nom}`,
       sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`,
       `• Mouvement : ${sel.mouvement?.nom}`,
+      `• Aiguilles : ${sel.aiguilles?.nom}`,
       `• Bracelet : ${sel.bracelet?.nom}`,
       '',
       'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
@@ -391,10 +395,11 @@ export default function Configurator({ onCommander }) {
     boitier:   !!sel.boitier,
     cadran:    !!(sel.cadranCouleur && sel.cadranStyle),
     mouvement: !!sel.mouvement,
+    aiguilles: !!sel.aiguilles,
     bracelet:  !!sel.bracelet,
   }
 
-  const TAB_ORDER = ['modele', 'boitier', 'cadran', 'mouvement', 'bracelet']
+  const TAB_ORDER = ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles', 'bracelet']
   function nextTab(id) {
     const idx = TAB_ORDER.indexOf(id)
     return idx < TAB_ORDER.length - 1 ? TAB_ORDER[idx + 1] : null
@@ -506,13 +511,33 @@ export default function Configurator({ onCommander }) {
                 <CatLabel>Mouvements compatibles avec {modele.nom}</CatLabel>
                 <CardsGrid>
                   {compatMvts.map(m => (
-                    <TextCard key={m.id} $selected={sel.mouvement?.id === m.id} onClick={() => set('mouvement', m, 'bracelet')}>
+                    <TextCard key={m.id} $selected={sel.mouvement?.id === m.id} onClick={() => set('mouvement', m, 'aiguilles')}>
                       <CardName style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, flexWrap: 'wrap' }}>
                         {m.nom}
                         {m.id === modele.mouvementRecommande && <RecoBadge>Recommandé</RecoBadge>}
                       </CardName>
                       <CardSub>{m.desc}</CardSub>
                       {m.allchinabuy && <AlliChinaBuyBadge>⚠ AllChinaBuy</AlliChinaBuyBadge>}
+                    </TextCard>
+                  ))}
+                </CardsGrid>
+              </CatSection>
+            )}
+          </TabContent>
+        )
+
+      case 'aiguilles':
+        return (
+          <TabContent>
+            {!modele ? (
+              <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
+            ) : (
+              <CatSection>
+                <CatLabel>Style d'aiguilles</CatLabel>
+                <CardsGrid>
+                  {modele.aiguilles.map(a => (
+                    <TextCard key={a.id} $selected={sel.aiguilles?.id === a.id} onClick={() => set('aiguilles', a, 'bracelet')}>
+                      <CardName>{a.nom}</CardName>
                     </TextCard>
                   ))}
                 </CardsGrid>
@@ -550,6 +575,7 @@ export default function Configurator({ onCommander }) {
     { label: 'Boîtier',   val: sel.boitier?.nom },
     { label: 'Cadran',    val: cadranSummary() },
     { label: 'Mouvement', val: sel.mouvement?.nom },
+    { label: 'Aiguilles', val: sel.aiguilles?.nom },
     { label: 'Bracelet',  val: sel.bracelet?.nom },
   ]
 
