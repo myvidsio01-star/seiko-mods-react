@@ -110,22 +110,34 @@
       ],
       "cadrans": {
         "modeles": [
-          { "id": "baton",       "nom": "Bâton" },
-          { "id": "baton-lisse", "nom": "Bâton Lisse" },
-          { "id": "skeleton",    "nom": "Skeleton" },
-          { "id": "arabic",      "nom": "Arabic Dial" }
+          { "id": "baton",           "nom": "Bâton" },
+          { "id": "baton-lisse",     "nom": "Bâton Lisse" },
+          { "id": "baton-aiguilles", "nom": "Bâton + Aiguilles" },
+          { "id": "skeleton",        "nom": "Skeleton" },
+          { "id": "arabic",          "nom": "Arabic Dial" }
         ],
         "couleurs": [
-          { "id": "bleu",      "nom": "Bleu Royal",  "hex": "#1B3A7A" },
-          { "id": "noir",      "nom": "Noir",        "hex": "#111111" },
-          { "id": "blanc",     "nom": "Blanc",       "hex": "#F0EBE0" },
-          { "id": "champagne", "nom": "Champagne",   "hex": "#C8A86B" },
-          { "id": "gris",      "nom": "Gris",        "hex": "#5A5A5A" }
+          { "id": "bleu-royal",  "nom": "Bleu Royal",  "hex": "#1B3A7A" },
+          { "id": "bleu-clair",  "nom": "Bleu Clair",  "hex": "#4A90D9" },
+          { "id": "turquoise",   "nom": "Turquoise",   "hex": "#2EBCB3" },
+          { "id": "vert",        "nom": "Vert",        "hex": "#2D5A3D" },
+          { "id": "noir",        "nom": "Noir",        "hex": "#111111" },
+          { "id": "blanc",       "nom": "Blanc",       "hex": "#F0EBE0" },
+          { "id": "gris",        "nom": "Gris",        "hex": "#5A5A5A" },
+          { "id": "champagne",   "nom": "Champagne",   "hex": "#C8A86B" },
+          { "id": "rose",        "nom": "Rose",        "hex": "#D4A0B0" },
+          { "id": "violet",      "nom": "Violet",      "hex": "#6B5B8A" },
+          { "id": "marron",      "nom": "Marron",      "hex": "#6B4226" },
+          { "id": "orange",      "nom": "Orange",      "hex": "#D4631A" },
+          { "id": "jaune",       "nom": "Jaune",       "hex": "#D4C23A" },
+          { "id": "rouge",       "nom": "Rouge",       "hex": "#C0392B" }
         ],
         "styles": [
-          { "id": "baton",    "nom": "Bâton" },
-          { "id": "skeleton", "nom": "Skeleton" },
-          { "id": "arabic",   "nom": "Arabic" }
+          { "id": "baton",           "nom": "Bâton" },
+          { "id": "baton-lisse",     "nom": "Bâton Lisse" },
+          { "id": "baton-aiguilles", "nom": "Bâton + Aiguilles" },
+          { "id": "skeleton",        "nom": "Skeleton" },
+          { "id": "arabic",          "nom": "Arabic" }
         ]
       },
       "aiguilles": [
