@@ -371,6 +371,21 @@ export default function Configurator({ onCommander }) {
 
   const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.bracelet
 
+  function buildWaUrl() {
+    const lines = [
+      'Bonjour ! Je viens de configurer ma montre sur votre site 👇',
+      '',
+      `• Modèle : ${sel.modele?.nom}`,
+      `• Boîtier : ${sel.boitier?.nom}`,
+      sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`,
+      `• Mouvement : ${sel.mouvement?.nom}`,
+      `• Bracelet : ${sel.bracelet?.nom}`,
+      '',
+      'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
+    ]
+    return `https://wa.me/262692421519?text=${encodeURIComponent(lines.join('\n'))}`
+  }
+
   const tabDone = {
     modele:    !!sel.modele,
     boitier:   !!sel.boitier,
@@ -576,8 +591,15 @@ export default function Configurator({ onCommander }) {
               ))}
             </SummaryList>
 
-            <CommanderBtn disabled={!isComplete} onClick={() => onCommander && onCommander(sel)}>
-              {isComplete ? 'Commander cette montre' : 'Complétez la sélection'}
+            <CommanderBtn
+              as={isComplete ? 'a' : 'button'}
+              href={isComplete ? buildWaUrl() : undefined}
+              target={isComplete ? '_blank' : undefined}
+              rel={isComplete ? 'noopener noreferrer' : undefined}
+              disabled={!isComplete}
+              style={isComplete ? { background: '#25D366', textDecoration: 'none' } : {}}
+            >
+              {isComplete ? '💬 Envoyer sur WhatsApp' : 'Complétez la sélection'}
             </CommanderBtn>
           </WatchPreview>
 

@@ -146,22 +146,21 @@ const PriceNote = styled.span`
   margin-top: 2px;
 `
 
-const BtnCard = styled.button`
+const BtnCard = styled.a`
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #CA8A04;
-  border: 1px solid rgba(202,138,4,0.4);
+  color: white;
+  background: #25D366;
+  border: none;
   padding: 9px 18px;
   border-radius: 9999px;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.25s ease;
 
-  &:hover {
-    background: #CA8A04;
-    color: #0C0A09;
-  }
+  &:hover { background: #1ebe5d; transform: translateY(-1px); }
 `
 
 const watches = [
@@ -202,8 +201,11 @@ function WatchCard({ watch, delay }) {
             <Price>{watch.price}</Price>
             <PriceNote>Prix indicatif</PriceNote>
           </div>
-          <BtnCard onClick={() => document.getElementById('configurateur')?.scrollIntoView({ behavior: 'smooth' })}>
-            Commander
+          <BtnCard
+            href={`https://wa.me/262692421519?text=${encodeURIComponent(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}`}
+            target="_blank" rel="noopener noreferrer"
+          >
+            WhatsApp
           </BtnCard>
         </CardFooter>
       </CardBody>

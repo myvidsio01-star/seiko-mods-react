@@ -181,7 +181,7 @@ export default function Hero() {
         <Sub>Submariner, Royal Oak, Daytona et plus — faits à la main.<br />Livré directement chez toi à La Réunion.</Sub>
         <CTARow>
           <Btn href="#catalogue" $primary>Voir les montres</Btn>
-          <Btn href="#process">Notre processus</Btn>
+          <Btn href="https://wa.me/262692421519" target="_blank" rel="noopener noreferrer">Nous contacter</Btn>
         </CTARow>
       </Content>
 
