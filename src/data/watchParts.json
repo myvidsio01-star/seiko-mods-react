@@ -1,0 +1,231 @@
+{
+  "mouvements": {
+    "nh35": { "nom": "NH35A", "desc": "Automatique · Date · 41h de réserve" },
+    "nh36": { "nom": "NH36A", "desc": "Automatique · Date + Jour · 41h de réserve" },
+    "nh38": { "nom": "NH38", "desc": "Automatique · Cœur ouvert · Sans date · 41h" },
+    "nh70": { "nom": "NH70", "desc": "Automatique · Skeleton · Mécanisme visible · 41h" },
+    "nh34": { "nom": "NH34", "desc": "Automatique · GMT · 4ème aiguille fuseau horaire" },
+    "vk63": { "nom": "VK63", "desc": "Quartz · Chronographe · 6 aiguilles", "allchinabuy": true },
+    "hangzhou": { "nom": "Hangzhou 2565A", "desc": "Automatique · Date · Alternative économique NH35" }
+  },
+
+  "modeles": [
+    {
+      "id": "submariner",
+      "nom": "Submariner",
+      "prix": "250–320 €",
+      "image": "/images/watch-submariner.jpg",
+      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvementRecommande": "nh35",
+      "boitiers": [
+        { "id": "acier",   "nom": "Acier",      "hex": "#B8BBBA" },
+        { "id": "black",   "nom": "Black PVD",  "hex": "#222222" },
+        { "id": "or-rose", "nom": "Or Rose",    "hex": "#C9856A" },
+        { "id": "or",      "nom": "Or Jaune",   "hex": "#D4A437" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "submariner",   "nom": "Submariner" },
+          { "id": "yacht-master", "nom": "Yacht Master" }
+        ],
+        "couleurs": [
+          { "id": "noir",  "nom": "Noir",             "hex": "#111111" },
+          { "id": "bleu",  "nom": "Bleu Marine",      "hex": "#1B2F6E" },
+          { "id": "vert",  "nom": "Vert Forêt",       "hex": "#1B4332" },
+          { "id": "gris",  "nom": "Gris Anthracite",  "hex": "#3D3D3D" }
+        ],
+        "styles": [
+          { "id": "baton",  "nom": "Bâton" },
+          { "id": "arabic", "nom": "Arabic" }
+        ]
+      },
+      "bracelets": [
+        { "id": "oyster",  "nom": "Oyster Acier" },
+        { "id": "jubilee", "nom": "Jubilé" }
+      ]
+    },
+
+    {
+      "id": "gmt",
+      "nom": "GMT-Master",
+      "prix": "280–380 €",
+      "image": "/images/watch-gmt.jpg",
+      "mouvements": ["nh34", "nh35"],
+      "mouvementRecommande": "nh34",
+      "boitiers": [
+        { "id": "batman",    "nom": "Batman (Bleu/Noir)",  "hex": "#1B3B8A" },
+        { "id": "pepsi",     "nom": "Pepsi (Rouge/Bleu)",  "hex": "#C0392B" },
+        { "id": "rootbeer",  "nom": "Rootbeer (Brun/Or)",  "hex": "#7D5A3C" },
+        { "id": "black",     "nom": "Black",               "hex": "#222222" },
+        { "id": "president", "nom": "Président Or",        "hex": "#D4A437" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "gmt",       "nom": "GMT Standard" }
+        ],
+        "couleurs": [
+          { "id": "noir", "nom": "Noir", "hex": "#111111" },
+          { "id": "bleu", "nom": "Bleu", "hex": "#1B2F6E" }
+        ],
+        "styles": [
+          { "id": "baton",  "nom": "Bâton" },
+          { "id": "arabic", "nom": "Arabic" }
+        ]
+      },
+      "bracelets": [
+        { "id": "oyster",    "nom": "Oyster Acier" },
+        { "id": "jubilee",   "nom": "Jubilé" },
+        { "id": "president", "nom": "Président" }
+      ]
+    },
+
+    {
+      "id": "royaloak",
+      "nom": "Royal Oak",
+      "prix": "300–400 €",
+      "image": "/images/watch-royaloak.png",
+      "mouvements": ["nh35", "nh36", "nh38", "nh70"],
+      "mouvementRecommande": "nh35",
+      "boitiers": [
+        { "id": "acier",      "nom": "Acier",        "hex": "#B8BBBA" },
+        { "id": "black",      "nom": "Black PVD",    "hex": "#222222" },
+        { "id": "or",         "nom": "Or Jaune",     "hex": "#D4A437" },
+        { "id": "or-rose",    "nom": "Or Rose",      "hex": "#C9856A" },
+        { "id": "frosted",    "nom": "Frosted",      "hex": "#DADADA" },
+        { "id": "caoutchouc", "nom": "Caoutchouc",   "hex": "#2D2D2D" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "baton",       "nom": "Bâton" },
+          { "id": "baton-lisse", "nom": "Bâton Lisse" },
+          { "id": "skeleton",    "nom": "Skeleton" },
+          { "id": "arabic",      "nom": "Arabic Dial" }
+        ],
+        "couleurs": [
+          { "id": "bleu",      "nom": "Bleu Royal",  "hex": "#1B3A7A" },
+          { "id": "noir",      "nom": "Noir",        "hex": "#111111" },
+          { "id": "blanc",     "nom": "Blanc",       "hex": "#F0EBE0" },
+          { "id": "champagne", "nom": "Champagne",   "hex": "#C8A86B" },
+          { "id": "gris",      "nom": "Gris",        "hex": "#5A5A5A" }
+        ],
+        "styles": [
+          { "id": "baton",    "nom": "Bâton" },
+          { "id": "skeleton", "nom": "Skeleton" },
+          { "id": "arabic",   "nom": "Arabic" }
+        ]
+      },
+      "bracelets": [
+        { "id": "integre",    "nom": "Intégré Acier" },
+        { "id": "caoutchouc", "nom": "Caoutchouc" }
+      ]
+    },
+
+    {
+      "id": "nautilus",
+      "nom": "Nautilus",
+      "prix": "320–420 €",
+      "image": "/images/watch-nautilus.png",
+      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvementRecommande": "nh35",
+      "boitiers": [
+        { "id": "acier",   "nom": "Acier",    "hex": "#B8BBBA" },
+        { "id": "black",   "nom": "Black",    "hex": "#222222" },
+        { "id": "or-rose", "nom": "Or Rose",  "hex": "#C9856A" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "open-heart", "nom": "Open Heart" },
+          { "id": "baton",      "nom": "Bâton" },
+          { "id": "arabic",     "nom": "Arabic Dial" },
+          { "id": "nacre",      "nom": "Open Heart Nacré" },
+          { "id": "diamant",    "nom": "Diamant" }
+        ],
+        "couleurs": [
+          { "id": "turquoise", "nom": "Turquoise", "hex": "#2EBCB3" },
+          { "id": "bleu",      "nom": "Bleu",      "hex": "#1B2F6E" },
+          { "id": "blanc",     "nom": "Blanc",     "hex": "#F0EBE0" },
+          { "id": "noir",      "nom": "Noir",      "hex": "#111111" },
+          { "id": "nacre",     "nom": "Nacré",     "hex": "#E8E0D0" }
+        ],
+        "styles": [
+          { "id": "open-heart", "nom": "Open Heart" },
+          { "id": "baton",      "nom": "Bâton" },
+          { "id": "arabic",     "nom": "Arabic" },
+          { "id": "diamant",    "nom": "Diamant" }
+        ]
+      },
+      "bracelets": [
+        { "id": "integre", "nom": "Intégré Acier" },
+        { "id": "jubilee", "nom": "Jubilé" }
+      ]
+    },
+
+    {
+      "id": "santos",
+      "nom": "Santos",
+      "prix": "300–400 €",
+      "image": "/images/watch-santos.png",
+      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvementRecommande": "nh35",
+      "boitiers": [
+        { "id": "acier", "nom": "Acier", "hex": "#B8BBBA" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "santos",    "nom": "Santos Standard" },
+          { "id": "fuck95",    "nom": "F*ck 9.5" },
+          { "id": "arabic",    "nom": "Arabic Dial" },
+          { "id": "skeleton",  "nom": "Skeleton" }
+        ],
+        "couleurs": [
+          { "id": "blanc",     "nom": "Blanc",     "hex": "#F0EBE0" },
+          { "id": "noir",      "nom": "Noir",      "hex": "#111111" },
+          { "id": "champagne", "nom": "Champagne", "hex": "#C8A86B" }
+        ],
+        "styles": [
+          { "id": "santos",   "nom": "Santos" },
+          { "id": "arabic",   "nom": "Arabic" },
+          { "id": "skeleton", "nom": "Skeleton" }
+        ]
+      },
+      "bracelets": [
+        { "id": "integre",    "nom": "Intégré Acier" },
+        { "id": "caoutchouc", "nom": "Caoutchouc" }
+      ]
+    },
+
+    {
+      "id": "daytona",
+      "nom": "Daytona",
+      "prix": "280–350 €",
+      "image": "/images/watch-seiko.png",
+      "allchinabuy": true,
+      "mouvements": ["vk63"],
+      "mouvementRecommande": "vk63",
+      "boitiers": [
+        { "id": "acier",   "nom": "Acier",   "hex": "#B8BBBA" },
+        { "id": "diamant", "nom": "Diamant", "hex": "#E8E8FF" }
+      ],
+      "cadrans": {
+        "modeles": [
+          { "id": "panda",         "nom": "Panda (Blanc)" },
+          { "id": "panda-inverse", "nom": "Panda Inversé (Noir)" },
+          { "id": "arabic",        "nom": "Arabic Dial" }
+        ],
+        "couleurs": [
+          { "id": "blanc",     "nom": "Blanc Panda", "hex": "#F0EBE0" },
+          { "id": "noir",      "nom": "Noir",        "hex": "#111111" },
+          { "id": "champagne", "nom": "Champagne",   "hex": "#C8A86B" }
+        ],
+        "styles": [
+          { "id": "chronographe", "nom": "Chronographe" },
+          { "id": "arabic",       "nom": "Arabic" }
+        ]
+      },
+      "bracelets": [
+        { "id": "oyster",  "nom": "Oyster Acier" },
+        { "id": "jubilee", "nom": "Jubilé" }
+      ]
+    }
+  ]
+}
