@@ -67,12 +67,22 @@
       "mouvementRecommande": "nh34",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
-        { "id": "batman",           "nom": "Batman (Bleu/Noir)",   "hex": "#1B3B8A" },
-        { "id": "pepsi",            "nom": "Pepsi (Rouge/Bleu)",   "hex": "#C0392B" },
-        { "id": "rootbeer",         "nom": "Rootbeer (Brun/Or)",   "hex": "#7D5A3C" },
-        { "id": "black",            "nom": "Black",                "hex": "#222222" },
-        { "id": "president",        "nom": "Président Or",         "hex": "#D4A437" },
-        { "id": "fond-transparent", "nom": "Fond Transparent", "hex": "#C8D8F0", "cat": "option", "note": "Fond saphir transparent — précisez le coloris du boîtier sur WhatsApp" }
+        { "id": "noir-oyster",          "nom": "Bezel Noir + Oyster",          "hex": "#222222", "img": "/images/gmt/boitier-noir-oyster.png" },
+        { "id": "vert-oyster",          "nom": "Bezel Vert + Oyster",          "hex": "#2D5A3D", "img": "/images/gmt/boitier-vert-oyster.png" },
+        { "id": "bleu-oyster",          "nom": "Bezel Bleu + Oyster",          "hex": "#1B3B8A", "img": "/images/gmt/boitier-bleu-oyster.png" },
+        { "id": "rouge-oyster",         "nom": "Bezel Rouge + Oyster",         "hex": "#C0392B", "img": "/images/gmt/boitier-rouge-oyster.png" },
+        { "id": "coke-oyster",          "nom": "Coke (Rouge/Noir) + Oyster",   "hex": "#8B1A1A", "img": "/images/gmt/boitier-coke-oyster.png" },
+        { "id": "batman-oyster",        "nom": "Batman (Bleu/Noir) + Oyster",  "hex": "#1B3B8A", "img": "/images/gmt/boitier-batman-oyster.png" },
+        { "id": "blanc-oyster",         "nom": "Bezel Blanc + Oyster",         "hex": "#F0EBE0", "img": "/images/gmt/boitier-blanc-oyster.png" },
+        { "id": "noir-jubilee",         "nom": "Bezel Noir + Jubilé",          "hex": "#222222", "img": "/images/gmt/boitier-noir-jubilee.png" },
+        { "id": "black-pvd",            "nom": "Black PVD",                    "hex": "#111111", "img": "/images/gmt/boitier-black-pvd.png" },
+        { "id": "bicolor-bleu-jubilee", "nom": "Bicolor Or/Acier Bleu + Jubilé","hex": "#D4A437","img": "/images/gmt/boitier-bicolor-bleu-jubilee.png" },
+        { "id": "coke-jubilee",         "nom": "Coke (Rouge/Noir) + Jubilé",   "hex": "#8B1A1A", "img": "/images/gmt/boitier-coke-jubilee.png" },
+        { "id": "argent-jubilee",       "nom": "Bezel Argent + Jubilé",        "hex": "#B8BBBA", "img": "/images/gmt/boitier-argent-jubilee.png" },
+        { "id": "or-jubilee",           "nom": "Or Jaune + Jubilé",            "hex": "#D4A437", "img": "/images/gmt/boitier-or-jubilee.png" },
+        { "id": "or-rose",              "nom": "Or Rose + Président",          "hex": "#C9856A", "img": "/images/gmt/boitier-or-rose.png" },
+        { "id": "batman-jubilee",       "nom": "Batman (Bleu/Noir) + Jubilé",  "hex": "#1B3B8A", "img": "/images/gmt/boitier-batman-jubilee.png" },
+        { "id": "fond-transparent",     "nom": "Fond Transparent",             "hex": "#C8D8F0", "cat": "option", "note": "Fond saphir transparent — précisez le coloris du boîtier sur WhatsApp" }
       ],
       "cadrans": {
         "catalogue": true,
@@ -87,9 +97,7 @@
         { "id": "baton",    "nom": "Bâton" }
       ],
       "bracelets": [
-        { "id": "oyster",    "nom": "Oyster Acier" },
-        { "id": "jubilee",   "nom": "Jubilé" },
-        { "id": "president", "nom": "Président" }
+        { "id": "inclus", "nom": "Inclus avec le boîtier", "note": "Le bracelet est compris dans votre choix de boîtier" }
       ]
     },
 
