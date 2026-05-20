@@ -378,7 +378,7 @@ function ImgWithFallback({ src, alt, style }) {
 
 export default function Configurator({ onCommander }) {
   const [tab, setTab] = useState('modele')
-  const [imgKey, setImgKey] = useState(0)
+  const [previewImg, setPreviewImg] = useState(null)
   const [livraison, setLivraison] = useState(null)
   const [sel, setSel] = useState({
     modele:        null,
@@ -392,6 +392,7 @@ export default function Configurator({ onCommander }) {
   })
 
   const set = useCallback((key, val, advance) => {
+    if (val?.img) setPreviewImg(val.img)
     setSel(prev => {
       const next = { ...prev, [key]: val }
       if (key === 'modele') {
@@ -402,7 +403,7 @@ export default function Configurator({ onCommander }) {
         next.mouvement     = null
         next.aiguilles     = null
         next.bracelet      = null
-        if (val) setImgKey(k => k + 1)
+        setPreviewImg(null)
       }
       if (key === 'mouvement') {
         const aig = prev.aiguilles
@@ -658,30 +659,7 @@ export default function Configurator({ onCommander }) {
         <Layout>
           <WatchPreview>
             <ImageWrap>
-              <ImgWithFallback key={imgKey} src={modele?.image} alt={modele?.nom} />
-              {sel.cadranCouleur?.img && modele?.dialClip && (
-                <svg aria-hidden="true" style={{ position:'absolute', width:'85%', height:'85%', top:'50%', left:'50%', transform:'translate(-50%,-50%)', pointerEvents:'none', overflow:'hidden' }}
-                  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                  <defs>
-                    <clipPath id="dialShape">
-                      <ellipse cx={modele.dialClip.cx} cy={modele.dialClip.cy} rx={modele.dialClip.rx} ry={modele.dialClip.ry} />
-                    </clipPath>
-                  </defs>
-                  <image href={sel.cadranCouleur.img}
-                    x={modele.dialClip.cx - modele.dialClip.rx}
-                    y={modele.dialClip.cy - modele.dialClip.ry}
-                    width={modele.dialClip.rx * 2}
-                    height={modele.dialClip.ry * 2}
-                    clipPath="url(#dialShape)"
-                    preserveAspectRatio="xMidYMid meet" />
-                </svg>
-              )}
-              {sel.cadranCouleur && !sel.cadranCouleur.img && modele?.dialClip && (
-                <svg aria-hidden="true" style={{ position:'absolute', width:'85%', height:'85%', top:'50%', left:'50%', transform:'translate(-50%,-50%)', mixBlendMode:'color', pointerEvents:'none', overflow:'hidden' }}
-                  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                  <ellipse cx={modele.dialClip.cx} cy={modele.dialClip.cy} rx={modele.dialClip.rx} ry={modele.dialClip.ry} fill={sel.cadranCouleur.hex} />
-                </svg>
-              )}
+              <ImgWithFallback key={previewImg || modele?.image} src={previewImg || modele?.image} alt={modele?.nom} />
             </ImageWrap>
 
             {modele && (
