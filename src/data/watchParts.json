@@ -74,19 +74,10 @@
         { "id": "president", "nom": "Président Or",        "hex": "#D4A437" }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "gmt", "nom": "GMT Standard" }
-        ],
-        "couleurs": [
-          { "id": "noir",       "nom": "Noir",            "hex": "#111111" },
-          { "id": "bleu",       "nom": "Bleu Marine",     "hex": "#1B2F6E" },
-          { "id": "vert",       "nom": "Vert",            "hex": "#2D5A3D" },
-          { "id": "gris",       "nom": "Gris Anthracite", "hex": "#3D3D3D" },
-          { "id": "champagne",  "nom": "Champagne",       "hex": "#C8A86B" }
-        ],
-        "styles": [
-          { "id": "baton",  "nom": "Bâton" },
-          { "id": "arabic", "nom": "Arabic" }
+        "catalogue": true,
+        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
+        "categories": [
+          { "id": "baton", "nom": "Bâton", "img": "/images/gmt/cadran-baton.png", "note": "7 coloris disponibles" }
         ]
       },
       "aiguilles": [
