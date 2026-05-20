@@ -255,28 +255,38 @@
       "mouvements": ["vk63"],
       "mouvementRecommande": "vk63",
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",   "hex": "#B8BBBA" },
-        { "id": "diamant", "nom": "Diamant", "hex": "#E8E8FF" }
+        { "id": "acier",       "nom": "Acier",        "hex": "#B8BBBA" },
+        { "id": "noir",        "nom": "Noir",         "hex": "#222222" },
+        { "id": "or",          "nom": "Or",           "hex": "#D4A437" },
+        { "id": "diamant",     "nom": "Diamant Acier","hex": "#E8E8FF" },
+        { "id": "diamant-or",  "nom": "Diamant Or",   "hex": "#D4A437" },
+        { "id": "diamant-bleu","nom": "Diamant Bleu", "hex": "#1B3B8A" },
+        { "id": "diamant-noir","nom": "Diamant Noir", "hex": "#1A1A2E" },
+        { "id": "diamant-rouge","nom": "Diamant Rouge","hex": "#8B1A1A" }
       ],
       "cadrans": {
         "modeles": [
-          { "id": "panda",         "nom": "Panda (Blanc)" },
-          { "id": "panda-inverse", "nom": "Panda Inversé (Noir)" },
-          { "id": "arabic",        "nom": "Arabic Dial" }
+          { "id": "daytona", "nom": "Daytona" },
+          { "id": "arabic",  "nom": "Arabic Dial" }
         ],
         "couleurs": [
-          { "id": "blanc",     "nom": "Blanc Panda", "hex": "#F0EBE0" },
-          { "id": "noir",      "nom": "Noir",        "hex": "#111111" },
-          { "id": "champagne", "nom": "Champagne",   "hex": "#C8A86B" }
+          { "id": "blanc",       "nom": "Blanc Panda",  "hex": "#F0EBE0" },
+          { "id": "noir",        "nom": "Noir",         "hex": "#111111" },
+          { "id": "champagne",   "nom": "Champagne",    "hex": "#C8A86B" },
+          { "id": "bleu-glace",  "nom": "Bleu Glacé",   "hex": "#A8C8E0" },
+          { "id": "vert",        "nom": "Vert",         "hex": "#2D5A3D" },
+          { "id": "irise",       "nom": "Irisé",        "hex": "#C0B8D8" },
+          { "id": "bleu-marine", "nom": "Bleu Marine",  "hex": "#1B2F6E" },
+          { "id": "marron",      "nom": "Marron",       "hex": "#6B4226" }
         ],
         "styles": [
-          { "id": "chronographe", "nom": "Chronographe" },
-          { "id": "arabic",       "nom": "Arabic" }
+          { "id": "daytona", "nom": "Daytona" },
+          { "id": "arabic",  "nom": "Arabic" }
         ]
       },
       "aiguilles": [
-        { "id": "daytona",          "nom": "Daytona" },
-        { "id": "daytona-nautilus", "nom": "Daytona Nautilus" }
+        { "id": "daytona",  "nom": "Daytona" },
+        { "id": "nautilus", "nom": "Nautilus" }
       ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
@@ -292,32 +302,34 @@
       "mouvements": ["miyota8285"],
       "mouvementRecommande": "miyota8285",
       "boitiers": [
-        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437" },
-        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A" },
-        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA" },
-        { "id": "black",   "nom": "Black PVD", "hex": "#222222" }
+        { "id": "acier", "nom": "Acier (Président)", "hex": "#B8BBBA" },
+        { "id": "or",    "nom": "Or Jaune (Président)", "hex": "#D4A437" }
       ],
       "cadrans": {
         "modeles": [
-          { "id": "classique", "nom": "Classique" },
-          { "id": "diamant",   "nom": "Diamant" },
-          { "id": "arabic",    "nom": "Arabic Dial" }
+          { "id": "baton",   "nom": "Bâton" },
+          { "id": "romain",  "nom": "Romain" },
+          { "id": "arabic",  "nom": "Arabic Dial" }
         ],
         "couleurs": [
-          { "id": "champagne", "nom": "Champagne",  "hex": "#C8A86B" },
-          { "id": "blanc",     "nom": "Blanc",      "hex": "#F0EBE0" },
-          { "id": "noir",      "nom": "Noir",       "hex": "#111111" },
-          { "id": "bleu",      "nom": "Bleu",       "hex": "#1B2F6E" },
-          { "id": "vert",      "nom": "Vert Olive", "hex": "#4A5240" }
+          { "id": "vert",        "nom": "Vert",          "hex": "#2D5A3D" },
+          { "id": "bleu-marine", "nom": "Bleu Marine",   "hex": "#1B2F6E" },
+          { "id": "anthracite",  "nom": "Gris Anthracite","hex": "#3D3D3D" },
+          { "id": "bleu-clair",  "nom": "Bleu Clair",    "hex": "#4A90D9" },
+          { "id": "gris",        "nom": "Gris",          "hex": "#5A5A5A" },
+          { "id": "blanc",       "nom": "Blanc",         "hex": "#F0EBE0" },
+          { "id": "champagne",   "nom": "Champagne",     "hex": "#C8A86B" },
+          { "id": "noir",        "nom": "Noir",          "hex": "#111111" },
+          { "id": "marron",      "nom": "Marron",        "hex": "#6B4226" }
         ],
         "styles": [
-          { "id": "classique", "nom": "Classique" },
-          { "id": "arabic",    "nom": "Arabic" },
-          { "id": "diamant",   "nom": "Diamant" }
+          { "id": "baton",  "nom": "Bâton" },
+          { "id": "romain", "nom": "Romain" },
+          { "id": "arabic", "nom": "Arabic" }
         ]
       },
       "aiguilles": [
-        { "id": "daydate", "nom": "Day-Date" }
+        { "id": "daydate-8285", "nom": "Day-Date (8285)" }
       ],
       "bracelets": [
         { "id": "president", "nom": "Président" },
