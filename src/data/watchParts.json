@@ -283,8 +283,10 @@
         ]
       },
       "aiguilles": [
-        { "id": "daytona",  "nom": "Daytona" },
-        { "id": "nautilus", "nom": "Nautilus" }
+        { "id": "daytona-noir",    "nom": "Daytona Noir",    "img": "/images/daytona/aiguilles/daytona-noir.png" },
+        { "id": "daytona-acier",   "nom": "Daytona Acier",   "img": "/images/daytona/aiguilles/daytona-acier.png" },
+        { "id": "daytona-or",      "nom": "Daytona Or",      "img": "/images/daytona/aiguilles/daytona-or.png" },
+        { "id": "daytona-or-rose", "nom": "Daytona Or Rose", "img": "/images/daytona/aiguilles/daytona-or-rose.png" }
       ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
