@@ -884,11 +884,14 @@ export default function Configurator({ onCommander }) {
               </ValidBtn>
             )}
 
-            <CustomNote href="https://wa.me/262692421519?text=Bonjour%20!%20J'ai%20une%20demande%20personnalis%C3%A9e%20qui%20ne%20figure%20pas%20dans%20les%20options%20du%20configurateur." target="_blank" rel="noopener noreferrer">
-              <span style={{ fontSize: 20 }}>💬</span>
+            <CustomNote
+              href={`https://wa.me/262692421519?text=${encodeURIComponent("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}`}
+              target="_blank" rel="noopener noreferrer"
+            >
+              <span style={{ fontSize: 20 }}>📸</span>
               <CustomNoteText>
-                <strong>Une option n'est pas dans la liste ?</strong><br />
-                Toute demande personnalisée est possible — écrivez-nous directement sur WhatsApp.
+                <strong>Vous avez une photo d'une montre à reproduire ?</strong><br />
+                Envoyez-la directement sur WhatsApp — on peut reproduire presque n'importe quel modèle.
               </CustomNoteText>
             </CustomNote>
 

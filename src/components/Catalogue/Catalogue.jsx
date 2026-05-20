@@ -146,6 +146,50 @@ const PriceNote = styled.span`
   margin-top: 2px;
 `
 
+const SoldOutBar = styled.div`
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(12,10,9,0.82);
+  backdrop-filter: blur(8px);
+  padding: 7px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+`
+const SoldOutLabel = styled.span`
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: #EF4444;
+`
+const SoldOutSub = styled.span`
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #78716C; font-weight: 300;
+`
+
+const PhotoBanner = styled.a`
+  display: flex; align-items: center; gap: 18px;
+  margin-top: 56px;
+  padding: 24px 32px;
+  background: rgba(202,138,4,0.05);
+  border: 1px solid rgba(202,138,4,0.2);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 250ms ease, border-color 250ms ease;
+  &:hover { background: rgba(202,138,4,0.1); border-color: rgba(202,138,4,0.4); }
+  @media (max-width: 640px) { flex-direction: column; text-align: center; }
+`
+const PhotoBannerIcon = styled.span`
+  font-size: 36px; flex-shrink: 0;
+`
+const PhotoBannerText = styled.div`
+  display: flex; flex-direction: column; gap: 4px;
+`
+const PhotoBannerTitle = styled.span`
+  font-size: 15px; font-weight: 400; color: #F5F5F4; line-height: 1.3;
+  strong { color: #CA8A04; }
+`
+const PhotoBannerSub = styled.span`
+  font-size: 12px; color: #78716C; font-weight: 300;
+`
+
 const BtnCard = styled.a`
   font-size: 11px;
   font-weight: 500;
@@ -193,6 +237,10 @@ function WatchCard({ watch, delay }) {
       <ImgWrap $filter={watch.filter}>
         <img src={watch.img} alt={watch.name} loading="lazy" />
         <Tag>{watch.tag}</Tag>
+        <SoldOutBar>
+          <SoldOutLabel>Rupture de stock</SoldOutLabel>
+          <SoldOutSub>Sur commande</SoldOutSub>
+        </SoldOutBar>
       </ImgWrap>
       <CardBody>
         <CardTitle>{watch.name}</CardTitle>
@@ -225,6 +273,17 @@ export default function Catalogue() {
         <Grid>
           {watches.map((w, i) => <WatchCard key={w.name} watch={w} delay={i * 80} />)}
         </Grid>
+
+        <PhotoBanner
+          href={`https://wa.me/262692421519?text=${encodeURIComponent("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}`}
+          target="_blank" rel="noopener noreferrer"
+        >
+          <PhotoBannerIcon>📸</PhotoBannerIcon>
+          <PhotoBannerText>
+            <PhotoBannerTitle>Vous avez vu une montre qui vous plaît ? <strong>Envoyez-nous la photo sur WhatsApp</strong></PhotoBannerTitle>
+            <PhotoBannerSub>On peut reproduire presque n'importe quel modèle — même s'il ne figure pas dans notre catalogue.</PhotoBannerSub>
+          </PhotoBannerText>
+        </PhotoBanner>
       </Inner>
     </Section>
   )
