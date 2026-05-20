@@ -30,10 +30,15 @@
           { "id": "yacht-master", "nom": "Yacht Master" }
         ],
         "couleurs": [
-          { "id": "noir",  "nom": "Noir",            "hex": "#111111" },
-          { "id": "bleu",  "nom": "Bleu Marine",     "hex": "#1B2F6E" },
-          { "id": "vert",  "nom": "Vert Forêt",      "hex": "#1B4332" },
-          { "id": "gris",  "nom": "Gris Anthracite", "hex": "#3D3D3D" }
+          { "id": "noir",         "nom": "Noir",            "hex": "#111111" },
+          { "id": "bleu",         "nom": "Bleu Marine",     "hex": "#1B2F6E" },
+          { "id": "bleu-clair",   "nom": "Bleu Clair",      "hex": "#4A90D9" },
+          { "id": "turquoise",    "nom": "Turquoise",       "hex": "#2EBCB3" },
+          { "id": "vert",         "nom": "Vert Forêt",      "hex": "#1B4332" },
+          { "id": "gris",         "nom": "Gris Anthracite", "hex": "#3D3D3D" },
+          { "id": "blanc",        "nom": "Blanc",           "hex": "#F0EBE0" },
+          { "id": "champagne",    "nom": "Champagne",       "hex": "#C8A86B" },
+          { "id": "rose",         "nom": "Rose",            "hex": "#D4A0B0" }
         ],
         "styles": [
           { "id": "baton",  "nom": "Bâton" },
@@ -73,8 +78,11 @@
           { "id": "gmt", "nom": "GMT Standard" }
         ],
         "couleurs": [
-          { "id": "noir", "nom": "Noir", "hex": "#111111" },
-          { "id": "bleu", "nom": "Bleu", "hex": "#1B2F6E" }
+          { "id": "noir",       "nom": "Noir",            "hex": "#111111" },
+          { "id": "bleu",       "nom": "Bleu Marine",     "hex": "#1B2F6E" },
+          { "id": "vert",       "nom": "Vert",            "hex": "#2D5A3D" },
+          { "id": "gris",       "nom": "Gris Anthracite", "hex": "#3D3D3D" },
+          { "id": "champagne",  "nom": "Champagne",       "hex": "#C8A86B" }
         ],
         "styles": [
           { "id": "baton",  "nom": "Bâton" },
@@ -82,7 +90,7 @@
         ]
       },
       "aiguilles": [
-        { "id": "gmt",      "nom": "GMT" },
+        { "id": "gmt",      "nom": "GMT",      "mouvements": ["nh34"] },
         { "id": "mercedes", "nom": "Mercedes" },
         { "id": "baton",    "nom": "Bâton" }
       ],
@@ -206,20 +214,20 @@
         { "id": "acier", "nom": "Acier", "hex": "#B8BBBA" }
       ],
       "cadrans": {
-        "modeles": [
+        "modeles": [],
+        "couleurs": [
+          { "id": "blanc",       "nom": "Blanc",       "hex": "#F0EBE0" },
+          { "id": "noir",        "nom": "Noir",        "hex": "#111111" },
+          { "id": "champagne",   "nom": "Champagne",   "hex": "#C8A86B" },
+          { "id": "bleu-marine", "nom": "Bleu Marine", "hex": "#1B2F6E" },
+          { "id": "vert",        "nom": "Vert",        "hex": "#2D5A3D" },
+          { "id": "turquoise",   "nom": "Turquoise",   "hex": "#2EBCB3" },
+          { "id": "gris",        "nom": "Gris",        "hex": "#5A5A5A" }
+        ],
+        "styles": [
           { "id": "santos",   "nom": "Santos Standard" },
           { "id": "fuck95",   "nom": "F*ck 9.5" },
           { "id": "arabic",   "nom": "Arabic Dial" },
-          { "id": "skeleton", "nom": "Skeleton" }
-        ],
-        "couleurs": [
-          { "id": "blanc",     "nom": "Blanc",     "hex": "#F0EBE0" },
-          { "id": "noir",      "nom": "Noir",      "hex": "#111111" },
-          { "id": "champagne", "nom": "Champagne", "hex": "#C8A86B" }
-        ],
-        "styles": [
-          { "id": "santos",   "nom": "Santos" },
-          { "id": "arabic",   "nom": "Arabic" },
           { "id": "skeleton", "nom": "Skeleton" }
         ]
       },

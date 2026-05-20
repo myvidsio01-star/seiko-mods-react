@@ -278,11 +278,12 @@ const TextCard = styled.button`
   padding: 14px 12px;
   background: ${p => p.$selected ? 'rgba(202,138,4,0.08)' : '#1C1917'};
   border: 1px solid ${p => p.$selected ? '#CA8A04' : '#292524'};
-  border-radius: 10px; cursor: pointer; text-align: center;
-  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
-  &:hover {
+  border-radius: 10px; cursor: ${p => p.$disabled ? 'not-allowed' : 'pointer'}; text-align: center;
+  opacity: ${p => p.$disabled ? 0.38 : 1};
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease, opacity 200ms ease;
+  &:hover:not([disabled]) {
     border-color: ${p => p.$selected ? '#CA8A04' : 'rgba(202,138,4,0.35)'};
-    transform: translateY(-2px);
+    transform: ${p => p.$disabled ? 'none' : 'translateY(-2px)'};
   }
 `
 const CardName = styled.span`
@@ -406,6 +407,12 @@ export default function Configurator({ onCommander }) {
         next.bracelet      = null
         if (val) setImgKey(k => k + 1)
       }
+      if (key === 'mouvement') {
+        const aig = prev.aiguilles
+        if (aig?.mouvements && !aig.mouvements.includes(val?.id)) {
+          next.aiguilles = null
+        }
+      }
       return next
     })
     if (key === 'modele') setLivraison(null)
@@ -478,7 +485,6 @@ export default function Configurator({ onCommander }) {
                     </ModelThumb>
                     <ModelName>{m.nom}</ModelName>
                     <ModelPrix>{m.prix}</ModelPrix>
-                    {m.allchinabuy && <AlliChinaBuyBadge>⚠ AllChinaBuy</AlliChinaBuyBadge>}
                   </ModelCard>
                 ))}
               </ModelGrid>
@@ -571,7 +577,6 @@ export default function Configurator({ onCommander }) {
                         {m.id === modele.mouvementRecommande && <RecoBadge>Recommandé</RecoBadge>}
                       </CardName>
                       <CardSub>{m.desc}</CardSub>
-                      {m.allchinabuy && <AlliChinaBuyBadge>⚠ AllChinaBuy</AlliChinaBuyBadge>}
                     </TextCard>
                   ))}
                 </CardsGrid>
@@ -589,11 +594,21 @@ export default function Configurator({ onCommander }) {
               <CatSection>
                 <CatLabel>Style d'aiguilles</CatLabel>
                 <CardsGrid>
-                  {modele.aiguilles.map(a => (
-                    <TextCard key={a.id} $selected={sel.aiguilles?.id === a.id} onClick={() => set('aiguilles', a, 'bracelet')}>
-                      <CardName>{a.nom}</CardName>
-                    </TextCard>
-                  ))}
+                  {modele.aiguilles.map(a => {
+                    const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
+                    return (
+                      <TextCard
+                        key={a.id}
+                        $selected={sel.aiguilles?.id === a.id}
+                        $disabled={!compatible}
+                        disabled={!compatible}
+                        onClick={compatible ? () => set('aiguilles', a, 'bracelet') : undefined}
+                      >
+                        <CardName>{a.nom}</CardName>
+                        {!compatible && <CardSub>Requiert NH34</CardSub>}
+                      </TextCard>
+                    )
+                  })}
                 </CardsGrid>
               </CatSection>
             )}
@@ -677,12 +692,6 @@ export default function Configurator({ onCommander }) {
                   <DelivOptPrice $sel={livraison === 'envoi'}>+15 €</DelivOptPrice>
                 </DeliveryOpt>
               </DeliverySection>
-            )}
-
-            {modele?.allchinabuy && (
-              <AliBadge>
-                ⚠️ Ce modèle est commandé via <strong style={{color:'#FB923C'}}>AllChinaBuy</strong> (mouvement à pile refusé par Sugargoo).
-              </AliBadge>
             )}
 
             <SummaryList>
