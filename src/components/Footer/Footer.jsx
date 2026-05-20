@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Foot = styled.footer`
   border-top: 1px solid #1C1917;
-  padding: 48px 24px;
+  padding: 48px 24px 36px;
   background: #0C0A09;
 `
 
@@ -45,6 +45,22 @@ const Copy = styled.p`
   letter-spacing: 0.05em;
 `
 
+const LegalBar = styled.div`
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #1C1917;
+`
+
+const LegalText = styled.p`
+  font-size: 10px;
+  color: #3D3935;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  strong { color: #57534E; font-weight: 500; }
+`
+
 export default function Footer() {
   return (
     <Foot>
@@ -57,6 +73,15 @@ export default function Footer() {
         </Links>
         <Copy>© 2026 Seiko Mods — Artisanat Horloger</Copy>
       </Inner>
+
+      <LegalBar>
+        <LegalText>
+          <strong>Mentions légales &amp; transparence —</strong> Toutes les montres proposées sont des créations artisanales personnalisées (« homage watches »).
+          Le mouvement est un <strong>Seiko authentique</strong> (NH35, NH36, NH38, etc.) ; le boîtier, le cadran, le bracelet et les aiguilles sont des <strong>pièces aftermarket indépendantes</strong>,
+          sans lien avec les marques d'origine. Ces montres ne sont pas des produits Rolex, Patek Philippe, Audemars Piguet, Cartier ou tout autre fabricant officiel,
+          et Seiko Mods Réunion n'est affilié à aucune de ces marques. Les noms de modèles utilisés (Submariner, Nautilus, etc.) servent uniquement à décrire le style de la pièce.
+        </LegalText>
+      </LegalBar>
     </Foot>
   )
 }
