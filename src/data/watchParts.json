@@ -277,8 +277,7 @@
           { "id": "irise",         "nom": "Irisé",         "hex": "#C0B8D8", "img": "/images/daytona/cadran-irise.png" }
         ],
         "styles": [
-          { "id": "daytona", "nom": "Daytona" },
-          { "id": "arabic",  "nom": "Arabic" }
+          { "id": "daytona", "nom": "Daytona" }
         ]
       },
       "aiguilles": [
