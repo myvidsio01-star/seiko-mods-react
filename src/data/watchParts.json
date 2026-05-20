@@ -41,8 +41,7 @@
           { "id": "rose",         "nom": "Rose",             "hex": "#D4A0B0", "img": "/images/submariner/cadran-rose.png" }
         ],
         "styles": [
-          { "id": "baton",  "nom": "Bâton" },
-          { "id": "arabic", "nom": "Arabic" }
+          { "id": "baton", "nom": "Bâton" }
         ]
       },
       "aiguilles": [
@@ -111,12 +110,11 @@
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 48, "rx": 29, "ry": 29 },
       "boitiers": [
-        { "id": "acier",      "nom": "Acier",      "hex": "#B8BBBA", "img": "/images/royaloak/boitier-acier.png" },
-        { "id": "black",      "nom": "Black PVD",  "hex": "#222222", "img": "/images/royaloak/boitier-black.png" },
-        { "id": "or",         "nom": "Or Jaune",   "hex": "#D4A437", "img": "/images/royaloak/boitier-or.png" },
-        { "id": "or-rose",    "nom": "Or Rose",    "hex": "#C9856A", "img": "/images/royaloak/boitier-or-rose.png" },
-        { "id": "frosted",    "nom": "Frosted",    "hex": "#DADADA", "img": "/images/royaloak/boitier-frosted.png" },
-        { "id": "caoutchouc", "nom": "Caoutchouc", "hex": "#2D2D2D" }
+        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA", "img": "/images/royaloak/boitier-acier.png" },
+        { "id": "black",   "nom": "Black PVD", "hex": "#222222", "img": "/images/royaloak/boitier-black.png" },
+        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437", "img": "/images/royaloak/boitier-or.png" },
+        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A", "img": "/images/royaloak/boitier-or-rose.png" },
+        { "id": "frosted", "nom": "Frosted",   "hex": "#DADADA", "img": "/images/royaloak/boitier-frosted.png" }
       ],
       "cadrans": {
         "sections": [
@@ -232,17 +230,13 @@
         "catalogue": true,
         "note": "Précisez votre couleur et style de cadran sur WhatsApp",
         "categories": [
-          { "id": "romain",   "nom": "Romain",    "img": "/images/santos/cadran-romain.png",  "note": "6 coloris disponibles" },
-          { "id": "arabic",   "nom": "Arabic",    "img": "/images/santos/cadran-arabic.png",  "note": "7 coloris disponibles" },
-          { "id": "fuck95",   "nom": "F*ck 9-5",  "img": "/images/santos/cadran-fuck95.png",  "note": "Édition unique" },
-          { "id": "standard", "nom": "Standard",                                               "note": "Photo bientôt disponible" },
-          { "id": "skeleton", "nom": "Skeleton",                                               "note": "Photo bientôt disponible" }
+          { "id": "romain", "nom": "Romain",   "img": "/images/santos/cadran-romain.png", "note": "6 coloris disponibles" },
+          { "id": "arabic", "nom": "Arabic",   "img": "/images/santos/cadran-arabic.png", "note": "7 coloris disponibles" },
+          { "id": "fuck95", "nom": "F*ck 9-5", "img": "/images/santos/cadran-fuck95.png", "note": "Édition unique" }
         ]
       },
       "aiguilles": [
-        { "id": "santos-acier", "nom": "Santos Acier", "img": "/images/santos/aiguilles/santos-acier.png" },
-        { "id": "baton",        "nom": "Bâton" },
-        { "id": "mercedes",     "nom": "Mercedes" }
+        { "id": "santos-acier", "nom": "Santos Acier", "img": "/images/santos/aiguilles/santos-acier.png" }
       ],
       "bracelets": [
         { "id": "integre",    "nom": "Intégré Acier" },
@@ -297,8 +291,7 @@
         { "id": "jubilee-acier", "nom": "Jubilé Acier", "desc": "Bracelet acier 5 maillons", "img": "/images/daytona/bracelets/jubilee-acier.png" },
         { "id": "oyster-noir",   "nom": "Oyster Noir",  "desc": "Bracelet PVD noir",         "img": "/images/daytona/bracelets/oyster-noir.png" },
         { "id": "oyster-or",     "nom": "Oyster Or",    "desc": "Bracelet doré classique",   "img": "/images/daytona/bracelets/oyster-or.png" },
-        { "id": "jubilee-or",    "nom": "Jubilé Or",    "desc": "Bracelet doré 5 maillons",  "img": "/images/daytona/bracelets/jubilee-or.png" },
-        { "id": "caoutchouc",    "nom": "Caoutchouc",   "desc": "Bracelet plastique sport" }
+        { "id": "jubilee-or",    "nom": "Jubilé Or",    "desc": "Bracelet doré 5 maillons",  "img": "/images/daytona/bracelets/jubilee-or.png" }
       ]
     },
 
