@@ -33,7 +33,7 @@
         "couleurs": [
           { "id": "noir",         "nom": "Noir",            "hex": "#111111" },
           { "id": "bleu",         "nom": "Bleu Marine",     "hex": "#1B2F6E" },
-          { "id": "bleu-clair",   "nom": "Bleu Clair",      "hex": "#4A90D9" },
+          { "id": "bleu-clair",   "nom": "Bleu Clair",      "hex": "#4A90D9", "img": "/images/submariner/cadran-bleu-clair.png" },
           { "id": "turquoise",    "nom": "Turquoise",       "hex": "#2EBCB3" },
           { "id": "vert",         "nom": "Vert Forêt",      "hex": "#1B4332" },
           { "id": "gris",         "nom": "Gris Anthracite", "hex": "#3D3D3D" },

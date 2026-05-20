@@ -659,30 +659,27 @@ export default function Configurator({ onCommander }) {
           <WatchPreview>
             <ImageWrap>
               <ImgWithFallback key={imgKey} src={modele?.image} alt={modele?.nom} />
-              {sel.cadranCouleur && modele?.dialClip && (
-                <svg
-                  aria-hidden="true"
-                  style={{
-                    position: 'absolute',
-                    width: '85%',
-                    height: '85%',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    mixBlendMode: 'color',
-                    pointerEvents: 'none',
-                    overflow: 'hidden',
-                  }}
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <ellipse
-                    cx={modele.dialClip.cx}
-                    cy={modele.dialClip.cy}
-                    rx={modele.dialClip.rx}
-                    ry={modele.dialClip.ry}
-                    fill={sel.cadranCouleur.hex}
-                  />
+              {sel.cadranCouleur?.img && modele?.dialClip && (
+                <svg aria-hidden="true" style={{ position:'absolute', width:'85%', height:'85%', top:'50%', left:'50%', transform:'translate(-50%,-50%)', pointerEvents:'none', overflow:'hidden' }}
+                  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <clipPath id="dialShape">
+                      <ellipse cx={modele.dialClip.cx} cy={modele.dialClip.cy} rx={modele.dialClip.rx} ry={modele.dialClip.ry} />
+                    </clipPath>
+                  </defs>
+                  <image href={sel.cadranCouleur.img}
+                    x={modele.dialClip.cx - modele.dialClip.rx}
+                    y={modele.dialClip.cy - modele.dialClip.ry}
+                    width={modele.dialClip.rx * 2}
+                    height={modele.dialClip.ry * 2}
+                    clipPath="url(#dialShape)"
+                    preserveAspectRatio="xMidYMid meet" />
+                </svg>
+              )}
+              {sel.cadranCouleur && !sel.cadranCouleur.img && modele?.dialClip && (
+                <svg aria-hidden="true" style={{ position:'absolute', width:'85%', height:'85%', top:'50%', left:'50%', transform:'translate(-50%,-50%)', mixBlendMode:'color', pointerEvents:'none', overflow:'hidden' }}
+                  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                  <ellipse cx={modele.dialClip.cx} cy={modele.dialClip.cy} rx={modele.dialClip.rx} ry={modele.dialClip.ry} fill={sel.cadranCouleur.hex} />
                 </svg>
               )}
             </ImageWrap>
