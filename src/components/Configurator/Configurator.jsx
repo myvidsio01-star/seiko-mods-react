@@ -70,9 +70,9 @@ const ImageWrap = styled.div`
   width: 100%; max-width: 340px;
   aspect-ratio: 1;
   display: flex; align-items: center; justify-content: center;
-  background: #111110;
+  background: #242220;
   border-radius: 24px;
-  border: 1px solid #292524;
+  border: 1px solid #3D3A36;
   overflow: hidden;
   @media (max-width: 960px) { max-width: 260px; margin: 0 auto; }
 `
@@ -86,7 +86,7 @@ const WatchPlaceholder = styled.div`
   width: 85%; height: 85%;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 12px;
-  color: #57534E; font-size: 13px; font-weight: 300;
+  color: #A8A29E; font-size: 13px; font-weight: 300;
   text-align: center;
 `
 const PriceBadge = styled.div`
@@ -323,7 +323,7 @@ function ImgWithFallback({ src, alt, style }) {
   const [err, setErr] = useState(false)
   if (err || !src) return (
     <WatchPlaceholder>
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#292524" strokeWidth="1">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#78716C" strokeWidth="1">
         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
       Sélectionnez un modèle
