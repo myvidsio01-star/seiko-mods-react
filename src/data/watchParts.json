@@ -322,22 +322,12 @@
         { "id": "or",    "nom": "Or Jaune (Président)", "hex": "#D4A437" }
       ],
       "cadrans": {
-        "modeles": [],
-        "couleurs": [
-          { "id": "vert",        "nom": "Vert",          "hex": "#2D5A3D" },
-          { "id": "bleu-marine", "nom": "Bleu Marine",   "hex": "#1B2F6E" },
-          { "id": "anthracite",  "nom": "Gris Anthracite","hex": "#3D3D3D" },
-          { "id": "bleu-clair",  "nom": "Bleu Clair",    "hex": "#4A90D9" },
-          { "id": "gris",        "nom": "Gris",          "hex": "#5A5A5A" },
-          { "id": "blanc",       "nom": "Blanc",         "hex": "#F0EBE0" },
-          { "id": "champagne",   "nom": "Champagne",     "hex": "#C8A86B" },
-          { "id": "noir",        "nom": "Noir",          "hex": "#111111" },
-          { "id": "marron",      "nom": "Marron",        "hex": "#6B4226" }
-        ],
-        "styles": [
-          { "id": "baton",  "nom": "Bâton" },
-          { "id": "romain", "nom": "Romain" },
-          { "id": "arabic", "nom": "Arabic" }
+        "catalogue": true,
+        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
+        "categories": [
+          { "id": "baton",  "nom": "Bâton",  "img": "/images/daydate/cadran-baton.png",  "note": "7 coloris disponibles" },
+          { "id": "romain", "nom": "Romain", "img": "/images/daydate/cadran-romain.png", "note": "7 coloris disponibles" },
+          { "id": "arabic", "nom": "Arabic", "img": "/images/daydate/cadran-arabic.png", "note": "7 coloris disponibles" }
         ]
       },
       "aiguilles": [
