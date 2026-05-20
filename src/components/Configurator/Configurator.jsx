@@ -364,6 +364,30 @@ const AlliChinaBuyBadge = styled.span`
   font-size: 9px; color: #FB923C; margin-top: 2px;
 `
 
+/* Photo cards pour cadrans Royal Oak */
+const PhotoCardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+`
+const PhotoCard = styled.button`
+  padding: 10px 10px 12px;
+  background: ${p => p.$selected ? 'rgba(202,138,4,0.08)' : '#1C1917'};
+  border: 1px solid ${p => p.$selected ? '#CA8A04' : '#292524'};
+  border-radius: 10px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+  &:hover {
+    border-color: ${p => p.$selected ? '#CA8A04' : 'rgba(202,138,4,0.35)'};
+    transform: translateY(-2px);
+  }
+`
+const PhotoThumb = styled.img`
+  width: 72px; height: 72px;
+  object-fit: contain;
+  border-radius: 6px;
+`
+
 /* Boîtier swatch avec nom */
 const BoitierGrid = styled.div`
   display: flex; flex-wrap: wrap; gap: 16px;
@@ -453,7 +477,10 @@ export default function Configurator({ onCommander }) {
     ? modele.mouvements.map(id => ({ id, ...mvtDefs[id] })).filter(Boolean)
     : []
 
-  const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.aiguilles && sel.bracelet && livraison
+  const cadranSections  = modele?.cadrans.sections
+  const cadranCatalogue = modele?.cadrans.catalogue
+  const cadranComplete  = (cadranSections || cadranCatalogue) ? !!sel.cadranCouleur : !!(sel.cadranCouleur && sel.cadranStyle)
+  const isComplete = sel.modele && sel.boitier && cadranComplete && sel.mouvement && sel.aiguilles && sel.bracelet && livraison
 
   function buildWaUrl() {
     const livraisonText = livraison === 'remise'
@@ -464,7 +491,11 @@ export default function Configurator({ onCommander }) {
       '',
       `• Modèle : ${sel.modele?.nom}`,
       `• Boîtier : ${sel.boitier?.nom}`,
-      sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`,
+      cadranCatalogue
+        ? `• Cadran : ${sel.cadranCouleur?.nom} — couleur à préciser sur WhatsApp`
+        : cadranSections
+          ? `• Cadran : ${sel.cadranCouleur?.nom}${sel.cadranCouleur?.surcharge ? ` (+${sel.cadranCouleur.surcharge} €, NH70 requis)` : ''}`
+          : (sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`),
       `• Mouvement : ${sel.mouvement?.nom}`,
       `• Aiguilles : ${sel.aiguilles?.nom}`,
       `• Bracelet : ${sel.bracelet?.nom}`,
@@ -478,7 +509,7 @@ export default function Configurator({ onCommander }) {
   const tabDone = {
     modele:    !!sel.modele,
     boitier:   !!sel.boitier,
-    cadran:    !!(sel.cadranCouleur && sel.cadranStyle),
+    cadran:    cadranComplete,
     mouvement: !!sel.mouvement,
     aiguilles: !!sel.aiguilles,
     bracelet:  !!sel.bracelet,
@@ -494,7 +525,7 @@ export default function Configurator({ onCommander }) {
     switch (tab) {
       case 'modele':    return !!sel.modele
       case 'boitier':   return !!sel.boitier
-      case 'cadran':    return !!(sel.cadranCouleur && sel.cadranStyle)
+      case 'cadran':    return cadranComplete
       case 'mouvement': return !!sel.mouvement
       case 'aiguilles': return !!sel.aiguilles
       case 'bracelet':  return !!sel.bracelet
@@ -503,6 +534,12 @@ export default function Configurator({ onCommander }) {
   }
 
   function cadranSummary() {
+    if (!sel.cadranCouleur) return null
+    if (cadranSections) {
+      const extra = sel.cadranCouleur.surcharge ? ` +${sel.cadranCouleur.surcharge} €` : ''
+      return sel.cadranCouleur.nom + extra
+    }
+    if (cadranCatalogue) return sel.cadranCouleur.nom + ' — couleur à préciser'
     const parts = [sel.cadranCouleur?.nom, sel.cadranStyle?.nom, sel.cadranModele?.nom].filter(Boolean)
     return parts.length ? parts.join(' · ') : null
   }
@@ -569,53 +606,104 @@ export default function Configurator({ onCommander }) {
         )
       }
 
-      case 'cadran':
+      case 'cadran': {
+        if (!modele) return <TabContent><EmptyState>Sélectionnez d'abord un modèle.</EmptyState></TabContent>
+
+        if (cadranCatalogue) {
+          return (
+            <TabContent>
+              <CatSection>
+                <CatLabel>Style de cadran</CatLabel>
+                <p style={{ fontSize: 12, color: '#78716C', fontWeight: 300, lineHeight: 1.5, marginBottom: 4 }}>
+                  Sélectionnez un style — précisez la couleur souhaitée sur WhatsApp
+                </p>
+                <PhotoCardsGrid>
+                  {modele.cadrans.categories.map(cat => (
+                    <PhotoCard key={cat.id} $selected={sel.cadranCouleur?.id === cat.id} onClick={() => set('cadranCouleur', cat)}>
+                      {cat.img && <PhotoThumb src={cat.img} alt={cat.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                      <CardName style={{ fontSize: 10 }}>{cat.nom}</CardName>
+                      {cat.note && <CardSub>{cat.note}</CardSub>}
+                    </PhotoCard>
+                  ))}
+                </PhotoCardsGrid>
+              </CatSection>
+            </TabContent>
+          )
+        }
+
+        if (cadranSections) {
+          return (
+            <TabContent>
+              {cadranSections.map(section => (
+                <CatSection key={section.id}>
+                  <CatLabel>
+                    {section.label}
+                    {section.surcharge && (
+                      <span style={{ fontSize: '9px', color: '#FB923C', letterSpacing: '0.05em', textTransform: 'none', fontWeight: 400, marginLeft: 8 }}>
+                        +{section.surcharge} € — mouvement NH70 requis
+                      </span>
+                    )}
+                  </CatLabel>
+                  <PhotoCardsGrid>
+                    {section.couleurs.map(c => {
+                      const fullC = { ...c, surcharge: section.surcharge, requiredMouvement: section.requiredMouvement }
+                      return (
+                        <PhotoCard key={c.id} $selected={sel.cadranCouleur?.id === c.id} onClick={() => set('cadranCouleur', fullC)}>
+                          {c.img && <PhotoThumb src={c.img} alt={c.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                          <CardName style={{ fontSize: 10 }}>{c.nom}</CardName>
+                        </PhotoCard>
+                      )
+                    })}
+                  </PhotoCardsGrid>
+                </CatSection>
+              ))}
+            </TabContent>
+          )
+        }
+
         return (
           <TabContent>
-            {!modele ? (
-              <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
-            ) : (
-              <>
-                {modele.cadrans.modeles.length > 0 && (
-                  <CatSection>
-                    <CatLabel>Modèle de cadran <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— optionnel</span></CatLabel>
-                    <CardsGrid>
-                      {modele.cadrans.modeles.map(c => (
-                        <TextCard key={c.id} $selected={sel.cadranModele?.id === c.id} onClick={() => set('cadranModele', c)}>
-                          <CardName>{c.nom}</CardName>
-                        </TextCard>
-                      ))}
-                    </CardsGrid>
-                  </CatSection>
-                )}
-
+            <>
+              {modele.cadrans.modeles?.length > 0 && (
                 <CatSection>
-                  <CatLabel>Couleur du cadran</CatLabel>
-                  <SwatchGrid>
-                    {modele.cadrans.couleurs.map(c => (
-                      <Swatch key={c.id} $hex={c.hex} $selected={sel.cadranCouleur?.id === c.id}
-                        onClick={() => set('cadranCouleur', c)}>
-                        <SwatchTooltip>{c.nom}</SwatchTooltip>
-                      </Swatch>
-                    ))}
-                  </SwatchGrid>
-                </CatSection>
-
-                <CatSection>
-                  <CatLabel>Style du cadran</CatLabel>
+                  <CatLabel>Modèle de cadran <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— optionnel</span></CatLabel>
                   <CardsGrid>
-                    {modele.cadrans.styles.map(s => (
-                      <TextCard key={s.id} $selected={sel.cadranStyle?.id === s.id}
-                        onClick={() => set('cadranStyle', s)}>
-                        <CardName>{s.nom}</CardName>
+                    {modele.cadrans.modeles.map(c => (
+                      <TextCard key={c.id} $selected={sel.cadranModele?.id === c.id} onClick={() => set('cadranModele', c)}>
+                        <CardName>{c.nom}</CardName>
                       </TextCard>
                     ))}
                   </CardsGrid>
                 </CatSection>
-              </>
-            )}
+              )}
+
+              <CatSection>
+                <CatLabel>Couleur du cadran</CatLabel>
+                <SwatchGrid>
+                  {modele.cadrans.couleurs.map(c => (
+                    <Swatch key={c.id} $hex={c.hex} $selected={sel.cadranCouleur?.id === c.id}
+                      onClick={() => set('cadranCouleur', c)}>
+                      <SwatchTooltip>{c.nom}</SwatchTooltip>
+                    </Swatch>
+                  ))}
+                </SwatchGrid>
+              </CatSection>
+
+              <CatSection>
+                <CatLabel>Style du cadran</CatLabel>
+                <CardsGrid>
+                  {modele.cadrans.styles.map(s => (
+                    <TextCard key={s.id} $selected={sel.cadranStyle?.id === s.id}
+                      onClick={() => set('cadranStyle', s)}>
+                      <CardName>{s.nom}</CardName>
+                    </TextCard>
+                  ))}
+                </CardsGrid>
+              </CatSection>
+            </>
           </TabContent>
         )
+      }
 
       case 'mouvement':
         return (
@@ -726,6 +814,7 @@ export default function Configurator({ onCommander }) {
                 <PriceLabel>Prix indicatif</PriceLabel>
                 <PriceValue>
                   {modele.prix}
+                  {sel.cadranCouleur?.surcharge && <span style={{fontSize:16,color:'#CA8A04'}}> + {sel.cadranCouleur.surcharge} €</span>}
                   {livraison === 'envoi' && <span style={{fontSize:16,color:'#CA8A04'}}> + 15 €</span>}
                 </PriceValue>
               </PriceBadge>
