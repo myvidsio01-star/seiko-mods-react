@@ -177,7 +177,7 @@ export default function Hero() {
 
       <Content>
         <Eyebrow>Artisanat Horloger Premium</Eyebrow>
-        <Title>Chaque montre<br />est une <span>œuvre</span></Title>
+        <Title>Chaque montre<br />est <span>unique</span></Title>
         <Sub>Submariner, Royal Oak, Daytona et plus — faits à la main.<br />Livré directement chez toi à La Réunion.</Sub>
         <CTARow>
           <Btn href="#catalogue" $primary>Voir les montres</Btn>

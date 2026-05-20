@@ -104,11 +104,11 @@ export default function Contact() {
           </InfoCard>
           <InfoCard>
             <InfoLabel>Livraison</InfoLabel>
-            <InfoValue>Gratuite à Saint-Denis · 10 € reste de La Réunion</InfoValue>
+            <InfoValue>Gratuite à Saint-Denis et La Possession · 15 € toute La Réunion</InfoValue>
           </InfoCard>
           <InfoCard>
             <InfoLabel>Délai</InfoLabel>
-            <InfoValue>3 à 4 semaines après confirmation</InfoValue>
+            <InfoValue>4 à 6 semaines après confirmation</InfoValue>
           </InfoCard>
         </Grid>
       </Inner>

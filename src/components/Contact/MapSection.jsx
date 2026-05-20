@@ -94,12 +94,12 @@ export default function MapSection() {
               <div className="label">Livraison</div>
               <DeliveryBadge>
                 <DeliveryLine>
-                  <span className="zone">Saint-Denis</span>
+                  <span className="zone">Saint-Denis · La Possession</span>
                   <span className="prix">Gratuit</span>
                 </DeliveryLine>
                 <DeliveryLine>
-                  <span className="zone">Reste de La Réunion</span>
-                  <span className="prix">10 €</span>
+                  <span className="zone">Toute La Réunion</span>
+                  <span className="prix">15 €</span>
                 </DeliveryLine>
               </DeliveryBadge>
               <div className="note">Livraison uniquement à La Réunion</div>
@@ -117,13 +117,13 @@ export default function MapSection() {
 
             <InfoBlock>
               <div className="label">Délai de fabrication</div>
-              <div className="value">3 à 4 semaines<br />après confirmation de commande</div>
+              <div className="value">4 à 6 semaines<br />après confirmation de commande</div>
             </InfoBlock>
 
             <InfoBlock>
-              <div className="label">Zone de service</div>
-              <div className="value">La Réunion uniquement</div>
-              <div className="note">Vente 100 % en ligne</div>
+              <div className="label">Inclus avec chaque montre</div>
+              <div className="value">Boîte de présentation offerte</div>
+              <div className="note">Livraison uniquement à La Réunion</div>
             </InfoBlock>
           </Info>
 

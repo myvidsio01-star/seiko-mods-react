@@ -76,10 +76,10 @@ export default function Footer() {
 
       <LegalBar>
         <LegalText>
-          <strong>Mentions légales &amp; transparence —</strong> Toutes les montres proposées sont des créations artisanales personnalisées (« homage watches »).
-          Le mouvement est un <strong>Seiko authentique</strong> (NH35, NH36, NH38, etc.) ; le boîtier, le cadran, le bracelet et les aiguilles sont des <strong>pièces aftermarket indépendantes</strong>,
-          sans lien avec les marques d'origine. Ces montres ne sont pas des produits Rolex, Patek Philippe, Audemars Piguet, Cartier ou tout autre fabricant officiel,
-          et Seiko Mods Réunion n'est affilié à aucune de ces marques. Les noms de modèles utilisés (Submariner, Nautilus, etc.) servent uniquement à décrire le style de la pièce.
+          <strong>Mentions légales &amp; transparence —</strong> Seiko Mods Réunion crée des montres artisanales personnalisées sur base de <strong>mouvements Seiko authentiques</strong> (NH35, NH36, NH38, NH34, etc.).
+          Le boîtier, le cadran, le bracelet et les aiguilles sont des <strong>pièces de modification (« mods ») aftermarket indépendantes</strong>, sélectionnées et assemblées à la main — sans lien avec les marques d'origine.
+          Ces montres ne sont pas des produits Rolex, Patek Philippe, Audemars Piguet, Cartier ou tout autre fabricant officiel, et Seiko Mods Réunion n'est affilié à aucune de ces marques.
+          Les noms de modèles (Submariner, Nautilus, etc.) servent uniquement à décrire le style inspiré de la pièce.
         </LegalText>
       </LegalBar>
     </Foot>

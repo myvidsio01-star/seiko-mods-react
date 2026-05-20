@@ -907,7 +907,7 @@ export default function Configurator({ onCommander }) {
                   <DeliveryOpt $sel={livraison === 'envoi'} onClick={() => setLivraison('envoi')}>
                     <DelivOptLeft>
                       <DelivOptName>Envoi postal</DelivOptName>
-                      <DelivOptSub>Livraison à domicile · Réunion</DelivOptSub>
+                      <DelivOptSub>Livraison à domicile · Toute La Réunion</DelivOptSub>
                     </DelivOptLeft>
                     <DelivOptPrice $sel={livraison === 'envoi'}>+15 €</DelivOptPrice>
                   </DeliveryOpt>
