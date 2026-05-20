@@ -20,10 +20,10 @@
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA" },
-        { "id": "black",   "nom": "Black PVD", "hex": "#222222" },
-        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A" },
-        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437" }
+        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA", "img": "/images/submariner/boitier-acier.png" },
+        { "id": "black",   "nom": "Black PVD", "hex": "#222222", "img": "/images/submariner/boitier-black.png" },
+        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A", "img": "/images/submariner/boitier-or-rose.png" },
+        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437", "img": "/images/submariner/boitier-or-jaune.png" }
       ],
       "cadrans": {
         "modeles": [
