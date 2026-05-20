@@ -765,6 +765,7 @@ export default function Configurator({ onCommander }) {
                         >
                           {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
                           <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
+                          {a.recommande && <RecoBadge>Recommandé</RecoBadge>}
                           {!compatible && <CardSub>Requiert NH34</CardSub>}
                         </PhotoCard>
                       )

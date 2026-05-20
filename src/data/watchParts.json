@@ -92,9 +92,13 @@
         ]
       },
       "aiguilles": [
-        { "id": "gmt",      "nom": "GMT",      "mouvements": ["nh34"] },
-        { "id": "mercedes", "nom": "Mercedes" },
-        { "id": "baton",    "nom": "Bâton" }
+        { "id": "gmt-acier",      "nom": "GMT Acier",      "img": "/images/gmt/aiguilles/gmt-acier.png",      "recommande": true },
+        { "id": "gmt-acier-bleu", "nom": "GMT Acier Bleu", "img": "/images/gmt/aiguilles/gmt-acier-bleu.png" },
+        { "id": "gmt-acier-vert", "nom": "GMT Acier Vert", "img": "/images/gmt/aiguilles/gmt-acier-vert.png" },
+        { "id": "gmt-or",         "nom": "GMT Or",         "img": "/images/gmt/aiguilles/gmt-or.png" },
+        { "id": "gmt-or-rose",    "nom": "GMT Or Rose",    "img": "/images/gmt/aiguilles/gmt-or-rose.png" },
+        { "id": "gmt-acier-2",    "nom": "GMT Acier II",   "img": "/images/gmt/aiguilles/gmt-acier-2.png",    "recommande": true },
+        { "id": "gmt-noir",       "nom": "GMT Noir",       "img": "/images/gmt/aiguilles/gmt-noir.png" }
       ],
       "bracelets": [
         { "id": "inclus", "nom": "Inclus avec le boîtier", "note": "Le bracelet est compris dans votre choix de boîtier" }
