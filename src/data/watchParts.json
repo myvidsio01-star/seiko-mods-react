@@ -48,12 +48,9 @@
         ]
       },
       "aiguilles": [
-        { "id": "mercedes",       "nom": "Mercedes" },
-        { "id": "baton",          "nom": "Bâton" },
-        { "id": "dauphine",       "nom": "Dauphine" },
-        { "id": "flocons-neige",  "nom": "Flocons de neige" },
-        { "id": "cathedrale",     "nom": "Cathédrale" },
-        { "id": "aquanaut",       "nom": "Aquanaut" }
+        { "id": "mercedes-noir",  "nom": "Mercedes Noir",  "img": "/images/submariner/aiguilles/mercedes-noir.png" },
+        { "id": "mercedes-acier", "nom": "Mercedes Acier", "img": "/images/submariner/aiguilles/mercedes-acier.png" },
+        { "id": "mercedes-or",    "nom": "Mercedes Or",    "img": "/images/submariner/aiguilles/mercedes-or.png" }
       ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
