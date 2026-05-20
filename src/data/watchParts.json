@@ -331,7 +331,9 @@
         ]
       },
       "aiguilles": [
-        { "id": "daydate-8285", "nom": "Day-Date (8285)" }
+        { "id": "daydate-acier",   "nom": "Day-Date Acier",   "img": "/images/daydate/aiguilles/daydate-acier.png" },
+        { "id": "daydate-or",      "nom": "Day-Date Or",      "img": "/images/daydate/aiguilles/daydate-or.png" },
+        { "id": "daydate-or-rose", "nom": "Day-Date Or Rose", "img": "/images/daydate/aiguilles/daydate-or-rose.png" }
       ],
       "bracelets": [
         { "id": "president", "nom": "Président" },
