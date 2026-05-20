@@ -203,10 +203,10 @@
         ]
       },
       "aiguilles": [
-        { "id": "nautilus",  "nom": "Nautilus" },
-        { "id": "aquanaut",  "nom": "Aquanaut" },
-        { "id": "baton",     "nom": "Bâton" },
-        { "id": "mercedes",  "nom": "Mercedes" }
+        { "id": "baton-noir",    "nom": "Bâton Noir",    "img": "/images/nautilus/aiguilles/baton-noir.png" },
+        { "id": "baton-acier",   "nom": "Bâton Acier",   "img": "/images/nautilus/aiguilles/baton-acier.png" },
+        { "id": "baton-or",      "nom": "Bâton Or",      "img": "/images/nautilus/aiguilles/baton-or.png" },
+        { "id": "baton-or-rose", "nom": "Bâton Or Rose", "img": "/images/nautilus/aiguilles/baton-or-rose.png" }
       ],
       "bracelets": [
         { "id": "integre", "nom": "Intégré Acier" },

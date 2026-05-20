@@ -729,7 +729,8 @@ export default function Configurator({ onCommander }) {
           </TabContent>
         )
 
-      case 'aiguilles':
+      case 'aiguilles': {
+        const hasAigPhotos = modele?.aiguilles.some(a => a.img)
         return (
           <TabContent>
             {!modele ? (
@@ -737,27 +738,48 @@ export default function Configurator({ onCommander }) {
             ) : (
               <CatSection>
                 <CatLabel>Style d'aiguilles</CatLabel>
-                <CardsGrid>
-                  {modele.aiguilles.map(a => {
-                    const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
-                    return (
-                      <TextCard
-                        key={a.id}
-                        $selected={sel.aiguilles?.id === a.id}
-                        $disabled={!compatible}
-                        disabled={!compatible}
-                        onClick={compatible ? () => set('aiguilles', a) : undefined}
-                      >
-                        <CardName>{a.nom}</CardName>
-                        {!compatible && <CardSub>Requiert NH34</CardSub>}
-                      </TextCard>
-                    )
-                  })}
-                </CardsGrid>
+                {hasAigPhotos ? (
+                  <PhotoCardsGrid>
+                    {modele.aiguilles.map(a => {
+                      const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
+                      return (
+                        <PhotoCard
+                          key={a.id}
+                          $selected={sel.aiguilles?.id === a.id}
+                          style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
+                          onClick={compatible ? () => set('aiguilles', a) : undefined}
+                        >
+                          {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                          <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
+                          {!compatible && <CardSub>Requiert NH34</CardSub>}
+                        </PhotoCard>
+                      )
+                    })}
+                  </PhotoCardsGrid>
+                ) : (
+                  <CardsGrid>
+                    {modele.aiguilles.map(a => {
+                      const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
+                      return (
+                        <TextCard
+                          key={a.id}
+                          $selected={sel.aiguilles?.id === a.id}
+                          $disabled={!compatible}
+                          disabled={!compatible}
+                          onClick={compatible ? () => set('aiguilles', a) : undefined}
+                        >
+                          <CardName>{a.nom}</CardName>
+                          {!compatible && <CardSub>Requiert NH34</CardSub>}
+                        </TextCard>
+                      )
+                    })}
+                  </CardsGrid>
+                )}
               </CatSection>
             )}
           </TabContent>
         )
+      }
 
       case 'bracelet':
         return (
