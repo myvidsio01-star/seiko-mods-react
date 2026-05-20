@@ -191,6 +191,15 @@ const DelivOptPrice = styled.span`
 const SelectionPanel = styled.div`
   display: flex; flex-direction: column;
 `
+const OrderDivider = styled.div`
+  height: 1px;
+  background: #292524;
+  margin: 40px 0 0;
+`
+const OrderSection = styled.div`
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 32px 0 0;
+`
 const TabsRow = styled.div`
   display: flex;
   border-bottom: 1px solid #292524;
@@ -662,7 +671,7 @@ export default function Configurator({ onCommander }) {
                     transform: 'translate(-50%, -50%)',
                     mixBlendMode: 'color',
                     pointerEvents: 'none',
-                    overflow: 'visible',
+                    overflow: 'hidden',
                   }}
                   viewBox="0 0 100 100"
                   preserveAspectRatio="xMidYMid meet"
@@ -681,29 +690,11 @@ export default function Configurator({ onCommander }) {
             {modele && (
               <PriceBadge>
                 <PriceLabel>Prix indicatif</PriceLabel>
-                <PriceValue>{modele.prix}</PriceValue>
-                {livraison === 'envoi' && <PriceNote style={{color:'#CA8A04'}}>+ 15 € d'envoi</PriceNote>}
+                <PriceValue>
+                  {modele.prix}
+                  {livraison === 'envoi' && <span style={{fontSize:16,color:'#CA8A04'}}> + 15 €</span>}
+                </PriceValue>
               </PriceBadge>
-            )}
-
-            {modele && (
-              <DeliverySection>
-                <DeliveryTitle>Mode de remise</DeliveryTitle>
-                <DeliveryOpt $sel={livraison === 'remise'} onClick={() => setLivraison('remise')}>
-                  <DelivOptLeft>
-                    <DelivOptName>Remise en main propre</DelivOptName>
-                    <DelivOptSub>Saint-Denis · La Possession</DelivOptSub>
-                  </DelivOptLeft>
-                  <DelivOptPrice $sel={livraison === 'remise'}>Gratuit</DelivOptPrice>
-                </DeliveryOpt>
-                <DeliveryOpt $sel={livraison === 'envoi'} onClick={() => setLivraison('envoi')}>
-                  <DelivOptLeft>
-                    <DelivOptName>Envoi postal</DelivOptName>
-                    <DelivOptSub>Livraison à domicile · Réunion</DelivOptSub>
-                  </DelivOptLeft>
-                  <DelivOptPrice $sel={livraison === 'envoi'}>+15 €</DelivOptPrice>
-                </DeliveryOpt>
-              </DeliverySection>
             )}
 
             <SummaryList>
@@ -714,17 +705,6 @@ export default function Configurator({ onCommander }) {
                 </SummaryItem>
               ))}
             </SummaryList>
-
-            <CommanderBtn
-              as={isComplete ? 'a' : 'button'}
-              href={isComplete ? buildWaUrl() : undefined}
-              target={isComplete ? '_blank' : undefined}
-              rel={isComplete ? 'noopener noreferrer' : undefined}
-              disabled={!isComplete}
-              style={isComplete ? { background: '#25D366', textDecoration: 'none' } : {}}
-            >
-              {isComplete ? '💬 Envoyer sur WhatsApp' : 'Complétez la sélection'}
-            </CommanderBtn>
           </WatchPreview>
 
           <SelectionPanel>
@@ -737,6 +717,41 @@ export default function Configurator({ onCommander }) {
               ))}
             </TabsRow>
             {renderTab()}
+
+            {sel.bracelet && (
+              <>
+                <OrderDivider />
+                <OrderSection>
+                  <DeliveryTitle>Mode de remise</DeliveryTitle>
+                  <DeliveryOpt $sel={livraison === 'remise'} onClick={() => setLivraison('remise')}>
+                    <DelivOptLeft>
+                      <DelivOptName>Remise en main propre</DelivOptName>
+                      <DelivOptSub>Saint-Denis · La Possession</DelivOptSub>
+                    </DelivOptLeft>
+                    <DelivOptPrice $sel={livraison === 'remise'}>Gratuit</DelivOptPrice>
+                  </DeliveryOpt>
+                  <DeliveryOpt $sel={livraison === 'envoi'} onClick={() => setLivraison('envoi')}>
+                    <DelivOptLeft>
+                      <DelivOptName>Envoi postal</DelivOptName>
+                      <DelivOptSub>Livraison à domicile · Réunion</DelivOptSub>
+                    </DelivOptLeft>
+                    <DelivOptPrice $sel={livraison === 'envoi'}>+15 €</DelivOptPrice>
+                  </DeliveryOpt>
+
+                  {isComplete && (
+                    <CommanderBtn
+                      as="a"
+                      href={buildWaUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ background: '#25D366', textDecoration: 'none', maxWidth: 'none' }}
+                    >
+                      💬 Passer la commande sur WhatsApp
+                    </CommanderBtn>
+                  )}
+                </OrderSection>
+              </>
+            )}
           </SelectionPanel>
         </Layout>
       </Inner>
