@@ -240,9 +240,9 @@
         ]
       },
       "aiguilles": [
-        { "id": "santos",   "nom": "Santos" },
-        { "id": "baton",    "nom": "Bâton" },
-        { "id": "mercedes", "nom": "Mercedes" }
+        { "id": "santos-acier", "nom": "Santos Acier", "img": "/images/santos/aiguilles/santos-acier.png" },
+        { "id": "baton",        "nom": "Bâton" },
+        { "id": "mercedes",     "nom": "Mercedes" }
       ],
       "bracelets": [
         { "id": "integre",    "nom": "Intégré Acier" },
