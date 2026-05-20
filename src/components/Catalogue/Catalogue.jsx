@@ -200,7 +200,6 @@ function WatchCard({ watch, delay }) {
         <CardFooter>
           <div>
             <Price>{watch.price}</Price>
-            <PriceNote>Prix de départ</PriceNote>
           </div>
           <BtnCard
             href={`https://wa.me/262692421519?text=${encodeURIComponent(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}`}
