@@ -48,9 +48,12 @@
         ]
       },
       "aiguilles": [
-        { "id": "mercedes-noir",  "nom": "Mercedes Noir",  "img": "/images/submariner/aiguilles/mercedes-noir.png" },
-        { "id": "mercedes-acier", "nom": "Mercedes Acier", "img": "/images/submariner/aiguilles/mercedes-acier.png" },
-        { "id": "mercedes-or",    "nom": "Mercedes Or",    "img": "/images/submariner/aiguilles/mercedes-or.png" }
+        { "id": "mercedes-noir",  "nom": "Mercedes Noir",   "img": "/images/submariner/aiguilles/mercedes-noir.png" },
+        { "id": "mercedes-acier", "nom": "Mercedes Acier",  "img": "/images/submariner/aiguilles/mercedes-acier.png" },
+        { "id": "mercedes-or",    "nom": "Mercedes Or",     "img": "/images/submariner/aiguilles/mercedes-or.png" },
+        { "id": "baton-or",       "nom": "Bâton Or",        "img": "/images/submariner/aiguilles/baton-or.png" },
+        { "id": "baton-acier",    "nom": "Bâton Acier",     "img": "/images/submariner/aiguilles/baton-acier.png" },
+        { "id": "baton-acier-2",  "nom": "Bâton Acier II",  "img": "/images/submariner/aiguilles/baton-acier-2.png" }
       ],
       "bracelets": [
         { "id": "oyster",  "nom": "Oyster Acier" },
