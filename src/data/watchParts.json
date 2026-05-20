@@ -229,21 +229,14 @@
         { "id": "acier", "nom": "Acier", "hex": "#B8BBBA" }
       ],
       "cadrans": {
-        "modeles": [],
-        "couleurs": [
-          { "id": "blanc",       "nom": "Blanc",       "hex": "#F0EBE0" },
-          { "id": "noir",        "nom": "Noir",        "hex": "#111111" },
-          { "id": "champagne",   "nom": "Champagne",   "hex": "#C8A86B" },
-          { "id": "bleu-marine", "nom": "Bleu Marine", "hex": "#1B2F6E" },
-          { "id": "vert",        "nom": "Vert",        "hex": "#2D5A3D" },
-          { "id": "turquoise",   "nom": "Turquoise",   "hex": "#2EBCB3" },
-          { "id": "gris",        "nom": "Gris",        "hex": "#5A5A5A" }
-        ],
-        "styles": [
-          { "id": "santos",   "nom": "Santos Standard" },
-          { "id": "fuck95",   "nom": "F*ck 9.5" },
-          { "id": "arabic",   "nom": "Arabic Dial" },
-          { "id": "skeleton", "nom": "Skeleton" }
+        "catalogue": true,
+        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
+        "categories": [
+          { "id": "romain",   "nom": "Romain",    "img": "/images/santos/cadran-romain.png",  "note": "6 coloris disponibles" },
+          { "id": "arabic",   "nom": "Arabic",    "img": "/images/santos/cadran-arabic.png",  "note": "7 coloris disponibles" },
+          { "id": "fuck95",   "nom": "F*ck 9-5",  "img": "/images/santos/cadran-fuck95.png",  "note": "Édition unique" },
+          { "id": "standard", "nom": "Standard",                                               "note": "Photo bientôt disponible" },
+          { "id": "skeleton", "nom": "Skeleton",                                               "note": "Photo bientôt disponible" }
         ]
       },
       "aiguilles": [
