@@ -96,7 +96,7 @@
     {
       "id": "royaloak",
       "nom": "Royal Oak",
-      "prix": "À partir de 270 €",
+      "prix": "À partir de 250 €",
       "image": "/images/watch-royaloak.png",
       "mouvements": ["nh35", "nh36", "nh38", "nh70"],
       "mouvementRecommande": "nh35",
@@ -109,13 +109,7 @@
         { "id": "caoutchouc", "nom": "Caoutchouc", "hex": "#2D2D2D" }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "baton",           "nom": "Bâton" },
-          { "id": "baton-lisse",     "nom": "Bâton Lisse" },
-          { "id": "baton-aiguilles", "nom": "Bâton + Aiguilles" },
-          { "id": "skeleton",        "nom": "Skeleton" },
-          { "id": "arabic",          "nom": "Arabic Dial" }
-        ],
+        "modeles": [],
         "couleurs": [
           { "id": "bleu-royal",  "nom": "Bleu Royal",  "hex": "#1B3A7A" },
           { "id": "bleu-clair",  "nom": "Bleu Clair",  "hex": "#4A90D9" },
@@ -155,7 +149,7 @@
     {
       "id": "nautilus",
       "nom": "Nautilus",
-      "prix": "À partir de 290 €",
+      "prix": "À partir de 250 €",
       "image": "/images/watch-nautilus.png",
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
@@ -165,13 +159,7 @@
         { "id": "or-rose", "nom": "Or Rose", "hex": "#C9856A" }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "open-heart", "nom": "Open Heart" },
-          { "id": "baton",      "nom": "Bâton" },
-          { "id": "arabic",     "nom": "Arabic Dial" },
-          { "id": "nacre",      "nom": "Open Heart Nacré" },
-          { "id": "diamant",    "nom": "Diamant" }
-        ],
+        "modeles": [],
         "couleurs": [
           { "id": "bleu-marine",  "nom": "Bleu Marine",  "hex": "#1B2F6E" },
           { "id": "bleu-clair",   "nom": "Bleu Clair",   "hex": "#4A90D9" },
@@ -210,7 +198,7 @@
     {
       "id": "santos",
       "nom": "Santos",
-      "prix": "À partir de 270 €",
+      "prix": "À partir de 240 €",
       "image": "/images/watch-santos.png",
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
@@ -265,10 +253,7 @@
         { "id": "diamant-rouge","nom": "Diamant Rouge","hex": "#8B1A1A" }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "daytona", "nom": "Daytona" },
-          { "id": "arabic",  "nom": "Arabic Dial" }
-        ],
+        "modeles": [],
         "couleurs": [
           { "id": "blanc",       "nom": "Blanc Panda",  "hex": "#F0EBE0" },
           { "id": "noir",        "nom": "Noir",         "hex": "#111111" },
@@ -297,7 +282,7 @@
     {
       "id": "daydate",
       "nom": "Day-Date",
-      "prix": "À partir de 270 €",
+      "prix": "À partir de 250 €",
       "image": "/images/watch-daydate.png",
       "mouvements": ["miyota8285"],
       "mouvementRecommande": "miyota8285",
@@ -306,11 +291,7 @@
         { "id": "or",    "nom": "Or Jaune (Président)", "hex": "#D4A437" }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "baton",   "nom": "Bâton" },
-          { "id": "romain",  "nom": "Romain" },
-          { "id": "arabic",  "nom": "Arabic Dial" }
-        ],
+        "modeles": [],
         "couleurs": [
           { "id": "vert",        "nom": "Vert",          "hex": "#2D5A3D" },
           { "id": "bleu-marine", "nom": "Bleu Marine",   "hex": "#1B2F6E" },

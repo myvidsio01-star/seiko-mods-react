@@ -67,6 +67,7 @@ const WatchPreview = styled.div`
   @media (max-width: 960px) { position: static; }
 `
 const ImageWrap = styled.div`
+  position: relative;
   width: 100%; max-width: 340px;
   aspect-ratio: 1;
   display: flex; align-items: center; justify-content: center;
@@ -74,7 +75,20 @@ const ImageWrap = styled.div`
   border-radius: 24px;
   border: 1px solid #3D3A36;
   overflow: hidden;
+  isolation: isolate;
   @media (max-width: 960px) { max-width: 260px; margin: 0 auto; }
+`
+const CaseColorOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, ${p => p.$hex}66 60%, ${p => p.$hex}99 86%);
+  pointer-events: none;
+`
+const DialColorOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 48%, ${p => p.$hex}EE 0%, ${p => p.$hex}99 28%, transparent 52%);
+  pointer-events: none;
 `
 const WatchImg = styled.img`
   width: 85%; height: 85%;
@@ -151,6 +165,38 @@ const CommanderBtn = styled.button`
   }
   &:disabled { opacity: 0.35; cursor: not-allowed; }
   @media (max-width: 960px) { max-width: 260px; }
+`
+const DeliverySection = styled.div`
+  width: 100%; max-width: 340px;
+  display: flex; flex-direction: column; gap: 8px;
+  @media (max-width: 960px) { max-width: 260px; }
+`
+const DeliveryTitle = styled.p`
+  font-size: 10px; font-weight: 500; letter-spacing: 0.3em;
+  text-transform: uppercase; color: #57534E; margin-bottom: 2px;
+`
+const DeliveryOpt = styled.button`
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 16px;
+  background: ${p => p.$sel ? 'rgba(202,138,4,0.08)' : '#1C1917'};
+  border: 1px solid ${p => p.$sel ? '#CA8A04' : '#292524'};
+  border-radius: 10px; cursor: pointer; width: 100%; text-align: left;
+  transition: border-color 200ms, background 200ms;
+  &:hover { border-color: rgba(202,138,4,0.4); }
+`
+const DelivOptLeft = styled.span`
+  display: flex; flex-direction: column; gap: 2px;
+`
+const DelivOptName = styled.span`
+  font-size: 12px; color: #F5F5F4; font-weight: 400;
+`
+const DelivOptSub = styled.span`
+  font-size: 10px; color: #78716C; font-weight: 300;
+`
+const DelivOptPrice = styled.span`
+  font-family: 'Bodoni Moda', serif;
+  font-size: 14px; color: ${p => p.$sel ? '#CA8A04' : '#78716C'};
+  white-space: nowrap;
 `
 
 /* ── RIGHT COLUMN ── */
@@ -335,6 +381,7 @@ function ImgWithFallback({ src, alt, style }) {
 export default function Configurator({ onCommander }) {
   const [tab, setTab] = useState('modele')
   const [imgKey, setImgKey] = useState(0)
+  const [livraison, setLivraison] = useState(null)
   const [sel, setSel] = useState({
     modele:        null,
     boitier:       null,
@@ -361,6 +408,7 @@ export default function Configurator({ onCommander }) {
       }
       return next
     })
+    if (key === 'modele') setLivraison(null)
     if (advance) setTab(advance)
   }, [])
 
@@ -372,9 +420,12 @@ export default function Configurator({ onCommander }) {
     ? modele.mouvements.map(id => ({ id, ...mvtDefs[id] })).filter(Boolean)
     : []
 
-  const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.aiguilles && sel.bracelet
+  const isComplete = sel.modele && sel.boitier && sel.cadranCouleur && sel.cadranStyle && sel.mouvement && sel.aiguilles && sel.bracelet && livraison
 
   function buildWaUrl() {
+    const livraisonText = livraison === 'remise'
+      ? 'Remise en main propre (Saint-Denis ou La Possession)'
+      : 'Envoi postal (+15 €)'
     const lines = [
       'Bonjour ! Je viens de configurer ma montre sur votre site 👇',
       '',
@@ -384,6 +435,7 @@ export default function Configurator({ onCommander }) {
       `• Mouvement : ${sel.mouvement?.nom}`,
       `• Aiguilles : ${sel.aiguilles?.nom}`,
       `• Bracelet : ${sel.bracelet?.nom}`,
+      `• Livraison : ${livraisonText}`,
       '',
       'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
     ]
@@ -462,16 +514,18 @@ export default function Configurator({ onCommander }) {
               <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
             ) : (
               <>
-                <CatSection>
-                  <CatLabel>Modèle de cadran <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— optionnel</span></CatLabel>
-                  <CardsGrid>
-                    {modele.cadrans.modeles.map(c => (
-                      <TextCard key={c.id} $selected={sel.cadranModele?.id === c.id} onClick={() => set('cadranModele', c)}>
-                        <CardName>{c.nom}</CardName>
-                      </TextCard>
-                    ))}
-                  </CardsGrid>
-                </CatSection>
+                {modele.cadrans.modeles.length > 0 && (
+                  <CatSection>
+                    <CatLabel>Modèle de cadran <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— optionnel</span></CatLabel>
+                    <CardsGrid>
+                      {modele.cadrans.modeles.map(c => (
+                        <TextCard key={c.id} $selected={sel.cadranModele?.id === c.id} onClick={() => set('cadranModele', c)}>
+                          <CardName>{c.nom}</CardName>
+                        </TextCard>
+                      ))}
+                    </CardsGrid>
+                  </CatSection>
+                )}
 
                 <CatSection>
                   <CatLabel>Couleur du cadran</CatLabel>
@@ -577,6 +631,7 @@ export default function Configurator({ onCommander }) {
     { label: 'Mouvement', val: sel.mouvement?.nom },
     { label: 'Aiguilles', val: sel.aiguilles?.nom },
     { label: 'Bracelet',  val: sel.bracelet?.nom },
+    { label: 'Livraison', val: livraison === 'remise' ? 'Remise main propre' : livraison === 'envoi' ? 'Envoi postal +15 €' : null },
   ]
 
   return (
@@ -592,14 +647,36 @@ export default function Configurator({ onCommander }) {
           <WatchPreview>
             <ImageWrap>
               <ImgWithFallback key={imgKey} src={modele?.image} alt={modele?.nom} />
+              {sel.boitier && <CaseColorOverlay $hex={sel.boitier.hex} />}
+              {sel.cadranCouleur && <DialColorOverlay $hex={sel.cadranCouleur.hex} />}
             </ImageWrap>
 
             {modele && (
               <PriceBadge>
                 <PriceLabel>Prix indicatif</PriceLabel>
                 <PriceValue>{modele.prix}</PriceValue>
-                <PriceNote>Livraison incluse à La Réunion</PriceNote>
+                {livraison === 'envoi' && <PriceNote style={{color:'#CA8A04'}}>+ 15 € d'envoi</PriceNote>}
               </PriceBadge>
+            )}
+
+            {modele && (
+              <DeliverySection>
+                <DeliveryTitle>Mode de remise</DeliveryTitle>
+                <DeliveryOpt $sel={livraison === 'remise'} onClick={() => setLivraison('remise')}>
+                  <DelivOptLeft>
+                    <DelivOptName>Remise en main propre</DelivOptName>
+                    <DelivOptSub>Saint-Denis · La Possession</DelivOptSub>
+                  </DelivOptLeft>
+                  <DelivOptPrice $sel={livraison === 'remise'}>Gratuit</DelivOptPrice>
+                </DeliveryOpt>
+                <DeliveryOpt $sel={livraison === 'envoi'} onClick={() => setLivraison('envoi')}>
+                  <DelivOptLeft>
+                    <DelivOptName>Envoi postal</DelivOptName>
+                    <DelivOptSub>Livraison à domicile · Réunion</DelivOptSub>
+                  </DelivOptLeft>
+                  <DelivOptPrice $sel={livraison === 'envoi'}>+15 €</DelivOptPrice>
+                </DeliveryOpt>
+              </DeliverySection>
             )}
 
             {modele?.allchinabuy && (
