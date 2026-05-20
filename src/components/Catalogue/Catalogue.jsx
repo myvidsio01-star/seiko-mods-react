@@ -164,13 +164,13 @@ const BtnCard = styled.a`
 `
 
 const watches = [
-  { name: 'Panda Daytona',  price: '280–350 €', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png',      filter: 'none' },
-  { name: 'Submariner',     price: '250–320 €', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg', filter: 'none' },
-  { name: 'GMT-Master',     price: '280–380 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg',        filter: 'none' },
-  { name: 'Royal Oak',      price: '300–400 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-royaloak.png',   filter: 'none' },
-  { name: 'Nautilus',       price: '320–420 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png',   filter: 'none' },
-  { name: 'Santos',         price: '300–400 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png',     filter: 'none' },
-  { name: 'Day-Date',       price: '300–400 €', stars: 3, tag: 'Prestige',    img: '/images/watch-daydate.png',    filter: 'none' },
+  { name: 'Panda Daytona',  price: '250 €', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png',      filter: 'none' },
+  { name: 'Submariner',     price: '220 €', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg', filter: 'none' },
+  { name: 'GMT-Master',     price: '250 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg',        filter: 'none' },
+  { name: 'Royal Oak',      price: '270 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-royaloak.png',   filter: 'none' },
+  { name: 'Nautilus',       price: '290 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png',   filter: 'none' },
+  { name: 'Santos',         price: '270 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png',     filter: 'none' },
+  { name: 'Day-Date',       price: '270 €', stars: 3, tag: 'Prestige',    img: '/images/watch-daydate.png',    filter: 'none' },
 ]
 
 function StarRow({ count }) {
@@ -200,7 +200,7 @@ function WatchCard({ watch, delay }) {
         <CardFooter>
           <div>
             <Price>{watch.price}</Price>
-            <PriceNote>Prix indicatif</PriceNote>
+            <PriceNote>Prix de départ</PriceNote>
           </div>
           <BtnCard
             href={`https://wa.me/262692421519?text=${encodeURIComponent(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}`}
