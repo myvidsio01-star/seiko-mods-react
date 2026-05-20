@@ -191,6 +191,19 @@ const DelivOptPrice = styled.span`
 const SelectionPanel = styled.div`
   display: flex; flex-direction: column;
 `
+const ValidBtn = styled.button`
+  margin-top: 28px;
+  width: 100%;
+  padding: 14px 32px;
+  background: #CA8A04;
+  color: #0C0A09;
+  border: none; border-radius: 9999px;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  cursor: pointer;
+  transition: background 200ms, transform 200ms, box-shadow 200ms;
+  &:hover { background: #D97706; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(202,138,4,0.35); }
+`
 const OrderDivider = styled.div`
   height: 1px;
   background: #292524;
@@ -477,6 +490,18 @@ export default function Configurator({ onCommander }) {
     return idx < TAB_ORDER.length - 1 ? TAB_ORDER[idx + 1] : null
   }
 
+  function canValidate() {
+    switch (tab) {
+      case 'modele':    return !!sel.modele
+      case 'boitier':   return !!sel.boitier
+      case 'cadran':    return !!(sel.cadranCouleur && sel.cadranStyle)
+      case 'mouvement': return !!sel.mouvement
+      case 'aiguilles': return !!sel.aiguilles
+      case 'bracelet':  return !!sel.bracelet
+      default:          return false
+    }
+  }
+
   function cadranSummary() {
     const parts = [sel.cadranCouleur?.nom, sel.cadranStyle?.nom, sel.cadranModele?.nom].filter(Boolean)
     return parts.length ? parts.join(' · ') : null
@@ -492,7 +517,7 @@ export default function Configurator({ onCommander }) {
               <CatLabel>Choisissez votre style de montre</CatLabel>
               <ModelGrid>
                 {modeles.map(m => (
-                  <ModelCard key={m.id} $selected={sel.modele?.id === m.id} onClick={() => set('modele', m, 'boitier')}>
+                  <ModelCard key={m.id} $selected={sel.modele?.id === m.id} onClick={() => set('modele', m)}>
                     <ModelThumb>
                       <ModelThumbImg src={m.image} alt={m.nom} onError={e => e.target.style.opacity = 0.3} />
                     </ModelThumb>
@@ -518,7 +543,7 @@ export default function Configurator({ onCommander }) {
                   <CatLabel>Couleur & finition du boîtier</CatLabel>
                   <BoitierGrid>
                     {standardBoitiers.map(b => (
-                      <BoitierItem key={b.id} onClick={() => set('boitier', b, 'cadran')}>
+                      <BoitierItem key={b.id} onClick={() => set('boitier', b)}>
                         <BoitierSwatch $hex={b.hex} $selected={sel.boitier?.id === b.id} />
                         <BoitierName $selected={sel.boitier?.id === b.id}>{b.nom}</BoitierName>
                       </BoitierItem>
@@ -530,7 +555,7 @@ export default function Configurator({ onCommander }) {
                     <CatLabel>Édition Diamant <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— coloris au choix sur WhatsApp</span></CatLabel>
                     <CardsGrid>
                       {diamantBoitiers.map(b => (
-                        <TextCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b, 'cadran')}>
+                        <TextCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b)}>
                           <CardName>{b.nom}</CardName>
                           {b.note && <CardSub>{b.note}</CardSub>}
                         </TextCard>
@@ -569,7 +594,7 @@ export default function Configurator({ onCommander }) {
                   <SwatchGrid>
                     {modele.cadrans.couleurs.map(c => (
                       <Swatch key={c.id} $hex={c.hex} $selected={sel.cadranCouleur?.id === c.id}
-                        onClick={() => set('cadranCouleur', c, sel.cadranStyle ? 'mouvement' : null)}>
+                        onClick={() => set('cadranCouleur', c)}>
                         <SwatchTooltip>{c.nom}</SwatchTooltip>
                       </Swatch>
                     ))}
@@ -581,7 +606,7 @@ export default function Configurator({ onCommander }) {
                   <CardsGrid>
                     {modele.cadrans.styles.map(s => (
                       <TextCard key={s.id} $selected={sel.cadranStyle?.id === s.id}
-                        onClick={() => set('cadranStyle', s, sel.cadranCouleur ? 'mouvement' : null)}>
+                        onClick={() => set('cadranStyle', s)}>
                         <CardName>{s.nom}</CardName>
                       </TextCard>
                     ))}
@@ -602,7 +627,7 @@ export default function Configurator({ onCommander }) {
                 <CatLabel>Mouvements compatibles avec {modele.nom}</CatLabel>
                 <CardsGrid>
                   {compatMvts.map(m => (
-                    <TextCard key={m.id} $selected={sel.mouvement?.id === m.id} onClick={() => set('mouvement', m, 'aiguilles')}>
+                    <TextCard key={m.id} $selected={sel.mouvement?.id === m.id} onClick={() => set('mouvement', m)}>
                       <CardName style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, flexWrap: 'wrap' }}>
                         {m.nom}
                         {m.id === modele.mouvementRecommande && <RecoBadge>Recommandé</RecoBadge>}
@@ -633,7 +658,7 @@ export default function Configurator({ onCommander }) {
                         $selected={sel.aiguilles?.id === a.id}
                         $disabled={!compatible}
                         disabled={!compatible}
-                        onClick={compatible ? () => set('aiguilles', a, 'bracelet') : undefined}
+                        onClick={compatible ? () => set('aiguilles', a) : undefined}
                       >
                         <CardName>{a.nom}</CardName>
                         {!compatible && <CardSub>Requiert NH34</CardSub>}
@@ -726,6 +751,12 @@ export default function Configurator({ onCommander }) {
               ))}
             </TabsRow>
             {renderTab()}
+
+            {canValidate() && nextTab(tab) && (
+              <ValidBtn onClick={() => setTab(nextTab(tab))}>
+                Valider et continuer →
+              </ValidBtn>
+            )}
 
             <CustomNote href="https://wa.me/262692421519?text=Bonjour%20!%20J'ai%20une%20demande%20personnalis%C3%A9e%20qui%20ne%20figure%20pas%20dans%20les%20options%20du%20configurateur." target="_blank" rel="noopener noreferrer">
               <span style={{ fontSize: 20 }}>💬</span>
