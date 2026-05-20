@@ -18,6 +18,7 @@
       "image": "/images/watch-submariner.jpg",
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
+      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
         { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA" },
         { "id": "black",   "nom": "Black PVD", "hex": "#222222" },
@@ -66,6 +67,7 @@
       "image": "/images/watch-gmt.jpg",
       "mouvements": ["nh34", "nh35"],
       "mouvementRecommande": "nh34",
+      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
         { "id": "batman",    "nom": "Batman (Bleu/Noir)",  "hex": "#1B3B8A" },
         { "id": "pepsi",     "nom": "Pepsi (Rouge/Bleu)",  "hex": "#C0392B" },
@@ -108,6 +110,7 @@
       "image": "/images/watch-royaloak.png",
       "mouvements": ["nh35", "nh36", "nh38", "nh70"],
       "mouvementRecommande": "nh35",
+      "dialClip": { "cx": 50, "cy": 48, "rx": 29, "ry": 29 },
       "boitiers": [
         { "id": "acier",      "nom": "Acier",      "hex": "#B8BBBA" },
         { "id": "black",      "nom": "Black PVD",  "hex": "#222222" },
@@ -161,6 +164,7 @@
       "image": "/images/watch-nautilus.png",
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
+      "dialClip": { "cx": 50, "cy": 49, "rx": 25, "ry": 22 },
       "boitiers": [
         { "id": "acier",   "nom": "Acier",   "hex": "#B8BBBA" },
         { "id": "black",   "nom": "Black",   "hex": "#222222" },
@@ -210,6 +214,7 @@
       "image": "/images/watch-santos.png",
       "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
       "mouvementRecommande": "nh35",
+      "dialClip": { "cx": 50, "cy": 46, "rx": 27, "ry": 27 },
       "boitiers": [
         { "id": "acier", "nom": "Acier", "hex": "#B8BBBA" }
       ],
@@ -250,6 +255,7 @@
       "allchinabuy": true,
       "mouvements": ["vk63"],
       "mouvementRecommande": "vk63",
+      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
         { "id": "acier",       "nom": "Acier",        "hex": "#B8BBBA" },
         { "id": "noir",        "nom": "Noir",         "hex": "#222222" },
@@ -294,6 +300,7 @@
       "image": "/images/watch-daydate.png",
       "mouvements": ["miyota8285"],
       "mouvementRecommande": "miyota8285",
+      "dialClip": { "cx": 50, "cy": 47, "rx": 29, "ry": 29 },
       "boitiers": [
         { "id": "acier", "nom": "Acier (Président)", "hex": "#B8BBBA" },
         { "id": "or",    "nom": "Or Jaune (Président)", "hex": "#D4A437" }

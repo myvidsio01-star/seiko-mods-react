@@ -78,18 +78,6 @@ const ImageWrap = styled.div`
   isolation: isolate;
   @media (max-width: 960px) { max-width: 260px; margin: 0 auto; }
 `
-const CaseColorOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, transparent 40%, ${p => p.$hex}66 60%, ${p => p.$hex}99 86%);
-  pointer-events: none;
-`
-const DialColorOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 48%, ${p => p.$hex}EE 0%, ${p => p.$hex}99 28%, transparent 52%);
-  pointer-events: none;
-`
 const WatchImg = styled.img`
   width: 85%; height: 85%;
   object-fit: contain;
@@ -662,8 +650,32 @@ export default function Configurator({ onCommander }) {
           <WatchPreview>
             <ImageWrap>
               <ImgWithFallback key={imgKey} src={modele?.image} alt={modele?.nom} />
-              {sel.boitier && <CaseColorOverlay $hex={sel.boitier.hex} />}
-              {sel.cadranCouleur && <DialColorOverlay $hex={sel.cadranCouleur.hex} />}
+              {sel.cadranCouleur && modele?.dialClip && (
+                <svg
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    width: '85%',
+                    height: '85%',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    mixBlendMode: 'color',
+                    pointerEvents: 'none',
+                    overflow: 'visible',
+                  }}
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <ellipse
+                    cx={modele.dialClip.cx}
+                    cy={modele.dialClip.cy}
+                    rx={modele.dialClip.rx}
+                    ry={modele.dialClip.ry}
+                    fill={sel.cadranCouleur.hex}
+                  />
+                </svg>
+              )}
             </ImageWrap>
 
             {modele && (
