@@ -196,6 +196,21 @@ const OrderDivider = styled.div`
   background: #292524;
   margin: 40px 0 0;
 `
+const CustomNote = styled.a`
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 40px;
+  padding: 14px 18px;
+  background: rgba(202,138,4,0.05);
+  border: 1px solid rgba(202,138,4,0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 200ms, background 200ms;
+  &:hover { background: rgba(202,138,4,0.1); border-color: rgba(202,138,4,0.35); }
+`
+const CustomNoteText = styled.span`
+  font-size: 12px; color: #A8A29E; font-weight: 300; line-height: 1.5;
+  strong { color: #CA8A04; font-weight: 500; }
+`
 const OrderSection = styled.div`
   display: flex; flex-direction: column; gap: 12px;
   padding: 32px 0 0;
@@ -692,6 +707,14 @@ export default function Configurator({ onCommander }) {
               ))}
             </TabsRow>
             {renderTab()}
+
+            <CustomNote href="https://wa.me/262692421519?text=Bonjour%20!%20J'ai%20une%20demande%20personnalis%C3%A9e%20qui%20ne%20figure%20pas%20dans%20les%20options%20du%20configurateur." target="_blank" rel="noopener noreferrer">
+              <span style={{ fontSize: 20 }}>💬</span>
+              <CustomNoteText>
+                <strong>Une option n'est pas dans la liste ?</strong><br />
+                Toute demande personnalisée est possible — écrivez-nous directement sur WhatsApp.
+              </CustomNoteText>
+            </CustomNote>
 
             {sel.bracelet && (
               <>
