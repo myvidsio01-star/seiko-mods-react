@@ -256,11 +256,13 @@
       "mouvementRecommande": "vk63",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
-        { "id": "acier",      "nom": "Acier",           "hex": "#B8BBBA", "img": "/images/daytona/boitier-acier.png" },
-        { "id": "acier-noir", "nom": "Acier Bezel Noir","hex": "#2A2A2A", "img": "/images/daytona/boitier-acier-noir.png" },
-        { "id": "noir",       "nom": "Noir PVD",        "hex": "#111111", "img": "/images/daytona/boitier-noir.png" },
-        { "id": "or",         "nom": "Or Jaune",        "hex": "#D4A437", "img": "/images/daytona/boitier-or.png" },
-        { "id": "diamant",    "nom": "Édition Diamant", "hex": "#C8D8F0", "img": "/images/daytona/boitier-diamant.png", "cat": "diamant", "note": "9 coloris disponibles — précisez la couleur sur WhatsApp" }
+        { "id": "acier",              "nom": "Acier",                 "hex": "#B8BBBA", "img": "/images/daytona/boitier-acier.png" },
+        { "id": "acier-noir",         "nom": "Acier Bezel Noir",      "hex": "#2A2A2A", "img": "/images/daytona/boitier-acier-noir.png" },
+        { "id": "noir",               "nom": "Noir PVD",              "hex": "#111111", "img": "/images/daytona/boitier-noir.png" },
+        { "id": "or",                 "nom": "Or Jaune",              "hex": "#D4A437", "img": "/images/daytona/boitier-or.png" },
+        { "id": "or-caoutchouc",      "nom": "Or + Caoutchouc",       "hex": "#D4A437", "img": "/images/daytona/boitier-or-caoutchouc.png" },
+        { "id": "or-rose-caoutchouc", "nom": "Or Rose + Caoutchouc",  "hex": "#C9856A", "img": "/images/daytona/boitier-or-rose-caoutchouc.png" },
+        { "id": "diamant",            "nom": "Édition Diamant",       "hex": "#C8D8F0", "img": "/images/daytona/boitier-diamant.png", "cat": "diamant", "note": "9 coloris disponibles — précisez la couleur sur WhatsApp" }
       ],
       "cadrans": {
         "modeles": [],
