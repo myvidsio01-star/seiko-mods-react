@@ -167,10 +167,13 @@
         ]
       },
       "aiguilles": [
-        { "id": "baton",      "nom": "Bâton" },
-        { "id": "mercedes",   "nom": "Mercedes" },
-        { "id": "dauphine",   "nom": "Dauphine" },
-        { "id": "cathedrale", "nom": "Cathédrale" }
+        { "id": "baton-noir",     "nom": "Bâton Noir",     "img": "/images/nautilus/aiguilles/baton-noir.png" },
+        { "id": "baton-acier",    "nom": "Bâton Acier",    "img": "/images/submariner/aiguilles/baton-acier.png" },
+        { "id": "baton-or",       "nom": "Bâton Or",       "img": "/images/submariner/aiguilles/baton-or.png" },
+        { "id": "baton-or-rose",  "nom": "Bâton Or Rose",  "img": "/images/nautilus/aiguilles/baton-or-rose.png" },
+        { "id": "mercedes-noir",  "nom": "Mercedes Noir",  "img": "/images/submariner/aiguilles/mercedes-noir.png" },
+        { "id": "mercedes-acier", "nom": "Mercedes Acier", "img": "/images/submariner/aiguilles/mercedes-acier.png" },
+        { "id": "mercedes-or",    "nom": "Mercedes Or",    "img": "/images/submariner/aiguilles/mercedes-or.png" }
       ],
       "bracelets": [
         { "id": "integre",    "nom": "Intégré Acier" },
