@@ -268,14 +268,16 @@
       "cadrans": {
         "modeles": [],
         "couleurs": [
-          { "id": "blanc",       "nom": "Blanc Panda",  "hex": "#F0EBE0" },
-          { "id": "noir",        "nom": "Noir",         "hex": "#111111" },
-          { "id": "champagne",   "nom": "Champagne",    "hex": "#C8A86B" },
-          { "id": "bleu-glace",  "nom": "Bleu Glacé",   "hex": "#A8C8E0" },
-          { "id": "vert",        "nom": "Vert",         "hex": "#2D5A3D" },
-          { "id": "irise",       "nom": "Irisé",        "hex": "#C0B8D8" },
-          { "id": "bleu-marine", "nom": "Bleu Marine",  "hex": "#1B2F6E" },
-          { "id": "marron",      "nom": "Marron",       "hex": "#6B4226" }
+          { "id": "noir-argent",   "nom": "Noir Argent",   "hex": "#111111", "img": "/images/daytona/cadran-noir-argent.png" },
+          { "id": "noir-or-rose",  "nom": "Noir Or Rose",  "hex": "#1A0E0A", "img": "/images/daytona/cadran-noir-or-rose.png" },
+          { "id": "noir-or",       "nom": "Noir Or",       "hex": "#120D00", "img": "/images/daytona/cadran-noir-or.png" },
+          { "id": "blanc-panda",   "nom": "Blanc Panda",   "hex": "#F0EBE0", "img": "/images/daytona/cadran-blanc-panda.png" },
+          { "id": "blanc-or",      "nom": "Blanc Or",      "hex": "#EDE0C4", "img": "/images/daytona/cadran-blanc-or.png" },
+          { "id": "blanc-argent",  "nom": "Blanc Argent",  "hex": "#E8E8E8", "img": "/images/daytona/cadran-blanc-argent.png" },
+          { "id": "champagne",     "nom": "Champagne",     "hex": "#C8A86B", "img": "/images/daytona/cadran-champagne.png" },
+          { "id": "vert",          "nom": "Vert",          "hex": "#2D5A3D", "img": "/images/daytona/cadran-vert.png" },
+          { "id": "bleu-glace",    "nom": "Bleu Glacé",    "hex": "#7A9BB5", "img": "/images/daytona/cadran-bleu-glace.png" },
+          { "id": "irise",         "nom": "Irisé",         "hex": "#C0B8D8", "img": "/images/daytona/cadran-irise.png" }
         ],
         "styles": [
           { "id": "daytona", "nom": "Daytona" },
