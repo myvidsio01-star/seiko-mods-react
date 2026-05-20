@@ -640,6 +640,7 @@ export default function Configurator({ onCommander }) {
                   {modele.bracelets.map(b => (
                     <TextCard key={b.id} $selected={sel.bracelet?.id === b.id} onClick={() => set('bracelet', b)}>
                       <CardName>{b.nom}</CardName>
+                      {b.desc && <CardSub>{b.desc}</CardSub>}
                     </TextCard>
                   ))}
                 </CardsGrid>

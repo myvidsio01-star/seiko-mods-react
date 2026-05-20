@@ -291,8 +291,9 @@
         { "id": "daytona-or-rose", "nom": "Daytona Or Rose", "img": "/images/daytona/aiguilles/daytona-or-rose.png" }
       ],
       "bracelets": [
-        { "id": "oyster",  "nom": "Oyster Acier" },
-        { "id": "jubilee", "nom": "Jubilé" }
+        { "id": "oyster",      "nom": "Oyster Acier",  "desc": "Bracelet acier classique" },
+        { "id": "jubilee",     "nom": "Jubilé",         "desc": "Bracelet acier 5 maillons" },
+        { "id": "caoutchouc",  "nom": "Caoutchouc",     "desc": "Bracelet plastique sport" }
       ]
     },
 
