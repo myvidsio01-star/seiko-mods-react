@@ -568,8 +568,9 @@ export default function Configurator({ onCommander }) {
         )
 
       case 'boitier': {
-        const standardBoitiers = modele?.boitiers.filter(b => b.cat !== 'diamant') ?? []
+        const standardBoitiers = modele?.boitiers.filter(b => !b.cat) ?? []
         const diamantBoitiers  = modele?.boitiers.filter(b => b.cat === 'diamant') ?? []
+        const optionBoitiers   = modele?.boitiers.filter(b => b.cat === 'option') ?? []
         return (
           <TabContent>
             {!modele ? (
@@ -592,6 +593,19 @@ export default function Configurator({ onCommander }) {
                     <CatLabel>Édition Diamant <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— coloris au choix sur WhatsApp</span></CatLabel>
                     <CardsGrid>
                       {diamantBoitiers.map(b => (
+                        <TextCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b)}>
+                          <CardName>{b.nom}</CardName>
+                          {b.note && <CardSub>{b.note}</CardSub>}
+                        </TextCard>
+                      ))}
+                    </CardsGrid>
+                  </CatSection>
+                )}
+                {optionBoitiers.length > 0 && (
+                  <CatSection>
+                    <CatLabel>Options</CatLabel>
+                    <CardsGrid>
+                      {optionBoitiers.map(b => (
                         <TextCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b)}>
                           <CardName>{b.nom}</CardName>
                           {b.note && <CardSub>{b.note}</CardSub>}

@@ -67,11 +67,12 @@
       "mouvementRecommande": "nh34",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
-        { "id": "batman",    "nom": "Batman (Bleu/Noir)",  "hex": "#1B3B8A" },
-        { "id": "pepsi",     "nom": "Pepsi (Rouge/Bleu)",  "hex": "#C0392B" },
-        { "id": "rootbeer",  "nom": "Rootbeer (Brun/Or)",  "hex": "#7D5A3C" },
-        { "id": "black",     "nom": "Black",               "hex": "#222222" },
-        { "id": "president", "nom": "Président Or",        "hex": "#D4A437" }
+        { "id": "batman",           "nom": "Batman (Bleu/Noir)",   "hex": "#1B3B8A" },
+        { "id": "pepsi",            "nom": "Pepsi (Rouge/Bleu)",   "hex": "#C0392B" },
+        { "id": "rootbeer",         "nom": "Rootbeer (Brun/Or)",   "hex": "#7D5A3C" },
+        { "id": "black",            "nom": "Black",                "hex": "#222222" },
+        { "id": "president",        "nom": "Président Or",         "hex": "#D4A437" },
+        { "id": "fond-transparent", "nom": "Fond Transparent", "hex": "#C8D8F0", "cat": "option", "note": "Fond saphir transparent — précisez le coloris du boîtier sur WhatsApp" }
       ],
       "cadrans": {
         "catalogue": true,
