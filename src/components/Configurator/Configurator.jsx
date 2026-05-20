@@ -505,26 +505,44 @@ export default function Configurator({ onCommander }) {
           </TabContent>
         )
 
-      case 'boitier':
+      case 'boitier': {
+        const standardBoitiers = modele?.boitiers.filter(b => b.cat !== 'diamant') ?? []
+        const diamantBoitiers  = modele?.boitiers.filter(b => b.cat === 'diamant') ?? []
         return (
           <TabContent>
             {!modele ? (
               <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
             ) : (
-              <CatSection>
-                <CatLabel>Couleur & finition du boîtier</CatLabel>
-                <BoitierGrid>
-                  {modele.boitiers.map(b => (
-                    <BoitierItem key={b.id} onClick={() => set('boitier', b, 'cadran')}>
-                      <BoitierSwatch $hex={b.hex} $selected={sel.boitier?.id === b.id} />
-                      <BoitierName $selected={sel.boitier?.id === b.id}>{b.nom}</BoitierName>
-                    </BoitierItem>
-                  ))}
-                </BoitierGrid>
-              </CatSection>
+              <>
+                <CatSection>
+                  <CatLabel>Couleur & finition du boîtier</CatLabel>
+                  <BoitierGrid>
+                    {standardBoitiers.map(b => (
+                      <BoitierItem key={b.id} onClick={() => set('boitier', b, 'cadran')}>
+                        <BoitierSwatch $hex={b.hex} $selected={sel.boitier?.id === b.id} />
+                        <BoitierName $selected={sel.boitier?.id === b.id}>{b.nom}</BoitierName>
+                      </BoitierItem>
+                    ))}
+                  </BoitierGrid>
+                </CatSection>
+                {diamantBoitiers.length > 0 && (
+                  <CatSection>
+                    <CatLabel>Édition Diamant <span style={{fontSize:'9px',color:'#44403C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— coloris au choix sur WhatsApp</span></CatLabel>
+                    <CardsGrid>
+                      {diamantBoitiers.map(b => (
+                        <TextCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b, 'cadran')}>
+                          <CardName>{b.nom}</CardName>
+                          {b.note && <CardSub>{b.note}</CardSub>}
+                        </TextCard>
+                      ))}
+                    </CardsGrid>
+                  </CatSection>
+                )}
+              </>
             )}
           </TabContent>
         )
+      }
 
       case 'cadran':
         return (

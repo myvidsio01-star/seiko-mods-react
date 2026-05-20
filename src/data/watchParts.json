@@ -256,14 +256,11 @@
       "mouvementRecommande": "vk63",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
-        { "id": "acier",       "nom": "Acier",        "hex": "#B8BBBA" },
-        { "id": "noir",        "nom": "Noir",         "hex": "#222222" },
-        { "id": "or",          "nom": "Or",           "hex": "#D4A437" },
-        { "id": "diamant",     "nom": "Diamant Acier","hex": "#E8E8FF" },
-        { "id": "diamant-or",  "nom": "Diamant Or",   "hex": "#D4A437" },
-        { "id": "diamant-bleu","nom": "Diamant Bleu", "hex": "#1B3B8A" },
-        { "id": "diamant-noir","nom": "Diamant Noir", "hex": "#1A1A2E" },
-        { "id": "diamant-rouge","nom": "Diamant Rouge","hex": "#8B1A1A" }
+        { "id": "acier",      "nom": "Acier",           "hex": "#B8BBBA", "img": "/images/daytona/boitier-acier.png" },
+        { "id": "acier-noir", "nom": "Acier Bezel Noir","hex": "#2A2A2A", "img": "/images/daytona/boitier-acier-noir.png" },
+        { "id": "noir",       "nom": "Noir PVD",        "hex": "#111111", "img": "/images/daytona/boitier-noir.png" },
+        { "id": "or",         "nom": "Or Jaune",        "hex": "#D4A437", "img": "/images/daytona/boitier-or.png" },
+        { "id": "diamant",    "nom": "Édition Diamant", "hex": "#C8D8F0", "img": "/images/daytona/boitier-diamant.png", "cat": "diamant", "note": "9 coloris disponibles — précisez la couleur sur WhatsApp" }
       ],
       "cadrans": {
         "modeles": [],
@@ -291,9 +288,12 @@
         { "id": "daytona-or-rose", "nom": "Daytona Or Rose", "img": "/images/daytona/aiguilles/daytona-or-rose.png" }
       ],
       "bracelets": [
-        { "id": "oyster",      "nom": "Oyster Acier",  "desc": "Bracelet acier classique" },
-        { "id": "jubilee",     "nom": "Jubilé",         "desc": "Bracelet acier 5 maillons" },
-        { "id": "caoutchouc",  "nom": "Caoutchouc",     "desc": "Bracelet plastique sport" }
+        { "id": "oyster-acier",  "nom": "Oyster Acier", "desc": "Bracelet acier classique",  "img": "/images/daytona/bracelets/oyster-acier.png" },
+        { "id": "jubilee-acier", "nom": "Jubilé Acier", "desc": "Bracelet acier 5 maillons", "img": "/images/daytona/bracelets/jubilee-acier.png" },
+        { "id": "oyster-noir",   "nom": "Oyster Noir",  "desc": "Bracelet PVD noir",         "img": "/images/daytona/bracelets/oyster-noir.png" },
+        { "id": "oyster-or",     "nom": "Oyster Or",    "desc": "Bracelet doré classique",   "img": "/images/daytona/bracelets/oyster-or.png" },
+        { "id": "jubilee-or",    "nom": "Jubilé Or",    "desc": "Bracelet doré 5 maillons",  "img": "/images/daytona/bracelets/jubilee-or.png" },
+        { "id": "caoutchouc",    "nom": "Caoutchouc",   "desc": "Bracelet plastique sport" }
       ]
     },
 
