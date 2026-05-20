@@ -55,6 +55,8 @@ const CTA = styled.a`
   border-radius: 9999px;
   cursor: pointer;
   display: flex; align-items: center; gap: 8px;
+  margin-left: 24px;
+  flex-shrink: 0;
   transition: background 200ms ease, transform 200ms ease;
   text-decoration: none;
 
