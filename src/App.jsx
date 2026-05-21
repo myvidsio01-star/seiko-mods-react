@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Catalogue from './components/Catalogue/Catalogue'
+import SurMesure from './components/SurMesure/SurMesure'
 import Configurator from './components/Configurator/Configurator'
 import Process from './components/Process/Process'
 import MapSection from './components/Contact/MapSection'
@@ -50,6 +51,7 @@ export default function App() {
             <Hero />
             <About />
             <Catalogue />
+            <SurMesure />
             <Configurator />
             <Process />
             <MapSection />

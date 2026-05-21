@@ -148,11 +148,7 @@ export default function Navbar() {
         <Logo href="#hero">SEIKO <span>MODS</span></Logo>
         <Links>
           {links.map(l => <Link key={l.label} href={l.href}>{l.label}</Link>)}
-          <Link
-            href={waMsg("Bonjour ! Je souhaite une montre personnalisée qui ne figure pas dans vos options. Pouvez-vous m'aider ?")}
-            target="_blank" rel="noopener noreferrer"
-            style={{ color: '#CA8A04' }}
-          >
+          <Link href="#sur-mesure" style={{ color: '#CA8A04' }}>
             Sur Mesure ✦
           </Link>
         </Links>
@@ -172,8 +168,7 @@ export default function Navbar() {
           </MobileLink>
         ))}
         <MobileLink
-          href={waMsg("Bonjour ! Je souhaite une montre personnalisée qui ne figure pas dans vos options. Pouvez-vous m'aider ?")}
-          target="_blank" rel="noopener noreferrer"
+          href="#sur-mesure"
           onClick={() => setOpen(false)}
           style={{ color: '#CA8A04' }}
         >
