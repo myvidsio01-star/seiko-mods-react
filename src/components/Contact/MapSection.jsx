@@ -134,6 +134,8 @@ export default function MapSection() {
               title="La Réunion — Saint-Denis"
               loading="lazy"
               allowFullScreen
+              sandbox="allow-scripts allow-same-origin allow-popups"
+              referrerPolicy="no-referrer"
             />
           </MapWrap>
         </Grid>
