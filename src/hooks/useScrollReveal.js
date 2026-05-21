@@ -1,11 +1,21 @@
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
-export function useScrollReveal(options = {}) {
+export function useScrollReveal({
+  threshold = 0.15,
+  rootMargin = '0px',
+  y = 40,
+  duration = 700,
+  delay = '0ms',
+} = {}) {
   const ref = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = ref.current
     if (!el) return
+
+    el.style.opacity = '0'
+    el.style.transform = `translateY(${y}px)`
+    el.style.transition = `opacity ${duration}ms ease ${delay}, transform ${duration}ms ease ${delay}`
 
     const obs = new IntersectionObserver(
       ([entry]) => {
@@ -15,17 +25,11 @@ export function useScrollReveal(options = {}) {
           obs.unobserve(el)
         }
       },
-      { threshold: options.threshold || 0.15, rootMargin: options.rootMargin || '0px' }
+      { threshold, rootMargin }
     )
-
-    el.style.opacity = '0'
-    el.style.transform = `translateY(${options.y || 40}px)`
-    el.style.transition = `opacity ${options.duration || 700}ms ease, transform ${options.duration || 700}ms ease`
-    el.style.transitionDelay = options.delay || '0ms'
-
     obs.observe(el)
     return () => obs.disconnect()
-  }, [])
+  }, [threshold, rootMargin, y, duration, delay])
 
   return ref
 }

@@ -1,8 +1,9 @@
-import { useRef, useMemo } from 'react'
+import { useRef, useMemo, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import styled, { keyframes } from 'styled-components'
+import { WA_URL } from '../../utils/contact'
 
-function Particles({ count = 2500 }) {
+function Particles({ count = 2500, visibleRef }) {
   const ref = useRef()
 
   const positions = useMemo(() => {
@@ -16,6 +17,7 @@ function Particles({ count = 2500 }) {
   }, [count])
 
   useFrame(({ clock }) => {
+    if (!visibleRef.current) return
     ref.current.rotation.y = clock.elapsedTime * 0.022
     ref.current.rotation.x = clock.elapsedTime * 0.010
   })
@@ -165,11 +167,23 @@ const Line = styled.div`
 `
 
 export default function Hero() {
+  const wrapRef = useRef()
+  const visibleRef = useRef(true)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { visibleRef.current = entry.isIntersecting },
+      { threshold: 0 }
+    )
+    if (wrapRef.current) observer.observe(wrapRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <Wrap id="hero">
+    <Wrap id="hero" ref={wrapRef}>
       <CanvasWrap>
         <Canvas camera={{ position: [0, 0, 10], fov: 60 }} gl={{ antialias: true, alpha: true }}>
-          <Particles />
+          <Particles visibleRef={visibleRef} />
         </Canvas>
       </CanvasWrap>
 
@@ -181,7 +195,7 @@ export default function Hero() {
         <Sub>Submariner, Royal Oak, Daytona et plus — faits à la main.<br />Livré directement chez toi à La Réunion.</Sub>
         <CTARow>
           <Btn href="#catalogue" $primary>Voir les montres</Btn>
-          <Btn href="https://wa.me/262692421519" target="_blank" rel="noopener noreferrer">Nous contacter</Btn>
+          <Btn href={WA_URL} target="_blank" rel="noopener noreferrer">Nous contacter</Btn>
         </CTARow>
       </Content>
 

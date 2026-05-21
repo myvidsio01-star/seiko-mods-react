@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { WA_URL, waMsg, PHONE_TEL, PHONE_DISPLAY } from '../../utils/contact'
 
 const Section = styled.section`
   padding: 120px 24px;
@@ -83,7 +84,7 @@ export default function Contact() {
           </Sub>
 
           <BtnWa
-            href="https://wa.me/262692421519?text=Bonjour%20!%20Je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20une%20Seiko%20Mod.%20Pouvez-vous%20me%20renseigner%20%3F"
+            href={waMsg("Bonjour ! Je suis intéressé(e) par une Seiko Mod. Pouvez-vous me renseigner ?")}
             target="_blank" rel="noopener noreferrer"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
@@ -92,7 +93,7 @@ export default function Contact() {
             Nous contacter sur WhatsApp
           </BtnWa>
 
-          <PhoneLink href="tel:0692421519">06 92 42 15 19</PhoneLink>
+          <PhoneLink href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</PhoneLink>
         </div>
 
         <Divider />

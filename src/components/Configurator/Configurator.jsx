@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
 import watchParts from '../../data/watchParts.json'
+import { WA_URL, waMsg } from '../../utils/contact'
 
 const TABS = [
   { id: 'modele',    label: 'Modèle' },
@@ -512,7 +513,7 @@ export default function Configurator({ onCommander }) {
       '',
       'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
     ]
-    return `https://wa.me/262692421519?text=${encodeURIComponent(lines.join('\n'))}`
+    return waMsg(lines.join('\n'))
   }
 
   const tabDone = {
@@ -896,7 +897,7 @@ export default function Configurator({ onCommander }) {
             )}
 
             <CustomNote
-              href={`https://wa.me/262692421519?text=${encodeURIComponent("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}`}
+              href={waMsg("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}
               target="_blank" rel="noopener noreferrer"
             >
               <span style={{ fontSize: 20 }}>📸</span>

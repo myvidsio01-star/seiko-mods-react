@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ThemeProvider } from 'styled-components'
 import styled, { keyframes } from 'styled-components'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { theme } from './styles/theme'
+import { WA_URL } from './utils/contact'
 import Loader from './components/Loader/Loader'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
@@ -13,9 +14,6 @@ import Process from './components/Process/Process'
 import MapSection from './components/Contact/MapSection'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-
-export const WA_URL = 'https://wa.me/262692421519'
-export const waMsg = text => `${WA_URL}?text=${encodeURIComponent(text)}`
 
 const pulse = keyframes`
   0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
@@ -38,9 +36,14 @@ const WaFab = styled.a`
 `
 
 function Cursor() {
+  const dotRef  = useRef()
+  const ringRef = useRef()
+
   useEffect(() => {
-    const dot  = document.getElementById('cursor-dot')
-    const ring = document.getElementById('cursor-ring')
+    if (window.matchMedia('(pointer: coarse)').matches) return
+
+    const dot  = dotRef.current
+    const ring = ringRef.current
     if (!dot || !ring) return
 
     let mx = 0, my = 0, rx = 0, ry = 0
@@ -51,10 +54,8 @@ function Cursor() {
     const tick = () => {
       rx += (mx - rx) * 0.18
       ry += (my - ry) * 0.18
-      dot.style.left  = mx + 'px'
-      dot.style.top   = my + 'px'
-      ring.style.left = rx + 'px'
-      ring.style.top  = ry + 'px'
+      dot.style.transform  = `translate3d(${mx - 4}px, ${my - 4}px, 0)`
+      ring.style.transform = `translate3d(${rx - 16}px, ${ry - 16}px, 0)`
       raf = requestAnimationFrame(tick)
     }
     raf = requestAnimationFrame(tick)
@@ -67,8 +68,8 @@ function Cursor() {
 
   return (
     <>
-      <div id="cursor-dot" />
-      <div id="cursor-ring" />
+      <div ref={dotRef}  id="cursor-dot" />
+      <div ref={ringRef} id="cursor-ring" />
     </>
   )
 }

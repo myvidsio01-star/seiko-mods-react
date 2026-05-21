@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { WA_URL, waMsg } from '../../utils/contact'
 
 const Section = styled.section`
   padding: 120px 24px;
@@ -65,7 +66,6 @@ const ImgWrap = styled.div`
     width: 100%; height: 100%;
     object-fit: cover;
     transition: transform 600ms ease;
-    filter: ${p => p.$filter || 'none'};
   }
 
   ${Card}:hover & img { transform: scale(1.06); }
@@ -208,13 +208,13 @@ const BtnCard = styled.a`
 `
 
 const watches = [
-  { name: 'Panda Daytona',  price: '250 €', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png',      filter: 'none' },
-  { name: 'Submariner',     price: '220 €', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg', filter: 'none' },
-  { name: 'GMT-Master',     price: '250 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg',        filter: 'none' },
-  { name: 'Royal Oak',      price: '250 €', stars: 5, tag: 'Exclusif',    img: '/images/watch-royaloak.png',   filter: 'none' },
-  { name: 'Nautilus',       price: '250 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png',   filter: 'none' },
-  { name: 'Santos',         price: '240 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png',     filter: 'none' },
-  { name: 'Day-Date',       price: '250 €', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png',    filter: 'none' },
+  { name: 'Panda Daytona',  price: '250 €', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png'      },
+  { name: 'Submariner',     price: '220 €', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg' },
+  { name: 'GMT-Master',     price: '250 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg'        },
+  { name: 'Royal Oak',      price: '250 €', stars: 5, tag: 'Exclusif',    img: '/images/watch-royaloak.png'   },
+  { name: 'Nautilus',       price: '250 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png'   },
+  { name: 'Santos',         price: '240 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png'     },
+  { name: 'Day-Date',       price: '250 €', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png'    },
 ]
 
 function StarRow({ count }) {
@@ -234,7 +234,7 @@ function WatchCard({ watch, delay }) {
   const ref = useScrollReveal({ delay: `${delay}ms` })
   return (
     <Card ref={ref}>
-      <ImgWrap $filter={watch.filter}>
+      <ImgWrap>
         <img src={watch.img} alt={watch.name} loading="lazy" />
         <Tag>{watch.tag}</Tag>
         <SoldOutBar>
@@ -250,7 +250,7 @@ function WatchCard({ watch, delay }) {
             <Price>{watch.price}</Price>
           </div>
           <BtnCard
-            href={`https://wa.me/262692421519?text=${encodeURIComponent(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}`}
+            href={waMsg(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}
             target="_blank" rel="noopener noreferrer"
           >
             WhatsApp
@@ -275,7 +275,7 @@ export default function Catalogue() {
         </Grid>
 
         <PhotoBanner
-          href={`https://wa.me/262692421519?text=${encodeURIComponent("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}`}
+          href={waMsg("Bonjour ! J'ai une photo d'une montre que j'aimerais vous envoyer pour que vous la reproduisiez. Pouvez-vous m'aider ?")}
           target="_blank" rel="noopener noreferrer"
         >
           <PhotoBannerIcon>📸</PhotoBannerIcon>
