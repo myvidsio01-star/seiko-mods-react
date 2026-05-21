@@ -4,6 +4,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal'
 const Section = styled.section`
   padding: 0 24px 120px;
   background: #111110;
+  @media (max-width: 640px) { padding: 0 20px 64px; }
 `
 const Inner = styled.div`
   max-width: 1100px;

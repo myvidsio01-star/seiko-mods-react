@@ -26,6 +26,7 @@ const fadeIn = keyframes`
 const Section = styled.section`
   padding: 120px 24px;
   background: #0C0A09;
+  @media (max-width: 640px) { padding: 64px 20px; }
 `
 const Inner = styled.div`
   max-width: 1200px;
