@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import styled, { keyframes } from 'styled-components'
 import { GlobalStyles } from './styles/GlobalStyles'
@@ -35,44 +35,6 @@ const WaFab = styled.a`
   &:hover { transform: scale(1.1); }
 `
 
-function Cursor() {
-  const dotRef  = useRef()
-  const ringRef = useRef()
-
-  useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) return
-
-    const dot  = dotRef.current
-    const ring = ringRef.current
-    if (!dot || !ring) return
-
-    let mx = 0, my = 0, rx = 0, ry = 0
-    const move = e => { mx = e.clientX; my = e.clientY }
-    document.addEventListener('mousemove', move)
-
-    let raf
-    const tick = () => {
-      rx += (mx - rx) * 0.18
-      ry += (my - ry) * 0.18
-      dot.style.transform  = `translate3d(${mx - 4}px, ${my - 4}px, 0)`
-      ring.style.transform = `translate3d(${rx - 16}px, ${ry - 16}px, 0)`
-      raf = requestAnimationFrame(tick)
-    }
-    raf = requestAnimationFrame(tick)
-
-    return () => {
-      document.removeEventListener('mousemove', move)
-      cancelAnimationFrame(raf)
-    }
-  }, [])
-
-  return (
-    <>
-      <div ref={dotRef}  id="cursor-dot" />
-      <div ref={ringRef} id="cursor-ring" />
-    </>
-  )
-}
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -80,7 +42,6 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Cursor />
       {!ready && <Loader onDone={() => setReady(true)} />}
       {ready && (
         <>

@@ -16,9 +16,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  @media (pointer: fine) {
-    body, a, button { cursor: none; }
-  }
 
   ::selection { background: rgba(202,138,4,0.3); color: #F5F5F4; }
 
@@ -32,18 +29,6 @@ export const GlobalStyles = createGlobalStyle`
   button { cursor: pointer; border: none; background: none; font-family: inherit; }
   img { max-width: 100%; display: block; }
 
-  /* Custom cursor — transform3d only (GPU compositing, no layout recalc) */
-  #cursor-dot {
-    position: fixed; top:0; left:0; width:8px; height:8px;
-    background: #CA8A04; border-radius: 50%; pointer-events: none;
-    z-index: 99999; will-change: transform;
-  }
-  #cursor-ring {
-    position: fixed; top:0; left:0; width:32px; height:32px;
-    border: 1px solid rgba(202,138,4,0.6); border-radius: 50%; pointer-events: none;
-    z-index: 99998; will-change: transform;
-    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
-  }
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 4px; }
