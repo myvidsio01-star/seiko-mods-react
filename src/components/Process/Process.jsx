@@ -106,7 +106,7 @@ const steps = [
   },
   {
     num: '04', title: 'Livraison',
-    body: 'Emballage premium, livraison gratuite à Saint-Denis. 10 € pour le reste de La Réunion.',
+    body: 'Emballage premium, livraison gratuite à Saint-Denis. 15 € pour le reste de La Réunion.',
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />,
   },
 ]

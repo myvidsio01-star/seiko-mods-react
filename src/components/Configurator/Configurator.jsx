@@ -457,6 +457,12 @@ export default function Configurator({ onCommander }) {
         next.bracelet      = null
         setPreviewImg(null)
       }
+      if (key === 'cadranCouleur') {
+        if (val?.requiredMouvement && prev.mouvement?.id !== val.requiredMouvement) {
+          next.mouvement = null
+          next.aiguilles = null
+        }
+      }
       if (key === 'mouvement') {
         const aig = prev.aiguilles
         if (aig?.mouvements && !aig.mouvements.includes(val?.id)) {
@@ -474,13 +480,16 @@ export default function Configurator({ onCommander }) {
   const modele  = sel.modele
 
   const compatMvts = modele
-    ? modele.mouvements.map(id => ({ id, ...mvtDefs[id] })).filter(Boolean)
+    ? modele.mouvements
+        .map(id => ({ id, ...mvtDefs[id] }))
+        .filter(m => m && (!sel.cadranCouleur?.requiredMouvement || m.id === sel.cadranCouleur.requiredMouvement))
     : []
 
   const cadranSections  = modele?.cadrans.sections
   const cadranCatalogue = modele?.cadrans.catalogue
   const cadranComplete  = (cadranSections || cadranCatalogue) ? !!sel.cadranCouleur : !!(sel.cadranCouleur && sel.cadranStyle)
-  const isComplete = sel.modele && sel.boitier && cadranComplete && sel.mouvement && sel.aiguilles && sel.bracelet && livraison
+  const isRoyalOak = modele?.id === 'royaloak'
+  const isComplete = sel.modele && sel.boitier && cadranComplete && sel.mouvement && sel.aiguilles && (isRoyalOak || sel.bracelet) && livraison
 
   function buildWaUrl() {
     const livraisonText = livraison === 'remise'
@@ -498,7 +507,7 @@ export default function Configurator({ onCommander }) {
           : (sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`),
       `• Mouvement : ${sel.mouvement?.nom}`,
       `• Aiguilles : ${sel.aiguilles?.nom}`,
-      `• Bracelet : ${sel.bracelet?.nom}`,
+      ...(!isRoyalOak && sel.bracelet ? [`• Bracelet : ${sel.bracelet?.nom}`] : []),
       `• Livraison : ${livraisonText}`,
       '',
       'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
@@ -515,7 +524,9 @@ export default function Configurator({ onCommander }) {
     bracelet:  !!sel.bracelet,
   }
 
-  const TAB_ORDER = ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles', 'bracelet']
+  const TAB_ORDER = isRoyalOak
+    ? ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles']
+    : ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles', 'bracelet']
   function nextTab(id) {
     const idx = TAB_ORDER.indexOf(id)
     return idx < TAB_ORDER.length - 1 ? TAB_ORDER[idx + 1] : null
@@ -827,7 +838,7 @@ export default function Configurator({ onCommander }) {
     { label: 'Cadran',    val: cadranSummary() },
     { label: 'Mouvement', val: sel.mouvement?.nom },
     { label: 'Aiguilles', val: sel.aiguilles?.nom },
-    { label: 'Bracelet',  val: sel.bracelet?.nom },
+    ...(!isRoyalOak ? [{ label: 'Bracelet', val: sel.bracelet?.nom }] : []),
     { label: 'Livraison', val: livraison === 'remise' ? 'Remise main propre' : livraison === 'envoi' ? 'Envoi postal +15 €' : null },
   ]
 
@@ -869,7 +880,7 @@ export default function Configurator({ onCommander }) {
 
           <SelectionPanel>
             <TabsRow>
-              {TABS.map(t => (
+              {TABS.filter(t => !(isRoyalOak && t.id === 'bracelet')).map(t => (
                 <Tab key={t.id} $active={tab === t.id} onClick={() => setTab(t.id)}>
                   {t.label}
                   {tabDone[t.id] && <TabDot />}
@@ -895,7 +906,7 @@ export default function Configurator({ onCommander }) {
               </CustomNoteText>
             </CustomNote>
 
-            {sel.bracelet && (
+            {(isRoyalOak ? sel.aiguilles : sel.bracelet) && (
               <>
                 <OrderDivider />
                 <OrderSection>
