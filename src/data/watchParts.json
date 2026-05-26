@@ -129,172 +129,6 @@
                 "img": "/images/submariner/cadran-rose.png"
               }
             ]
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "noir-wmc",
-                "nom": "Noir WMC",
-                "img": "/images/parts/submariner/cadrans/wmc/noir-wmc.jpg"
-              },
-              {
-                "id": "bleu-soleil",
-                "nom": "Bleu Soleillé",
-                "img": "/images/parts/submariner/cadrans/wmc/bleu-soleil.jpg"
-              },
-              {
-                "id": "meteorite",
-                "nom": "Météorite",
-                "img": "/images/parts/submariner/cadrans/wmc/meteorite.jpg"
-              },
-              {
-                "id": "carbon-forge",
-                "nom": "Carbon Forgé",
-                "img": "/images/parts/submariner/cadrans/wmc/carbon-forge.jpg"
-              },
-              {
-                "id": "vert-soleil",
-                "nom": "Vert Soleillé",
-                "img": "/images/parts/submariner/cadrans/wmc/vert-soleil.jpg"
-              },
-              {
-                "id": "gris-soleil",
-                "nom": "Gris Soleillé",
-                "img": "/images/parts/submariner/cadrans/wmc/gris-soleil.jpg"
-              },
-              {
-                "id": "blanc",
-                "nom": "Blanc",
-                "img": "/images/parts/submariner/cadrans/wmc/blanc.jpg"
-              },
-              {
-                "id": "or-rose",
-                "nom": "Or Rose",
-                "img": "/images/parts/submariner/cadrans/wmc/or-rose.jpg"
-              },
-              {
-                "id": "or",
-                "nom": "Or",
-                "img": "/images/parts/submariner/cadrans/wmc/or.jpg"
-              },
-              {
-                "id": "vintage",
-                "nom": "Vintage",
-                "img": "/images/parts/submariner/cadrans/wmc/vintage.jpg"
-              },
-              {
-                "id": "blanc-seiko",
-                "nom": "Blanc SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/blanc-seiko.jpg"
-              },
-              {
-                "id": "bleu-ciel-seiko",
-                "nom": "Bleu Ciel SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/bleu-ciel-seiko.jpg"
-              },
-              {
-                "id": "bleu-seiko",
-                "nom": "Bleu SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/bleu-seiko.jpg"
-              },
-              {
-                "id": "gris-seiko",
-                "nom": "Gris SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/gris-seiko.jpg"
-              },
-              {
-                "id": "noir-seiko",
-                "nom": "Noir SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/noir-seiko.jpg"
-              },
-              {
-                "id": "or-rose-seiko",
-                "nom": "Or Rose SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/or-rose-seiko.jpg"
-              },
-              {
-                "id": "or-seiko",
-                "nom": "Or SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/or-seiko.jpg"
-              },
-              {
-                "id": "rouge-seiko",
-                "nom": "Rouge SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/rouge-seiko.jpg"
-              },
-              {
-                "id": "vert-seiko",
-                "nom": "Vert SEIKO",
-                "img": "/images/parts/submariner/cadrans/wmc/vert-seiko.jpg"
-              },
-              {
-                "id": "sub-noir",
-                "nom": "Sub Noir",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-noir.jpg"
-              },
-              {
-                "id": "sub-noir-rouge",
-                "nom": "Sub Noir et Rouge",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-noir-rouge.jpg"
-              },
-              {
-                "id": "sub-bleu",
-                "nom": "Sub Bleu",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-bleu.jpg"
-              },
-              {
-                "id": "sub-bleu-petrole",
-                "nom": "Sub Bleu Pétrole",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-bleu-petrole.jpg"
-              },
-              {
-                "id": "sub-vert-starbucks",
-                "nom": "Sub Vert Starbucks",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-vert-starbucks.jpg"
-              },
-              {
-                "id": "sub-marron",
-                "nom": "Sub Marron",
-                "img": "/images/parts/submariner/cadrans/wmc/sub-marron.jpg"
-              },
-              {
-                "id": "blanc-ceramique",
-                "nom": "Blanc Céramique",
-                "img": "/images/parts/submariner/cadrans/wmc/blanc-ceramique.jpg"
-              },
-              {
-                "id": "carbon-forge-premium",
-                "nom": "Carbon Forgé Premium",
-                "img": "/images/parts/submariner/cadrans/wmc/carbon-forge-premium.jpg"
-              },
-              {
-                "id": "noir-mat",
-                "nom": "Noir Mat",
-                "img": "/images/parts/submariner/cadrans/wmc/noir-mat.jpg"
-              },
-              {
-                "id": "noir-rouge-wmc",
-                "nom": "Noir et Rouge WMC",
-                "img": "/images/parts/submariner/cadrans/wmc/noir-rouge-wmc.jpg"
-              },
-              {
-                "id": "noir-vert-wmc",
-                "nom": "Noir et Vert WMC",
-                "img": "/images/parts/submariner/cadrans/wmc/noir-vert-wmc.jpg"
-              },
-              {
-                "id": "open-heart",
-                "nom": "Open Heart",
-                "img": "/images/parts/submariner/cadrans/wmc/open-heart.jpg"
-              },
-              {
-                "id": "deep-s-noir",
-                "nom": "Deep S Noir",
-                "img": "/images/parts/submariner/cadrans/wmc/deep-s-noir.jpg"
-              }
-            ],
-            "label": "Cadrans Style Submariner"
           }
         ]
       },
@@ -359,22 +193,94 @@
       },
       "boitiers": [
         {
-          "id": "argent",
-          "nom": "Argent",
+          "id": "argent-jubilee",
+          "nom": "Argent Jubilé",
           "hex": "#B8BBBA",
-          "img": "/images/parts/gmt/boitiers/argent.png"
+          "img": "/images/gmt/boitier-argent-jubilee.png"
         },
         {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
+          "id": "noir-oyster",
+          "nom": "Noir Oyster",
+          "hex": "#222222",
+          "img": "/images/gmt/boitier-noir-oyster.png"
+        },
+        {
+          "id": "noir-jubilee",
+          "nom": "Noir Jubilé",
+          "hex": "#2A2A2A",
+          "img": "/images/gmt/boitier-noir-jubilee.png"
+        },
+        {
+          "id": "black-pvd",
+          "nom": "Black PVD",
+          "hex": "#111111",
+          "img": "/images/gmt/boitier-black-pvd.png"
+        },
+        {
+          "id": "batman-oyster",
+          "nom": "Batman Oyster",
+          "hex": "#1C3A6E",
+          "img": "/images/gmt/boitier-batman-oyster.png"
+        },
+        {
+          "id": "batman-jubilee",
+          "nom": "Batman Jubilé",
+          "hex": "#1C3A6E",
+          "img": "/images/gmt/boitier-batman-jubilee.png"
+        },
+        {
+          "id": "bleu-oyster",
+          "nom": "Bleu Oyster",
+          "hex": "#1A5F9A",
+          "img": "/images/gmt/boitier-bleu-oyster.png"
+        },
+        {
+          "id": "blanc-oyster",
+          "nom": "Blanc Oyster",
+          "hex": "#E8E8E8",
+          "img": "/images/gmt/boitier-blanc-oyster.png"
+        },
+        {
+          "id": "bicolor-bleu",
+          "nom": "Bicolor Bleu Jubilé",
+          "hex": "#6B8FBC",
+          "img": "/images/gmt/boitier-bicolor-bleu-jubilee.png"
+        },
+        {
+          "id": "coke-jubilee",
+          "nom": "Coke Jubilé",
+          "hex": "#8B2020",
+          "img": "/images/gmt/boitier-coke-jubilee.png"
+        },
+        {
+          "id": "coke-oyster",
+          "nom": "Coke Oyster",
+          "hex": "#8B2020",
+          "img": "/images/gmt/boitier-coke-oyster.png"
+        },
+        {
+          "id": "rouge-oyster",
+          "nom": "Rouge Oyster",
+          "hex": "#C0392B",
+          "img": "/images/gmt/boitier-rouge-oyster.png"
+        },
+        {
+          "id": "vert-oyster",
+          "nom": "Vert Oyster",
+          "hex": "#2E7D32",
+          "img": "/images/gmt/boitier-vert-oyster.png"
+        },
+        {
+          "id": "or-jubilee",
+          "nom": "Or Jubilé",
           "hex": "#D4A437",
-          "img": "/images/parts/gmt/boitiers/or-jaune.png"
+          "img": "/images/gmt/boitier-or-jubilee.png"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
           "hex": "#C9856A",
-          "img": "/images/parts/gmt/boitiers/or-rose.png"
+          "img": "/images/gmt/boitier-or-rose.png"
         }
       ],
       "cadrans": {
@@ -399,107 +305,6 @@
                 "img": "/images/parts/gmt/cadrans/noir-et-vert.png"
               }
             ]
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "noir",
-                "nom": "Noir",
-                "img": "/images/parts/gmt/cadrans/wmc/noir.jpg"
-              },
-              {
-                "id": "batman",
-                "nom": "Batman",
-                "img": "/images/parts/gmt/cadrans/wmc/batman.jpg"
-              },
-              {
-                "id": "black-tiffany-blue",
-                "nom": "Black & Tiffany Blue",
-                "img": "/images/parts/gmt/cadrans/wmc/black-tiffany-blue.jpg"
-              },
-              {
-                "id": "tiffany-blue",
-                "nom": "Tiffany Blue",
-                "img": "/images/parts/gmt/cadrans/wmc/tiffany-blue.jpg"
-              },
-              {
-                "id": "rootbeer",
-                "nom": "Rootbeer",
-                "img": "/images/parts/gmt/cadrans/wmc/rootbeer.jpg"
-              },
-              {
-                "id": "cola",
-                "nom": "Cola",
-                "img": "/images/parts/gmt/cadrans/wmc/cola.jpg"
-              },
-              {
-                "id": "pepsi",
-                "nom": "Pepsi",
-                "img": "/images/parts/gmt/cadrans/wmc/pepsi.jpg"
-              },
-              {
-                "id": "sprite",
-                "nom": "Sprite",
-                "img": "/images/parts/gmt/cadrans/wmc/sprite.jpg"
-              },
-              {
-                "id": "gris-noir-or",
-                "nom": "Gris Noir Or",
-                "img": "/images/parts/gmt/cadrans/wmc/gris-noir-or.jpg"
-              },
-              {
-                "id": "ym-noir",
-                "nom": "YM Noir",
-                "img": "/images/parts/gmt/cadrans/wmc/ym-noir.jpg"
-              },
-              {
-                "id": "gris-noir",
-                "nom": "Gris Noir",
-                "img": "/images/parts/gmt/cadrans/wmc/gris-noir.jpg"
-              },
-              {
-                "id": "carbon-forge",
-                "nom": "Carbon Forgé",
-                "img": "/images/parts/gmt/cadrans/wmc/carbon-forge.jpg"
-              },
-              {
-                "id": "vert",
-                "nom": "Vert",
-                "img": "/images/parts/gmt/cadrans/wmc/vert.jpg"
-              },
-              {
-                "id": "violet-et-noir",
-                "nom": "Violet et Noir",
-                "img": "/images/parts/gmt/cadrans/wmc/violet-et-noir.jpg"
-              },
-              {
-                "id": "arabic-noir",
-                "nom": "Arabic Noir",
-                "img": "/images/parts/gmt/cadrans/wmc/arabic-noir.jpg"
-              },
-              {
-                "id": "arabic-bleu",
-                "nom": "Arabic Bleu",
-                "img": "/images/parts/gmt/cadrans/wmc/arabic-bleu.jpg"
-              },
-              {
-                "id": "arabic-bleu-electric",
-                "nom": "Arabic Bleu Electric",
-                "img": "/images/parts/gmt/cadrans/wmc/arabic-bleu-electric.jpg"
-              },
-              {
-                "id": "arabic-vert",
-                "nom": "Arabic Vert",
-                "img": "/images/parts/gmt/cadrans/wmc/arabic-vert.jpg"
-              },
-              {
-                "id": "vert-noir-double-fuseau",
-                "nom": "Vert et Noir Double Fuseau",
-                "img": "/images/parts/gmt/cadrans/wmc/vert-noir-double-fuseau.jpg"
-              }
-            ],
-            "label": "Cadrans GMT Colorés"
           }
         ]
       },
@@ -601,28 +406,34 @@
       },
       "boitiers": [
         {
-          "id": "argent",
-          "nom": "Argent",
+          "id": "acier",
+          "nom": "Acier",
           "hex": "#B8BBBA",
-          "img": "/images/parts/royaloak/boitiers/argent.png"
+          "img": "/images/royaloak/boitier-acier.png"
         },
         {
           "id": "noir",
-          "nom": "Noir",
+          "nom": "Noir PVD",
           "hex": "#222222",
-          "img": "/images/parts/royaloak/boitiers/noir.png"
+          "img": "/images/royaloak/boitier-black.png"
         },
         {
-          "id": "or-jaune",
+          "id": "or",
           "nom": "Or Jaune",
           "hex": "#D4A437",
-          "img": "/images/parts/royaloak/boitiers/or-jaune.png"
+          "img": "/images/royaloak/boitier-or.png"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
           "hex": "#C9856A",
-          "img": "/images/parts/royaloak/boitiers/or-rose.png"
+          "img": "/images/royaloak/boitier-or-rose.png"
+        },
+        {
+          "id": "frosted",
+          "nom": "Frosted Gold",
+          "hex": "#D4B56A",
+          "img": "/images/royaloak/boitier-frosted.png"
         }
       ],
       "cadrans": {
@@ -861,97 +672,6 @@
             ],
             "surcharge": 20,
             "requiredMouvement": "nh70"
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "baton-bleu",
-                "nom": "Baton Bleu",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-bleu.jpg"
-              },
-              {
-                "id": "gris-sunburst",
-                "nom": "Gris Sunburst",
-                "img": "/images/parts/royaloak/cadrans/wmc/gris-sunburst.jpg"
-              },
-              {
-                "id": "baton-blanc",
-                "nom": "Baton Blanc",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-blanc.jpg"
-              },
-              {
-                "id": "carbon-forge",
-                "nom": "Carbon Forgé",
-                "img": "/images/parts/royaloak/cadrans/wmc/carbon-forge.jpg"
-              },
-              {
-                "id": "baton-marron",
-                "nom": "Baton Marron",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-marron.jpg"
-              },
-              {
-                "id": "baton-rose",
-                "nom": "Baton Rose",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-rose.jpg"
-              },
-              {
-                "id": "baton-vert",
-                "nom": "Baton Vert",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-vert.jpg"
-              },
-              {
-                "id": "baton-violet",
-                "nom": "Baton Violet",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-violet.jpg"
-              },
-              {
-                "id": "tiffany-bleu",
-                "nom": "Tiffany Bleu",
-                "img": "/images/parts/royaloak/cadrans/wmc/tiffany-bleu.jpg"
-              },
-              {
-                "id": "baton-noir",
-                "nom": "Baton Noir",
-                "img": "/images/parts/royaloak/cadrans/wmc/baton-noir.jpg"
-              },
-              {
-                "id": "skeleton-baton-acier",
-                "nom": "Skeleton Baton Acier",
-                "img": "/images/parts/royaloak/cadrans/wmc/skeleton-baton-acier.jpg"
-              },
-              {
-                "id": "skeleton-bleu",
-                "nom": "Skeleton Bleu",
-                "img": "/images/parts/royaloak/cadrans/wmc/skeleton-bleu.jpg"
-              },
-              {
-                "id": "skeleton-vert",
-                "nom": "Skeleton Vert",
-                "img": "/images/parts/royaloak/cadrans/wmc/skeleton-vert.jpg"
-              },
-              {
-                "id": "skeleton-noir",
-                "nom": "Skeleton Noir",
-                "img": "/images/parts/royaloak/cadrans/wmc/skeleton-noir.jpg"
-              },
-              {
-                "id": "pilote-noir",
-                "nom": "Pilote Noir",
-                "img": "/images/parts/royaloak/cadrans/wmc/pilote-noir.jpg"
-              },
-              {
-                "id": "rainbow-blanc",
-                "nom": "Rainbow Blanc",
-                "img": "/images/parts/royaloak/cadrans/wmc/rainbow-blanc.jpg"
-              },
-              {
-                "id": "rainbow-noir",
-                "nom": "Rainbow Noir",
-                "img": "/images/parts/royaloak/cadrans/wmc/rainbow-noir.jpg"
-              }
-            ],
-            "label": "Cadrans Style Royal Oak"
           }
         ]
       },
@@ -1330,127 +1050,6 @@
                 "img": "/images/parts/nautilus/cadrans/arabic-dial-vert-index-argentes.png"
               }
             ]
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "flash-bleu",
-                "nom": "Flash Bleu",
-                "img": "/images/parts/nautilus/cadrans/wmc/flash-bleu.jpg"
-              },
-              {
-                "id": "flash-orange",
-                "nom": "Flash Orange",
-                "img": "/images/parts/nautilus/cadrans/wmc/flash-orange.jpg"
-              },
-              {
-                "id": "flash-rouge",
-                "nom": "Flash Rouge",
-                "img": "/images/parts/nautilus/cadrans/wmc/flash-rouge.jpg"
-              },
-              {
-                "id": "orange",
-                "nom": "Orange",
-                "img": "/images/parts/nautilus/cadrans/wmc/orange.jpg"
-              },
-              {
-                "id": "flash-or-rose",
-                "nom": "Flash Or Rose",
-                "img": "/images/parts/nautilus/cadrans/wmc/flash-or-rose.jpg"
-              },
-              {
-                "id": "benz-bleu",
-                "nom": "Benz Bleu",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-bleu.jpg"
-              },
-              {
-                "id": "benz-bleu-turquoise",
-                "nom": "Benz Bleu Turquoise",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-bleu-turquoise.jpg"
-              },
-              {
-                "id": "benz-orange",
-                "nom": "Benz Orange",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-orange.jpg"
-              },
-              {
-                "id": "benz-rouge",
-                "nom": "Benz Rouge",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-rouge.jpg"
-              },
-              {
-                "id": "benz-vert",
-                "nom": "Benz Vert",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-vert.jpg"
-              },
-              {
-                "id": "nautilus-or-rose",
-                "nom": "Nautilus Or Rose",
-                "img": "/images/parts/nautilus/cadrans/wmc/nautilus-or-rose.jpg"
-              },
-              {
-                "id": "nautilus-or",
-                "nom": "Nautilus Or",
-                "img": "/images/parts/nautilus/cadrans/wmc/nautilus-or.jpg"
-              },
-              {
-                "id": "nautilus-noir",
-                "nom": "Nautilus Noir",
-                "img": "/images/parts/nautilus/cadrans/wmc/nautilus-noir.jpg"
-              },
-              {
-                "id": "baton-acier",
-                "nom": "Baton Acier",
-                "img": "/images/parts/nautilus/cadrans/wmc/baton-acier.jpg"
-              },
-              {
-                "id": "baton-or-rose",
-                "nom": "Baton Or Rose",
-                "img": "/images/parts/nautilus/cadrans/wmc/baton-or-rose.jpg"
-              },
-              {
-                "id": "baton-or",
-                "nom": "Baton Or",
-                "img": "/images/parts/nautilus/cadrans/wmc/baton-or.jpg"
-              },
-              {
-                "id": "baton-noir",
-                "nom": "Baton Noir",
-                "img": "/images/parts/nautilus/cadrans/wmc/baton-noir.jpg"
-              },
-              {
-                "id": "benz-or-rose",
-                "nom": "Benz Or Rose",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-or-rose.jpg"
-              },
-              {
-                "id": "benz-or",
-                "nom": "Benz Or",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-or.jpg"
-              },
-              {
-                "id": "benz-noir",
-                "nom": "Benz Noir",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-noir.jpg"
-              },
-              {
-                "id": "flash-bleu-alt",
-                "nom": "Flash Bleu Alt",
-                "img": "/images/parts/nautilus/cadrans/wmc/flash-bleu-alt.jpg"
-              },
-              {
-                "id": "benz-skeleton",
-                "nom": "Benz Skeleton N&B",
-                "img": "/images/parts/nautilus/cadrans/wmc/benz-skeleton.jpg"
-              },
-              {
-                "id": "dolphin-or-rose",
-                "nom": "Dolphin Or Rose",
-                "img": "/images/parts/nautilus/cadrans/wmc/dolphin-or-rose.jpg"
-              }
-            ],
-            "label": "Cadrans Style Nautilus"
           }
         ]
       },
@@ -1569,22 +1168,47 @@
       },
       "boitiers": [
         {
-          "id": "argent",
-          "nom": "Argent",
+          "id": "acier",
+          "nom": "Acier",
           "hex": "#B8BBBA",
-          "img": "/images/parts/daytona/boitiers/argent.png"
+          "img": "/images/daytona/boitier-acier.png"
         },
         {
-          "id": "or-jaune",
+          "id": "noir",
+          "nom": "Noir PVD",
+          "hex": "#222222",
+          "img": "/images/daytona/boitier-noir.png"
+        },
+        {
+          "id": "acier-noir",
+          "nom": "Acier & Noir",
+          "hex": "#5A5A5A",
+          "img": "/images/daytona/boitier-acier-noir.png"
+        },
+        {
+          "id": "or",
           "nom": "Or Jaune",
           "hex": "#D4A437",
-          "img": "/images/parts/daytona/boitiers/or-jaune.png"
+          "img": "/images/daytona/boitier-or.png"
         },
         {
-          "id": "or-rose",
-          "nom": "Or Rose",
+          "id": "or-caoutchouc",
+          "nom": "Or Caoutchouc",
+          "hex": "#C9A040",
+          "img": "/images/daytona/boitier-or-caoutchouc.png"
+        },
+        {
+          "id": "or-rose-caoutchouc",
+          "nom": "Or Rose Caoutchouc",
           "hex": "#C9856A",
-          "img": "/images/parts/daytona/boitiers/or-rose.png"
+          "img": "/images/daytona/boitier-or-rose-caoutchouc.png"
+        },
+        {
+          "id": "diamant",
+          "nom": "Édition Diamant",
+          "hex": "#D0D8E4",
+          "img": "/images/daytona/boitier-diamant.png",
+          "cat": "diamant"
         }
       ],
       "cadrans": {
@@ -1656,82 +1280,6 @@
                 "img": "/images/daytona/cadran-irise.png"
               }
             ]
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "or-rose-avec-indices",
-                "nom": "Or Rose avec indices",
-                "img": "/images/parts/daytona/cadrans/wmc/or-rose-avec-indices.jpg"
-              },
-              {
-                "id": "or-avec-indices",
-                "nom": "Or avec indices",
-                "img": "/images/parts/daytona/cadrans/wmc/or-avec-indices.jpg"
-              },
-              {
-                "id": "noir-avec-indices",
-                "nom": "Noir avec indices",
-                "img": "/images/parts/daytona/cadrans/wmc/noir-avec-indices.jpg"
-              },
-              {
-                "id": "noir-et-blanc",
-                "nom": "Noir et Blanc",
-                "img": "/images/parts/daytona/cadrans/wmc/noir-et-blanc.jpg"
-              },
-              {
-                "id": "double-noir",
-                "nom": "Double Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/double-noir.jpg"
-              },
-              {
-                "id": "orange-et-noir",
-                "nom": "Orange et Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/orange-et-noir.jpg"
-              },
-              {
-                "id": "or-rose-brosse",
-                "nom": "Or Rose Brossé",
-                "img": "/images/parts/daytona/cadrans/wmc/or-rose-brosse.jpg"
-              },
-              {
-                "id": "or-brosse",
-                "nom": "Or Brossé",
-                "img": "/images/parts/daytona/cadrans/wmc/or-brosse.jpg"
-              },
-              {
-                "id": "noir-mat",
-                "nom": "Noir Mat",
-                "img": "/images/parts/daytona/cadrans/wmc/noir-mat.jpg"
-              },
-              {
-                "id": "bleu-et-noir",
-                "nom": "Bleu et Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/bleu-et-noir.jpg"
-              },
-              {
-                "id": "jaune-et-noir",
-                "nom": "Jaune et Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/jaune-et-noir.jpg"
-              },
-              {
-                "id": "vert-et-noir",
-                "nom": "Vert et Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/vert-et-noir.jpg"
-              },
-              {
-                "id": "rouge-et-noir",
-                "nom": "Rouge et Noir",
-                "img": "/images/parts/daytona/cadrans/wmc/rouge-et-noir.jpg"
-              },
-              {
-                "id": "blanc-ceramique",
-                "nom": "Blanc Céramique",
-                "img": "/images/parts/daytona/cadrans/wmc/blanc-ceramique.jpg"
-              }
-            ],
-            "label": "Cadrans Chronographe"
           }
         ]
       },
@@ -1767,23 +1315,6 @@
           "id": "or-rose",
           "nom": "Or Rose",
           "img": "/images/parts/daytona/bracelets/or-rose.png"
-        }
-      ],
-      "lunettes": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "img": "/images/parts/daytona/lunettes/argent.png"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "img": "/images/parts/daytona/lunettes/or-jaune.png"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "img": "/images/parts/daytona/lunettes/or-rose.png"
         }
       ]
     },
@@ -1845,87 +1376,6 @@
                 "img": "/images/parts/daydate/cadrans/noir.png"
               }
             ]
-          },
-          {
-            "id": "wmc",
-            "couleurs": [
-              {
-                "id": "benz-vintage-acier",
-                "nom": "Benz Vintage Acier",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-vintage-acier.jpg"
-              },
-              {
-                "id": "benz-or",
-                "nom": "Benz Or",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-or.jpg"
-              },
-              {
-                "id": "benz-or-rose",
-                "nom": "Benz Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-or-rose.jpg"
-              },
-              {
-                "id": "benz-noir",
-                "nom": "Benz Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-noir.jpg"
-              },
-              {
-                "id": "benz-noir-complet",
-                "nom": "Benz Noir Complet",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-noir-complet.jpg"
-              },
-              {
-                "id": "snowflakes-or-rose",
-                "nom": "Snowflakes Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/snowflakes-or-rose.jpg"
-              },
-              {
-                "id": "snowflakes-noir",
-                "nom": "Snowflakes Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/snowflakes-noir.jpg"
-              },
-              {
-                "id": "index-or-rose",
-                "nom": "Index Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/index-or-rose.jpg"
-              },
-              {
-                "id": "index-or",
-                "nom": "Index Or",
-                "img": "/images/parts/daydate/cadrans/wmc/index-or.jpg"
-              },
-              {
-                "id": "index-noir",
-                "nom": "Index Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/index-noir.jpg"
-              },
-              {
-                "id": "baton-acier",
-                "nom": "Baton Acier",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-acier.jpg"
-              },
-              {
-                "id": "baton-or-rose",
-                "nom": "Baton Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-or-rose.jpg"
-              },
-              {
-                "id": "baton-or",
-                "nom": "Baton Or",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-or.jpg"
-              },
-              {
-                "id": "baton-noir",
-                "nom": "Baton Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-noir.jpg"
-              },
-              {
-                "id": "benz-skeleton",
-                "nom": "Benz Skeleton N&B",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-skeleton.jpg"
-              }
-            ],
-            "label": "Cadrans Style Day-Date"
           }
         ]
       },
