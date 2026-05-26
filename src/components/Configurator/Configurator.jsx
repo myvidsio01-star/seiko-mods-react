@@ -3,6 +3,12 @@ import styled, { keyframes } from 'styled-components'
 import watchParts from '../../data/watchParts.json'
 import { WA_URL, waMsg, FB_URL } from '../../utils/contact'
 
+/* Convert /images/MODEL/part.png → /images/layers/MODEL/part.png */
+function toLayer(img) {
+  if (!img) return null
+  return img.replace('/images/', '/images/layers/')
+}
+
 const TABS = [
   { id: 'modele',    label: 'Modèle' },
   { id: 'boitier',  label: 'Boîtier' },
@@ -92,6 +98,18 @@ const WatchPlaceholder = styled.div`
   align-items: center; justify-content: center; gap: 12px;
   color: #A8A29E; font-size: 13px; font-weight: 300;
   text-align: center;
+`
+/* ── LAYER COMPOSITING ── */
+const LayerWrap = styled.div`
+  position: relative;
+  width: 85%; height: 85%;
+  filter: drop-shadow(0 8px 32px rgba(202,138,4,0.25)) drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+`
+const LayerImg = styled.img`
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  animation: ${fadeIn} 250ms ease;
 `
 const PriceBadge = styled.div`
   display: flex; flex-direction: column; align-items: center; gap: 4px;
@@ -417,22 +435,43 @@ const BoitierName = styled.span`
   transition: color 200ms ease;
 `
 
-function ImgWithFallback({ src, alt, style }) {
-  const [err, setErr] = useState(false)
-  if (err || !src) return (
-    <WatchPlaceholder>
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#78716C" strokeWidth="1">
-        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-      </svg>
-      Sélectionnez un modèle
-    </WatchPlaceholder>
+function LayerPreview({ modele, sel }) {
+  const boitierSrc   = toLayer(sel.boitier?.img)
+  const cadranSrc    = toLayer(sel.cadranCouleur?.img)
+  const aiguillesSrc = toLayer(sel.aiguilles?.img)
+  const braceletSrc  = toLayer(sel.bracelet?.img)
+
+  const hasLayers = boitierSrc || cadranSrc || aiguillesSrc || braceletSrc
+
+  if (!modele) {
+    return (
+      <WatchPlaceholder>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#78716C" strokeWidth="1">
+          <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+          <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="4.22" y1="4.22" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/>
+        </svg>
+        Sélectionnez un modèle
+      </WatchPlaceholder>
+    )
+  }
+
+  if (!hasLayers) {
+    return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
+  }
+
+  return (
+    <LayerWrap>
+      {braceletSrc  && <LayerImg key={braceletSrc}   src={braceletSrc}   alt="bracelet"  style={{ zIndex: 1 }} onError={e => { e.target.style.display='none' }} />}
+      {boitierSrc   && <LayerImg key={boitierSrc}    src={boitierSrc}    alt="boitier"   style={{ zIndex: 2 }} onError={e => { e.target.style.display='none' }} />}
+      {cadranSrc    && <LayerImg key={cadranSrc}     src={cadranSrc}     alt="cadran"    style={{ zIndex: 3 }} onError={e => { e.target.style.display='none' }} />}
+      {aiguillesSrc && <LayerImg key={aiguillesSrc}  src={aiguillesSrc}  alt="aiguilles" style={{ zIndex: 4 }} onError={e => { e.target.style.display='none' }} />}
+    </LayerWrap>
   )
-  return <WatchImg src={src} alt={alt} style={style} onError={() => setErr(true)} />
 }
 
 export default function Configurator({ onCommander }) {
   const [tab, setTab] = useState('modele')
-  const [previewImg, setPreviewImg] = useState(null)
   const [livraison, setLivraison] = useState(null)
   const [sel, setSel] = useState({
     modele:        null,
@@ -446,7 +485,6 @@ export default function Configurator({ onCommander }) {
   })
 
   const set = useCallback((key, val, advance) => {
-    if (val?.img) setPreviewImg(val.img)
     setSel(prev => {
       const next = { ...prev, [key]: val }
       if (key === 'modele') {
@@ -457,7 +495,6 @@ export default function Configurator({ onCommander }) {
         next.mouvement     = null
         next.aiguilles     = null
         next.bracelet      = null
-        setPreviewImg(null)
       }
       if (key === 'cadranCouleur') {
         if (val?.requiredMouvement && prev.mouvement?.id !== val.requiredMouvement) {
@@ -859,7 +896,7 @@ export default function Configurator({ onCommander }) {
         <Layout>
           <WatchPreview>
             <ImageWrap>
-              <ImgWithFallback key={previewImg || modele?.image} src={previewImg || modele?.image} alt={modele?.nom} />
+              <LayerPreview modele={modele} sel={sel} />
             </ImageWrap>
 
             {modele && (

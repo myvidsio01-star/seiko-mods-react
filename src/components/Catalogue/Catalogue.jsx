@@ -227,13 +227,13 @@ const BtnCardFb = styled.a`
 `
 
 const watches = [
-  { name: 'Panda Daytona',  price: 'À partir de 200 euros', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png'      },
-  { name: 'Submariner',     price: 'À partir de 200 euros', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg' },
-  { name: 'GMT-Master',     price: 'À partir de 200 euros', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg'        },
-  { name: 'Royal Oak',      price: 'À partir de 200 euros', stars: 5, tag: 'Exclusif',    img: '/images/watch-royaloak.png'   },
-  { name: 'Nautilus',       price: 'À partir de 200 euros', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png'   },
-  { name: 'Santos',         price: 'À partir de 200 euros', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png'     },
-  { name: 'Day-Date',       price: 'À partir de 200 euros', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png'    },
+  { name: 'Panda Daytona',  price: '210 €', stars: 5, tag: 'Best-seller', img: '/images/watch-seiko.png'      },
+  { name: 'Submariner',     price: '210 €', stars: 5, tag: 'Signature',   img: '/images/watch-submariner.jpg' },
+  { name: 'GMT-Master',     price: '210 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.jpg'        },
+  { name: 'Royal Oak',      price: '210 €', stars: 5, tag: 'Exclusif',    img: '/images/watch-royaloak.png'   },
+  { name: 'Nautilus',       price: '210 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png'   },
+  { name: 'Santos',         price: '210 €', stars: 4, tag: 'Exclusif',    img: '/images/watch-santos.png'     },
+  { name: 'Day-Date',       price: '210 €', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png'    },
 ]
 
 function StarRow({ count }) {

@@ -14,7 +14,7 @@
     {
       "id": "submariner",
       "nom": "Submariner",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-submariner.jpg",
       "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
@@ -61,7 +61,7 @@
     {
       "id": "gmt",
       "nom": "GMT-Master",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-gmt.jpg",
       "mouvements": ["nh34"],
       "mouvementRecommande": "nh34",
@@ -108,7 +108,7 @@
     {
       "id": "royaloak",
       "nom": "Royal Oak",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-royaloak.png",
       "mouvements": ["nh35", "nh70"],
       "mouvementRecommande": "nh35",
@@ -185,7 +185,7 @@
     {
       "id": "nautilus",
       "nom": "Nautilus",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-nautilus.png",
       "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
@@ -221,7 +221,7 @@
     {
       "id": "santos",
       "nom": "Santos",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-santos.png",
       "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
@@ -249,7 +249,7 @@
     {
       "id": "daytona",
       "nom": "Daytona",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-seiko.png",
       "allchinabuy": true,
       "mouvements": ["vk63"],
@@ -300,7 +300,7 @@
     {
       "id": "daydate",
       "nom": "Day-Date",
-      "prix": "200 € – 220 €",
+      "prix": "210 €",
       "image": "/images/watch-daydate.png",
       "mouvements": ["miyota8285"],
       "mouvementRecommande": "miyota8285",
