@@ -469,6 +469,7 @@ export default function Configurator({ onCommander }) {
   const [sel, setSel] = useState({
     modele:        null,
     boitier:       null,
+    lunette:       null,
     cadranModele:  null,
     cadranCouleur: null,
     cadranStyle:   null,
@@ -482,6 +483,7 @@ export default function Configurator({ onCommander }) {
       const next = { ...prev, [key]: val }
       if (key === 'modele') {
         next.boitier       = null
+        next.lunette       = null
         next.cadranModele  = null
         next.cadranCouleur = null
         next.cadranStyle   = null
@@ -533,6 +535,7 @@ export default function Configurator({ onCommander }) {
       '',
       `• Modèle : ${sel.modele?.nom}`,
       `• Boîtier : ${sel.boitier?.nom}`,
+      ...(sel.lunette ? [`• Lunette : ${sel.lunette?.nom}`] : []),
       cadranCatalogue
         ? `• Cadran : ${sel.cadranCouleur?.nom} — couleur à préciser sur WhatsApp`
         : cadranSections
@@ -616,6 +619,7 @@ export default function Configurator({ onCommander }) {
         const diamantBoitiers  = modele?.boitiers.filter(b => b.cat === 'diamant') ?? []
         const optionBoitiers   = modele?.boitiers.filter(b => b.cat === 'option') ?? []
         const hasBoitierPhotos = standardBoitiers.some(b => b.img || b.yansImg)
+        const lunettes         = modele?.lunettes ?? []
         return (
           <TabContent>
             {!modele ? (
@@ -671,6 +675,19 @@ export default function Configurator({ onCommander }) {
                         </TextCard>
                       ))}
                     </CardsGrid>
+                  </CatSection>
+                )}
+                {lunettes.length > 0 && (
+                  <CatSection>
+                    <CatLabel>Lunette</CatLabel>
+                    <PhotoCardsGrid>
+                      {lunettes.map(l => (
+                        <PhotoCard key={l.id} $selected={sel.lunette?.id === l.id} onClick={() => set('lunette', l)}>
+                          {l.img && <PhotoThumb src={l.img} alt={l.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                          <CardName style={{ fontSize: 10 }}>{l.nom}</CardName>
+                        </PhotoCard>
+                      ))}
+                    </PhotoCardsGrid>
                   </CatSection>
                 )}
               </>
@@ -806,21 +823,6 @@ export default function Configurator({ onCommander }) {
         )
 
       case 'aiguilles': {
-        /* Hex par nom d'aiguille */
-        const AIGUILLES_HEX = {
-          'argent': '#C8C8C8', 'noir': '#2A2A2A', 'or-rose': '#C9856A',
-          'or-jaune': '#D4A437', 'or': '#D4A437',
-          'gmt-acier': '#B8BBBA', 'gmt-acier-bleu': '#3A6BAF', 'gmt-acier-vert': '#3A7A4A',
-          'gmt-or': '#D4A437', 'gmt-or-rose': '#C9856A', 'gmt-acier-2': '#B8BBBA',
-          'gmt-noir': '#2A2A2A',
-          'daytona-acier': '#B8BBBA', 'daytona-or': '#D4A437',
-          'daytona-or-rose': '#C9856A', 'daytona-noir': '#2A2A2A',
-          'baton-acier': '#B8BBBA', 'baton-or': '#D4A437',
-          'baton-or-rose': '#C9856A', 'baton-noir': '#2A2A2A',
-          'mercedes-acier': '#B8BBBA', 'mercedes-or': '#D4A437', 'mercedes-noir': '#2A2A2A',
-          'santos-acier': '#B8BBBA',
-        }
-        const getHex = (a) => a.hex || AIGUILLES_HEX[a.id] || '#B8BBBA'
         return (
           <TabContent>
             {!modele ? (
@@ -828,24 +830,23 @@ export default function Configurator({ onCommander }) {
             ) : (
               <CatSection>
                 <CatLabel>Couleur des aiguilles</CatLabel>
-                <BoitierGrid>
+                <PhotoCardsGrid>
                   {modele.aiguilles.map(a => {
                     const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
                     return (
-                      <BoitierItem
+                      <PhotoCard
                         key={a.id}
+                        $selected={sel.aiguilles?.id === a.id}
                         style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
                         onClick={compatible ? () => set('aiguilles', a) : undefined}
                       >
-                        <BoitierSwatch $hex={getHex(a)} $selected={sel.aiguilles?.id === a.id} />
-                        <BoitierName $selected={sel.aiguilles?.id === a.id}>
-                          {a.nom}
-                          {!compatible && <span style={{display:'block',fontSize:8,color:'#44403C'}}>NH34 requis</span>}
-                        </BoitierName>
-                      </BoitierItem>
+                        {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                        <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
+                        {!compatible && <CardSub>NH34 requis</CardSub>}
+                      </PhotoCard>
                     )
                   })}
-                </BoitierGrid>
+                </PhotoCardsGrid>
               </CatSection>
             )}
           </TabContent>
@@ -893,6 +894,7 @@ export default function Configurator({ onCommander }) {
   const summaryRows = [
     { label: 'Modèle',    val: sel.modele?.nom },
     { label: 'Boîtier',   val: sel.boitier?.nom },
+    ...(modele?.lunettes?.length ? [{ label: 'Lunette', val: sel.lunette?.nom }] : []),
     { label: 'Cadran',    val: cadranSummary() },
     { label: 'Mouvement', val: sel.mouvement?.nom },
     { label: 'Aiguilles', val: sel.aiguilles?.nom },

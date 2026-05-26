@@ -269,6 +269,50 @@
           "nom": "Or Rose",
           "img": "/images/parts/gmt/bracelets/or-rose.png"
         }
+      ],
+      "aiguilleFuseau": [
+        {
+          "id": "bleue",
+          "nom": "Bleue",
+          "img": "/images/parts/gmt/fuseau/bleue.png"
+        },
+        {
+          "id": "rouge",
+          "nom": "Rouge",
+          "img": "/images/parts/gmt/fuseau/rouge.png"
+        },
+        {
+          "id": "verte",
+          "nom": "Verte",
+          "img": "/images/parts/gmt/fuseau/verte.png"
+        }
+      ],
+      "lunettes": [
+        {
+          "id": "batman",
+          "nom": "Batman",
+          "img": "/images/parts/gmt/lunettes/batman.png"
+        },
+        {
+          "id": "bruce-wayne",
+          "nom": "Bruce Wayne",
+          "img": "/images/parts/gmt/lunettes/bruce-wayne.png"
+        },
+        {
+          "id": "pepsi",
+          "nom": "Pepsi",
+          "img": "/images/parts/gmt/lunettes/pepsi.png"
+        },
+        {
+          "id": "rouge",
+          "nom": "Rouge",
+          "img": "/images/parts/gmt/lunettes/rouge.png"
+        },
+        {
+          "id": "sprite",
+          "nom": "Sprite",
+          "img": "/images/parts/gmt/lunettes/sprite.png"
+        }
       ]
     },
     {
@@ -1168,6 +1212,23 @@
           "id": "or-rose",
           "nom": "Or Rose",
           "img": "/images/parts/daytona/bracelets/or-rose.png"
+        }
+      ],
+      "lunettes": [
+        {
+          "id": "argent",
+          "nom": "Argent",
+          "img": "/images/parts/daytona/lunettes/argent.png"
+        },
+        {
+          "id": "or-jaune",
+          "nom": "Or Jaune",
+          "img": "/images/parts/daytona/lunettes/or-jaune.png"
+        },
+        {
+          "id": "or-rose",
+          "nom": "Or Rose",
+          "img": "/images/parts/daytona/lunettes/or-rose.png"
         }
       ]
     },
