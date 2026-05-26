@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
 import watchParts from '../../data/watchParts.json'
-import { WA_URL, waMsg } from '../../utils/contact'
+import { WA_URL, waMsg, FB_URL } from '../../utils/contact'
 
 const TABS = [
   { id: 'modele',    label: 'Modèle' },
@@ -932,15 +932,26 @@ export default function Configurator({ onCommander }) {
                   </DeliveryOpt>
 
                   {isComplete && (
-                    <CommanderBtn
-                      as="a"
-                      href={buildWaUrl()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ background: '#25D366', textDecoration: 'none', maxWidth: 'none' }}
-                    >
-                      💬 Passer la commande sur WhatsApp
-                    </CommanderBtn>
+                    <>
+                      <CommanderBtn
+                        as="a"
+                        href={buildWaUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ background: '#25D366', textDecoration: 'none', maxWidth: 'none' }}
+                      >
+                        💬 Passer la commande sur WhatsApp
+                      </CommanderBtn>
+                      <CommanderBtn
+                        as="a"
+                        href={FB_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ background: '#0099FF', textDecoration: 'none', maxWidth: 'none', marginTop: 8 }}
+                      >
+                        💬 Passer la commande sur Messenger
+                      </CommanderBtn>
+                    </>
                   )}
                 </OrderSection>
               </>

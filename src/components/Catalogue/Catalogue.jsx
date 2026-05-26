@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
-import { WA_URL, waMsg } from '../../utils/contact'
+import { WA_URL, waMsg, FB_URL } from '../../utils/contact'
 
 const Section = styled.section`
   padding: 120px 24px;
@@ -132,6 +132,10 @@ const CardFooter = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+const CardBtns = styled.div`
+  display: flex;
+  gap: 8px;
+`
 
 const Price = styled.span`
   font-family: 'Bodoni Moda', serif;
@@ -204,8 +208,22 @@ const BtnCard = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.25s ease;
-
   &:hover { background: #1ebe5d; transform: translateY(-1px); }
+`
+const BtnCardFb = styled.a`
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white;
+  background: #0099FF;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:hover { background: #007acc; transform: translateY(-1px); }
 `
 
 const watches = [
@@ -250,12 +268,17 @@ function WatchCard({ watch, delay }) {
           <div>
             <Price>{watch.price}</Price>
           </div>
-          <BtnCard
-            href={waMsg(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}
-            target="_blank" rel="noopener noreferrer"
-          >
-            WhatsApp
-          </BtnCard>
+          <CardBtns>
+            <BtnCard
+              href={waMsg(`Bonjour ! Je suis intéressé(e) par la ${watch.name}. Pouvez-vous me donner plus d'infos ?`)}
+              target="_blank" rel="noopener noreferrer"
+            >
+              WhatsApp
+            </BtnCard>
+            <BtnCardFb href={FB_URL} target="_blank" rel="noopener noreferrer">
+              Messenger
+            </BtnCardFb>
+          </CardBtns>
         </CardFooter>
       </CardBody>
     </Card>
