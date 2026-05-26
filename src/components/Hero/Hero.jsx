@@ -190,9 +190,9 @@ export default function Hero() {
       <Vignette />
 
       <Content>
-        <Eyebrow>Artisanat Horloger Premium</Eyebrow>
+        <Eyebrow>Mouvement Seiko original · Pièces aftermarket · La Réunion 974</Eyebrow>
         <Title>Chaque montre<br />est <span>unique</span></Title>
-        <Sub>Submariner, Royal Oak, Daytona et plus — faits à la main.<br />Livré directement chez toi à La Réunion.</Sub>
+        <Sub>Un vrai mouvement Seiko (NH35, NH36…) associé à un boîtier<br />et cadran aftermarket premium — assemblé à la main.<br />Pas une copie : une création unique, livrée chez toi à La Réunion.</Sub>
         <CTARow>
           <Btn href="#catalogue" $primary>Voir les montres</Btn>
           <Btn href={WA_URL} target="_blank" rel="noopener noreferrer">Nous contacter</Btn>
