@@ -449,14 +449,20 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
-  /* Render principal du modèle — les thumbnails yansmode sont des images
-     de sélection (pièce isolée), pas des couches positionnées sur la montre.
-     On garde le render complet comme aperçu fixe.                        */
-  const renderSrc = modele.render || modele.image
+  /* Priorité d'affichage :
+     1. Boîtier sélectionné (photo complète de la montre dans ce coloris)
+     2. Cadran sélectionné (visuel du cadran)
+     3. Render du modèle / image par défaut                               */
+  const previewSrc =
+    sel?.boitier?.img  ||
+    sel?.cadranCouleur?.img ||
+    modele.render      ||
+    modele.image
+
   return (
     <WatchImg
-      key={renderSrc}
-      src={renderSrc}
+      key={previewSrc}
+      src={previewSrc}
       alt={modele.nom}
       onError={e => { e.target.src = modele.image }}
     />
