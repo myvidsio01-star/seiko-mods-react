@@ -449,38 +449,18 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
-  /* ── Compositing yansmode : on empile toutes les couches disponibles ──
-     Les images parts/ sont des RGBA PNG rendus depuis le même angle de caméra
-     → bracelet (fond) → boitier → cadran → aiguilles (dessus)          */
-  const braceletImg  = sel.bracelet?.img
-  const boitierImg   = sel.boitier?.img
-  const cadranImg    = sel.cadranCouleur?.img
-  const aiguillesImg = sel.aiguilles?.img
-
-  const hasYansLayers = braceletImg || boitierImg || cadranImg || aiguillesImg
-
-  if (hasYansLayers) {
-    return (
-      <LayerWrap>
-        {braceletImg  && <LayerImg key={braceletImg}  src={braceletImg}  alt="bracelet"  style={{ zIndex: 1 }} onError={e => { e.target.style.display='none' }} />}
-        {boitierImg   && <LayerImg key={boitierImg}   src={boitierImg}   alt="boitier"   style={{ zIndex: 2 }} onError={e => { e.target.style.display='none' }} />}
-        {cadranImg    && <LayerImg key={cadranImg}    src={cadranImg}    alt="cadran"    style={{ zIndex: 3 }} onError={e => { e.target.style.display='none' }} />}
-        {aiguillesImg && <LayerImg key={aiguillesImg} src={aiguillesImg} alt="aiguilles" style={{ zIndex: 4 }} onError={e => { e.target.style.display='none' }} />}
-      </LayerWrap>
-    )
-  }
-
-  /* Render haute qualité yansmode (quand rien n'est encore sélectionné) */
-  const renderSrc = modele.render || null
-  if (renderSrc) {
-    return (
-      <WatchImg key={renderSrc} src={renderSrc} alt={modele.nom}
-        onError={e => { e.target.src = modele.image }} />
-    )
-  }
-
-  /* Fallback image catalogue */
-  return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
+  /* Render principal du modèle — les thumbnails yansmode sont des images
+     de sélection (pièce isolée), pas des couches positionnées sur la montre.
+     On garde le render complet comme aperçu fixe.                        */
+  const renderSrc = modele.render || modele.image
+  return (
+    <WatchImg
+      key={renderSrc}
+      src={renderSrc}
+      alt={modele.nom}
+      onError={e => { e.target.src = modele.image }}
+    />
+  )
 }
 
 export default function Configurator({ onCommander }) {
