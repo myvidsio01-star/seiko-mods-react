@@ -436,12 +436,8 @@ const BoitierName = styled.span`
 `
 
 function LayerPreview({ modele, sel }) {
-  const boitierSrc   = toLayer(sel.boitier?.img)
-  const cadranSrc    = toLayer(sel.cadranCouleur?.img)
-  const aiguillesSrc = toLayer(sel.aiguilles?.img)
-  const braceletSrc  = toLayer(sel.bracelet?.img)
-
-  const hasLayers = boitierSrc || cadranSrc || aiguillesSrc || braceletSrc
+  /* Si le modèle a un render yansmode, on l'utilise comme base */
+  const renderSrc = modele?.render || null
 
   if (!modele) {
     return (
@@ -455,6 +451,25 @@ function LayerPreview({ modele, sel }) {
       </WatchPlaceholder>
     )
   }
+
+  /* Modèle avec render haute qualité */
+  if (renderSrc) {
+    return (
+      <WatchImg
+        key={renderSrc}
+        src={renderSrc}
+        alt={modele.nom}
+        onError={e => { e.target.src = modele.image }}
+      />
+    )
+  }
+
+  /* Fallback : layer compositing ou image catalogue */
+  const boitierSrc   = toLayer(sel.boitier?.img)
+  const cadranSrc    = toLayer(sel.cadranCouleur?.img)
+  const aiguillesSrc = toLayer(sel.aiguilles?.img)
+  const braceletSrc  = toLayer(sel.bracelet?.img)
+  const hasLayers    = boitierSrc || cadranSrc || aiguillesSrc || braceletSrc
 
   if (!hasLayers) {
     return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
