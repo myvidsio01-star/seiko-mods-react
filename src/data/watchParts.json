@@ -262,19 +262,22 @@
           "id": "argent-jubilee",
           "nom": "Bezel Argent + Jubilé",
           "hex": "#B8BBBA",
-          "img": "/images/gmt/boitier-argent-jubilee.png"
+          "img": "/images/gmt/boitier-argent-jubilee.png",
+          "yansImg": "/images/boitiers/gmt/argent.png"
         },
         {
           "id": "or-jubilee",
           "nom": "Or Jaune + Jubilé",
           "hex": "#D4A437",
-          "img": "/images/gmt/boitier-or-jubilee.png"
+          "img": "/images/gmt/boitier-or-jubilee.png",
+          "yansImg": "/images/boitiers/gmt/or-jaune.png"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose + Président",
           "hex": "#C9856A",
-          "img": "/images/gmt/boitier-or-rose.png"
+          "img": "/images/gmt/boitier-or-rose.png",
+          "yansImg": "/images/boitiers/gmt/or-rose.png"
         },
         {
           "id": "batman-jubilee",
@@ -384,25 +387,29 @@
           "id": "acier",
           "nom": "Acier",
           "hex": "#B8BBBA",
-          "img": "/images/royaloak/boitier-acier.png"
+          "img": "/images/royaloak/boitier-acier.png",
+          "yansImg": "/images/boitiers/royaloak/argent.png"
         },
         {
           "id": "black",
           "nom": "Black PVD",
           "hex": "#222222",
-          "img": "/images/royaloak/boitier-black.png"
+          "img": "/images/royaloak/boitier-black.png",
+          "yansImg": "/images/boitiers/royaloak/noir.png"
         },
         {
           "id": "or",
           "nom": "Or Jaune",
           "hex": "#D4A437",
-          "img": "/images/royaloak/boitier-or.png"
+          "img": "/images/royaloak/boitier-or.png",
+          "yansImg": "/images/boitiers/royaloak/or-jaune.png"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
           "hex": "#C9856A",
-          "img": "/images/royaloak/boitier-or-rose.png"
+          "img": "/images/royaloak/boitier-or-rose.png",
+          "yansImg": "/images/boitiers/royaloak/or-rose.png"
         },
         {
           "id": "frosted",
@@ -715,19 +722,22 @@
           "id": "acier",
           "nom": "Acier",
           "hex": "#B8BBBA",
-          "img": "/images/nautilus/boitier-acier.png"
+          "img": "/images/nautilus/boitier-acier.png",
+          "yansImg": "/images/boitiers/nautilus/argent.png"
         },
         {
           "id": "black",
           "nom": "Black",
           "hex": "#222222",
-          "img": "/images/nautilus/boitier-black.png"
+          "img": "/images/nautilus/boitier-black.png",
+          "yansImg": "/images/boitiers/nautilus/noir.png"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
           "hex": "#C9856A",
-          "img": "/images/nautilus/boitier-or-rose.png"
+          "img": "/images/nautilus/boitier-or-rose.png",
+          "yansImg": "/images/boitiers/nautilus/or-rose.png"
         }
       ],
       "cadrans": {
@@ -1118,7 +1128,8 @@
           "id": "acier",
           "nom": "Acier",
           "hex": "#B8BBBA",
-          "img": "/images/daytona/boitier-acier.png"
+          "img": "/images/daytona/boitier-acier.png",
+          "yansImg": "/images/boitiers/daytona/argent.png"
         },
         {
           "id": "acier-noir",
@@ -1136,7 +1147,8 @@
           "id": "or",
           "nom": "Or Jaune",
           "hex": "#D4A437",
-          "img": "/images/daytona/boitier-or.png"
+          "img": "/images/daytona/boitier-or.png",
+          "yansImg": "/images/boitiers/daytona/or-jaune.png"
         },
         {
           "id": "or-caoutchouc",
@@ -1148,7 +1160,8 @@
           "id": "or-rose-caoutchouc",
           "nom": "Or Rose + Caoutchouc",
           "hex": "#C9856A",
-          "img": "/images/daytona/boitier-or-rose-caoutchouc.png"
+          "img": "/images/daytona/boitier-or-rose-caoutchouc.png",
+          "yansImg": "/images/boitiers/daytona/or-rose.png"
         },
         {
           "id": "diamant",

@@ -462,6 +462,19 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
+  /* Boîtier sélectionné avec photo yansmode → aperçu de la montre avec ce boîtier */
+  const boitierImg = sel.boitier?.yansImg
+  if (boitierImg) {
+    return (
+      <WatchImg
+        key={boitierImg}
+        src={boitierImg}
+        alt={sel.boitier.nom}
+        onError={e => { e.target.src = modele.render || modele.image }}
+      />
+    )
+  }
+
   /* Render haute qualité yansmode */
   const renderSrc = modele.render || null
   if (renderSrc) {
@@ -646,6 +659,7 @@ export default function Configurator({ onCommander }) {
         const standardBoitiers = modele?.boitiers.filter(b => !b.cat) ?? []
         const diamantBoitiers  = modele?.boitiers.filter(b => b.cat === 'diamant') ?? []
         const optionBoitiers   = modele?.boitiers.filter(b => b.cat === 'option') ?? []
+        const hasBoitierPhotos = standardBoitiers.some(b => b.yansImg)
         return (
           <TabContent>
             {!modele ? (
@@ -654,14 +668,28 @@ export default function Configurator({ onCommander }) {
               <>
                 <CatSection>
                   <CatLabel>Couleur & finition du boîtier</CatLabel>
-                  <BoitierGrid>
-                    {standardBoitiers.map(b => (
-                      <BoitierItem key={b.id} onClick={() => set('boitier', b)}>
-                        <BoitierSwatch $hex={b.hex} $selected={sel.boitier?.id === b.id} />
-                        <BoitierName $selected={sel.boitier?.id === b.id}>{b.nom}</BoitierName>
-                      </BoitierItem>
-                    ))}
-                  </BoitierGrid>
+                  {hasBoitierPhotos ? (
+                    <PhotoCardsGrid>
+                      {standardBoitiers.map(b => (
+                        <PhotoCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b)}>
+                          {b.yansImg
+                            ? <PhotoThumb src={b.yansImg} alt={b.nom} onError={e => { e.target.style.opacity = 0.3 }} />
+                            : <div style={{ width: 72, height: 72, borderRadius: 6, background: b.hex, border: '1px solid #292524' }} />
+                          }
+                          <CardName style={{ fontSize: 10 }}>{b.nom}</CardName>
+                        </PhotoCard>
+                      ))}
+                    </PhotoCardsGrid>
+                  ) : (
+                    <BoitierGrid>
+                      {standardBoitiers.map(b => (
+                        <BoitierItem key={b.id} onClick={() => set('boitier', b)}>
+                          <BoitierSwatch $hex={b.hex} $selected={sel.boitier?.id === b.id} />
+                          <BoitierName $selected={sel.boitier?.id === b.id}>{b.nom}</BoitierName>
+                        </BoitierItem>
+                      ))}
+                    </BoitierGrid>
+                  )}
                 </CatSection>
                 {diamantBoitiers.length > 0 && (
                   <CatSection>
