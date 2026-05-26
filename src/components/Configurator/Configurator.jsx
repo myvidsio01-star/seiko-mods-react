@@ -707,7 +707,10 @@ export default function Configurator({ onCommander }) {
               <CatSection>
                 <CatLabel>Couleur du cadran</CatLabel>
                 <SwatchGrid>
-                  {modele.cadrans.couleurs.map(c => (
+                  {(sel.cadranModele
+                    ? modele.cadrans.couleurs.filter(c => !c.modele || c.modele === sel.cadranModele.id)
+                    : modele.cadrans.couleurs
+                  ).map(c => (
                     <Swatch key={c.id} $hex={c.hex} $selected={sel.cadranCouleur?.id === c.id}
                       onClick={() => set('cadranCouleur', c)}>
                       <SwatchTooltip>{c.nom}</SwatchTooltip>

@@ -31,14 +31,14 @@
           { "id": "yacht-master", "nom": "Yacht Master" }
         ],
         "couleurs": [
-          { "id": "noir",         "nom": "Noir",              "hex": "#111111", "img": "/images/submariner/cadran-noir.png" },
-          { "id": "bleu",         "nom": "Bleu Marine Or",   "hex": "#1B2F6E", "img": "/images/submariner/cadran-bleu-marine.png" },
-          { "id": "bleu-acier",   "nom": "Bleu Marine Acier","hex": "#1E3A6E", "img": "/images/submariner/cadran-bleu-acier.png" },
-          { "id": "bleu-clair",   "nom": "Bleu Clair",       "hex": "#4A90D9", "img": "/images/submariner/cadran-bleu-clair.png" },
-          { "id": "vert",         "nom": "Vert Forêt",       "hex": "#1B4332", "img": "/images/submariner/cadran-vert.png" },
-          { "id": "gris",         "nom": "Gris Anthracite",  "hex": "#3D3D3D", "img": "/images/submariner/cadran-gris-anthracite.png" },
-          { "id": "blanc",        "nom": "Blanc",            "hex": "#F0EBE0", "img": "/images/submariner/cadran-blanc.png" },
-          { "id": "rose",         "nom": "Rose",             "hex": "#D4A0B0", "img": "/images/submariner/cadran-rose.png" }
+          { "id": "noir",         "nom": "Noir",              "hex": "#111111", "modele": "submariner",   "img": "/images/submariner/cadran-noir.png" },
+          { "id": "bleu",         "nom": "Bleu Marine Or",   "hex": "#1B2F6E", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-marine.png" },
+          { "id": "bleu-acier",   "nom": "Bleu Marine Acier","hex": "#1E3A6E", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-acier.png" },
+          { "id": "bleu-clair",   "nom": "Bleu Clair",       "hex": "#4A90D9", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-clair.png" },
+          { "id": "vert",         "nom": "Vert Forêt",       "hex": "#1B4332", "modele": "submariner",   "img": "/images/submariner/cadran-vert.png" },
+          { "id": "gris",         "nom": "Gris Anthracite",  "hex": "#3D3D3D", "modele": "submariner",   "img": "/images/submariner/cadran-gris-anthracite.png" },
+          { "id": "blanc",        "nom": "Blanc",            "hex": "#F0EBE0", "modele": "yacht-master", "img": "/images/submariner/cadran-blanc.png" },
+          { "id": "rose",         "nom": "Rose",             "hex": "#D4A0B0", "modele": "submariner",   "img": "/images/submariner/cadran-rose.png" }
         ],
         "styles": [
           { "id": "baton", "nom": "Bâton" }
