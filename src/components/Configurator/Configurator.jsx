@@ -449,62 +449,38 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
-  /* Cadran sélectionné avec image → aperçu close-up du cadran */
-  const cadranImg = sel.cadranCouleur?.img
-  if (cadranImg) {
+  /* ── Compositing yansmode : on empile toutes les couches disponibles ──
+     Les images parts/ sont des RGBA PNG rendus depuis le même angle de caméra
+     → bracelet (fond) → boitier → cadran → aiguilles (dessus)          */
+  const braceletImg  = sel.bracelet?.img
+  const boitierImg   = sel.boitier?.img
+  const cadranImg    = sel.cadranCouleur?.img
+  const aiguillesImg = sel.aiguilles?.img
+
+  const hasYansLayers = braceletImg || boitierImg || cadranImg || aiguillesImg
+
+  if (hasYansLayers) {
     return (
-      <WatchImg
-        key={cadranImg}
-        src={cadranImg}
-        alt={sel.cadranCouleur.nom}
-        onError={e => { e.target.src = modele.render || modele.image }}
-      />
+      <LayerWrap>
+        {braceletImg  && <LayerImg key={braceletImg}  src={braceletImg}  alt="bracelet"  style={{ zIndex: 1 }} onError={e => { e.target.style.display='none' }} />}
+        {boitierImg   && <LayerImg key={boitierImg}   src={boitierImg}   alt="boitier"   style={{ zIndex: 2 }} onError={e => { e.target.style.display='none' }} />}
+        {cadranImg    && <LayerImg key={cadranImg}    src={cadranImg}    alt="cadran"    style={{ zIndex: 3 }} onError={e => { e.target.style.display='none' }} />}
+        {aiguillesImg && <LayerImg key={aiguillesImg} src={aiguillesImg} alt="aiguilles" style={{ zIndex: 4 }} onError={e => { e.target.style.display='none' }} />}
+      </LayerWrap>
     )
   }
 
-  /* Boîtier sélectionné avec photo yansmode → aperçu de la montre avec ce boîtier */
-  const boitierImg = sel.boitier?.yansImg
-  if (boitierImg) {
-    return (
-      <WatchImg
-        key={boitierImg}
-        src={boitierImg}
-        alt={sel.boitier.nom}
-        onError={e => { e.target.src = modele.render || modele.image }}
-      />
-    )
-  }
-
-  /* Render haute qualité yansmode */
+  /* Render haute qualité yansmode (quand rien n'est encore sélectionné) */
   const renderSrc = modele.render || null
   if (renderSrc) {
     return (
-      <WatchImg
-        key={renderSrc}
-        src={renderSrc}
-        alt={modele.nom}
-        onError={e => { e.target.src = modele.image }}
-      />
+      <WatchImg key={renderSrc} src={renderSrc} alt={modele.nom}
+        onError={e => { e.target.src = modele.image }} />
     )
   }
 
-  /* Fallback : layer compositing ou image catalogue */
-  const boitierSrc   = toLayer(sel.boitier?.img)
-  const aiguillesSrc = toLayer(sel.aiguilles?.img)
-  const braceletSrc  = toLayer(sel.bracelet?.img)
-  const hasLayers    = boitierSrc || aiguillesSrc || braceletSrc
-
-  if (!hasLayers) {
-    return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
-  }
-
-  return (
-    <LayerWrap>
-      {braceletSrc  && <LayerImg key={braceletSrc}   src={braceletSrc}   alt="bracelet"  style={{ zIndex: 1 }} onError={e => { e.target.style.display='none' }} />}
-      {boitierSrc   && <LayerImg key={boitierSrc}    src={boitierSrc}    alt="boitier"   style={{ zIndex: 2 }} onError={e => { e.target.style.display='none' }} />}
-      {aiguillesSrc && <LayerImg key={aiguillesSrc}  src={aiguillesSrc}  alt="aiguilles" style={{ zIndex: 4 }} onError={e => { e.target.style.display='none' }} />}
-    </LayerWrap>
-  )
+  /* Fallback image catalogue */
+  return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
 }
 
 export default function Configurator({ onCommander }) {
@@ -659,7 +635,7 @@ export default function Configurator({ onCommander }) {
         const standardBoitiers = modele?.boitiers.filter(b => !b.cat) ?? []
         const diamantBoitiers  = modele?.boitiers.filter(b => b.cat === 'diamant') ?? []
         const optionBoitiers   = modele?.boitiers.filter(b => b.cat === 'option') ?? []
-        const hasBoitierPhotos = standardBoitiers.some(b => b.yansImg)
+        const hasBoitierPhotos = standardBoitiers.some(b => b.img || b.yansImg)
         return (
           <TabContent>
             {!modele ? (
@@ -672,8 +648,8 @@ export default function Configurator({ onCommander }) {
                     <PhotoCardsGrid>
                       {standardBoitiers.map(b => (
                         <PhotoCard key={b.id} $selected={sel.boitier?.id === b.id} onClick={() => set('boitier', b)}>
-                          {b.yansImg
-                            ? <PhotoThumb src={b.yansImg} alt={b.nom} onError={e => { e.target.style.opacity = 0.3 }} />
+                          {(b.img || b.yansImg)
+                            ? <PhotoThumb src={b.img || b.yansImg} alt={b.nom} onError={e => { e.target.style.opacity = 0.3 }} />
                             : <div style={{ width: 72, height: 72, borderRadius: 6, background: b.hex, border: '1px solid #292524' }} />
                           }
                           <CardName style={{ fontSize: 10 }}>{b.nom}</CardName>
@@ -902,7 +878,8 @@ export default function Configurator({ onCommander }) {
         )
       }
 
-      case 'bracelet':
+      case 'bracelet': {
+        const hasBraceletPhotos = modele?.bracelets?.some(b => b.img)
         return (
           <TabContent>
             {!modele ? (
@@ -910,18 +887,30 @@ export default function Configurator({ onCommander }) {
             ) : (
               <CatSection>
                 <CatLabel>Bracelet</CatLabel>
-                <CardsGrid>
-                  {modele.bracelets.map(b => (
-                    <TextCard key={b.id} $selected={sel.bracelet?.id === b.id} onClick={() => set('bracelet', b)}>
-                      <CardName>{b.nom}</CardName>
-                      {b.desc && <CardSub>{b.desc}</CardSub>}
-                    </TextCard>
-                  ))}
-                </CardsGrid>
+                {hasBraceletPhotos ? (
+                  <PhotoCardsGrid>
+                    {modele.bracelets.map(b => (
+                      <PhotoCard key={b.id} $selected={sel.bracelet?.id === b.id} onClick={() => set('bracelet', b)}>
+                        {b.img && <PhotoThumb src={b.img} alt={b.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                        <CardName style={{ fontSize: 10 }}>{b.nom}</CardName>
+                      </PhotoCard>
+                    ))}
+                  </PhotoCardsGrid>
+                ) : (
+                  <CardsGrid>
+                    {modele.bracelets.map(b => (
+                      <TextCard key={b.id} $selected={sel.bracelet?.id === b.id} onClick={() => set('bracelet', b)}>
+                        <CardName>{b.nom}</CardName>
+                        {b.desc && <CardSub>{b.desc}</CardSub>}
+                      </TextCard>
+                    ))}
+                  </CardsGrid>
+                )}
               </CatSection>
             )}
           </TabContent>
         )
+      }
 
       default: return null
     }
