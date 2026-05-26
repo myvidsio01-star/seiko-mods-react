@@ -14,9 +14,9 @@
     {
       "id": "submariner",
       "nom": "Submariner",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-submariner.jpg",
-      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
@@ -61,9 +61,9 @@
     {
       "id": "gmt",
       "nom": "GMT-Master",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-gmt.jpg",
-      "mouvements": ["nh34", "nh35"],
+      "mouvements": ["nh34"],
       "mouvementRecommande": "nh34",
       "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
       "boitiers": [
@@ -108,9 +108,9 @@
     {
       "id": "royaloak",
       "nom": "Royal Oak",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-royaloak.png",
-      "mouvements": ["nh35", "nh36", "nh38", "nh70"],
+      "mouvements": ["nh35", "nh70"],
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 48, "rx": 29, "ry": 29 },
       "boitiers": [
@@ -186,9 +186,9 @@
     {
       "id": "nautilus",
       "nom": "Nautilus",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-nautilus.png",
-      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 49, "rx": 25, "ry": 22 },
       "boitiers": [
@@ -222,9 +222,9 @@
     {
       "id": "santos",
       "nom": "Santos",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-santos.png",
-      "mouvements": ["nh35", "nh36", "nh38", "hangzhou"],
+      "mouvements": ["nh35"],
       "mouvementRecommande": "nh35",
       "dialClip": { "cx": 50, "cy": 46, "rx": 27, "ry": 27 },
       "boitiers": [
@@ -251,7 +251,7 @@
     {
       "id": "daytona",
       "nom": "Daytona",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-seiko.png",
       "allchinabuy": true,
       "mouvements": ["vk63"],
@@ -302,7 +302,7 @@
     {
       "id": "daydate",
       "nom": "Day-Date",
-      "prix": "À partir de 200 euros",
+      "prix": "200 € – 220 €",
       "image": "/images/watch-daydate.png",
       "mouvements": ["miyota8285"],
       "mouvementRecommande": "miyota8285",
