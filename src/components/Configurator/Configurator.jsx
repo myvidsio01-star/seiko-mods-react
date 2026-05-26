@@ -467,15 +467,16 @@ export default function Configurator({ onCommander }) {
   const [tab, setTab] = useState('modele')
   const [livraison, setLivraison] = useState(null)
   const [sel, setSel] = useState({
-    modele:        null,
-    boitier:       null,
-    lunette:       null,
-    cadranModele:  null,
-    cadranCouleur: null,
-    cadranStyle:   null,
-    mouvement:     null,
-    aiguilles:     null,
-    bracelet:      null,
+    modele:          null,
+    boitier:         null,
+    lunette:         null,
+    cadranModele:    null,
+    cadranCouleur:   null,
+    cadranStyle:     null,
+    mouvement:       null,
+    aiguilles:       null,
+    aiguilleFuseau:  null,
+    bracelet:        null,
   })
 
   const set = useCallback((key, val, advance) => {
@@ -487,9 +488,10 @@ export default function Configurator({ onCommander }) {
         next.cadranModele  = null
         next.cadranCouleur = null
         next.cadranStyle   = null
-        next.mouvement     = null
-        next.aiguilles     = null
-        next.bracelet      = null
+        next.mouvement       = null
+        next.aiguilles       = null
+        next.aiguilleFuseau  = null
+        next.bracelet        = null
       }
       if (key === 'cadranCouleur') {
         if (val?.requiredMouvement && prev.mouvement?.id !== val.requiredMouvement) {
@@ -543,6 +545,7 @@ export default function Configurator({ onCommander }) {
           : `• Cadran : ${sel.cadranCouleur?.nom}`,
       `• Mouvement : ${sel.mouvement?.nom}`,
       `• Aiguilles : ${sel.aiguilles?.nom}`,
+      ...(sel.aiguilleFuseau ? [`• 2ème fuseau : ${sel.aiguilleFuseau?.nom}`] : []),
       ...(hasBraceletChoice && sel.bracelet ? [`• Bracelet : ${sel.bracelet?.nom}`] : []),
       `• Livraison : ${livraisonText}`,
       '',
@@ -823,31 +826,48 @@ export default function Configurator({ onCommander }) {
         )
 
       case 'aiguilles': {
+        const aiguilleFuseau = modele?.aiguilleFuseau ?? []
         return (
           <TabContent>
             {!modele ? (
               <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
             ) : (
-              <CatSection>
-                <CatLabel>Couleur des aiguilles</CatLabel>
-                <PhotoCardsGrid>
-                  {modele.aiguilles.map(a => {
-                    const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
-                    return (
-                      <PhotoCard
-                        key={a.id}
-                        $selected={sel.aiguilles?.id === a.id}
-                        style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
-                        onClick={compatible ? () => set('aiguilles', a) : undefined}
-                      >
-                        {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
-                        <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
-                        {!compatible && <CardSub>NH34 requis</CardSub>}
-                      </PhotoCard>
-                    )
-                  })}
-                </PhotoCardsGrid>
-              </CatSection>
+              <>
+                <CatSection>
+                  <CatLabel>Couleur des aiguilles</CatLabel>
+                  <PhotoCardsGrid>
+                    {modele.aiguilles.map(a => {
+                      const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
+                      return (
+                        <PhotoCard
+                          key={a.id}
+                          $selected={sel.aiguilles?.id === a.id}
+                          style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
+                          onClick={compatible ? () => set('aiguilles', a) : undefined}
+                        >
+                          {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                          <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
+                          {!compatible && <CardSub>NH34 requis</CardSub>}
+                        </PhotoCard>
+                      )
+                    })}
+                  </PhotoCardsGrid>
+                </CatSection>
+                {aiguilleFuseau.length > 0 && (
+                  <CatSection>
+                    <CatLabel>Aiguille 2ème fuseau <span style={{fontSize:'9px',color:'#78716C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— NH34 requis</span></CatLabel>
+                    <PhotoCardsGrid>
+                      {aiguilleFuseau.map(f => (
+                        <PhotoCard key={f.id} $selected={sel.aiguilleFuseau?.id === f.id}
+                          onClick={() => set('aiguilleFuseau', f)}>
+                          {f.img && <PhotoThumb src={f.img} alt={f.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
+                          <CardName style={{ fontSize: 10 }}>{f.nom}</CardName>
+                        </PhotoCard>
+                      ))}
+                    </PhotoCardsGrid>
+                  </CatSection>
+                )}
+              </>
             )}
           </TabContent>
         )
@@ -898,6 +918,7 @@ export default function Configurator({ onCommander }) {
     { label: 'Cadran',    val: cadranSummary() },
     { label: 'Mouvement', val: sel.mouvement?.nom },
     { label: 'Aiguilles', val: sel.aiguilles?.nom },
+    ...(modele?.aiguilleFuseau?.length ? [{ label: '2ème fuseau', val: sel.aiguilleFuseau?.nom }] : []),
     ...(hasBraceletChoice ? [{ label: 'Bracelet', val: sel.bracelet?.nom }] : []),
     { label: 'Livraison', val: livraison === 'remise' ? 'Remise main propre' : livraison === 'envoi' ? 'Envoi postal +15 €' : null },
   ]
