@@ -806,52 +806,46 @@ export default function Configurator({ onCommander }) {
         )
 
       case 'aiguilles': {
-        const hasAigPhotos = modele?.aiguilles.some(a => a.img)
+        /* Hex par nom d'aiguille */
+        const AIGUILLES_HEX = {
+          'argent': '#C8C8C8', 'noir': '#2A2A2A', 'or-rose': '#C9856A',
+          'or-jaune': '#D4A437', 'or': '#D4A437',
+          'gmt-acier': '#B8BBBA', 'gmt-acier-bleu': '#3A6BAF', 'gmt-acier-vert': '#3A7A4A',
+          'gmt-or': '#D4A437', 'gmt-or-rose': '#C9856A', 'gmt-acier-2': '#B8BBBA',
+          'gmt-noir': '#2A2A2A',
+          'daytona-acier': '#B8BBBA', 'daytona-or': '#D4A437',
+          'daytona-or-rose': '#C9856A', 'daytona-noir': '#2A2A2A',
+          'baton-acier': '#B8BBBA', 'baton-or': '#D4A437',
+          'baton-or-rose': '#C9856A', 'baton-noir': '#2A2A2A',
+          'mercedes-acier': '#B8BBBA', 'mercedes-or': '#D4A437', 'mercedes-noir': '#2A2A2A',
+          'santos-acier': '#B8BBBA',
+        }
+        const getHex = (a) => a.hex || AIGUILLES_HEX[a.id] || '#B8BBBA'
         return (
           <TabContent>
             {!modele ? (
               <EmptyState>Sélectionnez d'abord un modèle.</EmptyState>
             ) : (
               <CatSection>
-                <CatLabel>Style d'aiguilles</CatLabel>
-                {hasAigPhotos ? (
-                  <PhotoCardsGrid>
-                    {modele.aiguilles.map(a => {
-                      const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
-                      return (
-                        <PhotoCard
-                          key={a.id}
-                          $selected={sel.aiguilles?.id === a.id}
-                          style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
-                          onClick={compatible ? () => set('aiguilles', a) : undefined}
-                        >
-                          {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
-                          <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
-                          {a.recommande && <RecoBadge>Recommandé</RecoBadge>}
-                          {!compatible && <CardSub>Requiert NH34</CardSub>}
-                        </PhotoCard>
-                      )
-                    })}
-                  </PhotoCardsGrid>
-                ) : (
-                  <CardsGrid>
-                    {modele.aiguilles.map(a => {
-                      const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
-                      return (
-                        <TextCard
-                          key={a.id}
-                          $selected={sel.aiguilles?.id === a.id}
-                          $disabled={!compatible}
-                          disabled={!compatible}
-                          onClick={compatible ? () => set('aiguilles', a) : undefined}
-                        >
-                          <CardName>{a.nom}</CardName>
-                          {!compatible && <CardSub>Requiert NH34</CardSub>}
-                        </TextCard>
-                      )
-                    })}
-                  </CardsGrid>
-                )}
+                <CatLabel>Couleur des aiguilles</CatLabel>
+                <BoitierGrid>
+                  {modele.aiguilles.map(a => {
+                    const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
+                    return (
+                      <BoitierItem
+                        key={a.id}
+                        style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
+                        onClick={compatible ? () => set('aiguilles', a) : undefined}
+                      >
+                        <BoitierSwatch $hex={getHex(a)} $selected={sel.aiguilles?.id === a.id} />
+                        <BoitierName $selected={sel.aiguilles?.id === a.id}>
+                          {a.nom}
+                          {!compatible && <span style={{display:'block',fontSize:8,color:'#44403C'}}>NH34 requis</span>}
+                        </BoitierName>
+                      </BoitierItem>
+                    )
+                  })}
+                </BoitierGrid>
               </CatSection>
             )}
           </TabContent>
