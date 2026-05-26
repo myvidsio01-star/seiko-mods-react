@@ -86,6 +86,16 @@ const WatchImg = styled.img`
   filter: drop-shadow(0 8px 32px rgba(202,138,4,0.25)) drop-shadow(0 2px 8px rgba(0,0,0,0.8));
   animation: ${fadeIn} 300ms ease;
 `
+const Layer = styled.img`
+  position: absolute;
+  inset: 7%;
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+  z-index: ${p => p.$z || 1};
+  animation: ${fadeIn} 250ms ease;
+  pointer-events: none;
+`
 const WatchPlaceholder = styled.div`
   width: 85%; height: 85%;
   display: flex; flex-direction: column;
@@ -859,7 +869,33 @@ export default function Configurator({ onCommander }) {
         <Layout>
           <WatchPreview>
             <ImageWrap>
-              <ImgWithFallback key={previewImg || modele?.image} src={previewImg || modele?.image} alt={modele?.nom} />
+              {(() => {
+                const isDaytona = modele?.id === 'daytona'
+                const hasLayers = sel.boitier?.img || sel.cadranCouleur?.img || sel.aiguilles?.img
+                if (hasLayers) {
+                  return (
+                    <>
+                      {/* Bracelet séparé uniquement pour la Daytona */}
+                      {isDaytona && sel.bracelet?.img && (
+                        <Layer key={'bracelet-' + sel.bracelet.id} src={sel.bracelet.img} $z={1} alt="bracelet" />
+                      )}
+                      {/* Boîtier (inclut le bracelet pour la plupart des modèles) */}
+                      {sel.boitier?.img && (
+                        <Layer key={'boitier-' + sel.boitier.id} src={sel.boitier.img} $z={2} alt="boitier" />
+                      )}
+                      {/* Cadran (uniquement pour les modèles à couleurs individuelles, pas catalogue) */}
+                      {sel.cadranCouleur?.img && !cadranCatalogue && (
+                        <Layer key={'cadran-' + sel.cadranCouleur.id} src={sel.cadranCouleur.img} $z={3} alt="cadran" />
+                      )}
+                      {/* Aiguilles */}
+                      {sel.aiguilles?.img && (
+                        <Layer key={'aiguilles-' + sel.aiguilles.id} src={sel.aiguilles.img} $z={4} alt="aiguilles" />
+                      )}
+                    </>
+                  )
+                }
+                return <ImgWithFallback key={modele?.image} src={modele?.image} alt={modele?.nom} />
+              })()}
             </ImageWrap>
 
             {modele && (
