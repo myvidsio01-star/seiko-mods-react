@@ -178,8 +178,7 @@
         { "id": "mercedes-or",    "nom": "Mercedes Or",    "img": "/images/submariner/aiguilles/mercedes-or.png" }
       ],
       "bracelets": [
-        { "id": "integre",    "nom": "Intégré Acier" },
-        { "id": "caoutchouc", "nom": "Caoutchouc" }
+        { "id": "integre", "nom": "Intégré Acier" }
       ]
     },
 
@@ -243,8 +242,7 @@
         { "id": "santos-acier", "nom": "Santos Acier", "img": "/images/santos/aiguilles/santos-acier.png" }
       ],
       "bracelets": [
-        { "id": "integre",    "nom": "Intégré Acier" },
-        { "id": "caoutchouc", "nom": "Caoutchouc" }
+        { "id": "integre", "nom": "Intégré Acier" }
       ]
     },
 
