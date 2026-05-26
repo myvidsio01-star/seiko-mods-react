@@ -1,254 +1,1231 @@
 {
   "mouvements": {
-    "nh35":      { "nom": "NH35A",         "desc": "Automatique · Date · 41h de réserve" },
-    "nh36":      { "nom": "NH36A",         "desc": "Automatique · Date + Jour · 41h de réserve" },
-    "nh38":      { "nom": "NH38",          "desc": "Automatique · Cœur ouvert · Sans date · 41h" },
-    "nh70":      { "nom": "NH70",          "desc": "Automatique · Skeleton · Mécanisme visible · 41h" },
-    "nh34":      { "nom": "NH34",          "desc": "Automatique · GMT · 4ème aiguille fuseau horaire" },
-    "vk63":      { "nom": "VK63",          "desc": "Quartz · Chronographe · 6 aiguilles", "allchinabuy": true },
-    "hangzhou":  { "nom": "Hangzhou 2565A","desc": "Automatique · Date · Alternative économique NH35" },
-    "miyota8285":{ "nom": "Miyota 8285",   "desc": "Automatique · Date + Jour · Day-Date · 42h de réserve" }
+    "nh35": {
+      "nom": "NH35A",
+      "desc": "Automatique · Date · 41h de réserve"
+    },
+    "nh36": {
+      "nom": "NH36A",
+      "desc": "Automatique · Date + Jour · 41h de réserve"
+    },
+    "nh38": {
+      "nom": "NH38",
+      "desc": "Automatique · Cœur ouvert · Sans date · 41h"
+    },
+    "nh70": {
+      "nom": "NH70",
+      "desc": "Automatique · Skeleton · Mécanisme visible · 41h"
+    },
+    "nh34": {
+      "nom": "NH34",
+      "desc": "Automatique · GMT · 4ème aiguille fuseau horaire"
+    },
+    "vk63": {
+      "nom": "VK63",
+      "desc": "Quartz · Chronographe · 6 aiguilles",
+      "allchinabuy": true
+    },
+    "hangzhou": {
+      "nom": "Hangzhou 2565A",
+      "desc": "Automatique · Date · Alternative économique NH35"
+    },
+    "miyota8285": {
+      "nom": "Miyota 8285",
+      "desc": "Automatique · Date + Jour · Day-Date · 42h de réserve"
+    }
   },
-
   "modeles": [
     {
       "id": "submariner",
       "nom": "Submariner",
       "prix": "210 €",
       "image": "/images/watch-submariner.jpg",
-      "mouvements": ["nh35"],
+      "mouvements": [
+        "nh35"
+      ],
       "mouvementRecommande": "nh35",
-      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 47,
+        "rx": 28,
+        "ry": 28
+      },
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA", "img": "/images/submariner/boitier-acier.png" },
-        { "id": "black",   "nom": "Black PVD", "hex": "#222222", "img": "/images/submariner/boitier-black.png" },
-        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A", "img": "/images/submariner/boitier-or-rose.png" },
-        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437", "img": "/images/submariner/boitier-or-jaune.png" }
+        {
+          "id": "acier",
+          "nom": "Acier",
+          "hex": "#B8BBBA",
+          "img": "/images/submariner/boitier-acier.png"
+        },
+        {
+          "id": "black",
+          "nom": "Black PVD",
+          "hex": "#222222",
+          "img": "/images/submariner/boitier-black.png"
+        },
+        {
+          "id": "or-rose",
+          "nom": "Or Rose",
+          "hex": "#C9856A",
+          "img": "/images/submariner/boitier-or-rose.png"
+        },
+        {
+          "id": "or",
+          "nom": "Or Jaune",
+          "hex": "#D4A437",
+          "img": "/images/submariner/boitier-or-jaune.png"
+        }
       ],
       "cadrans": {
-        "modeles": [
-          { "id": "submariner",   "nom": "Submariner" },
-          { "id": "yacht-master", "nom": "Yacht Master" }
-        ],
-        "couleurs": [
-          { "id": "noir",         "nom": "Noir",              "hex": "#111111", "modele": "submariner",   "img": "/images/submariner/cadran-noir.png" },
-          { "id": "bleu",         "nom": "Bleu Marine Or",   "hex": "#1B2F6E", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-marine.png" },
-          { "id": "bleu-acier",   "nom": "Bleu Marine Acier","hex": "#1E3A6E", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-acier.png" },
-          { "id": "bleu-clair",   "nom": "Bleu Clair",       "hex": "#4A90D9", "modele": "submariner",   "img": "/images/submariner/cadran-bleu-clair.png" },
-          { "id": "vert",         "nom": "Vert Forêt",       "hex": "#1B4332", "modele": "submariner",   "img": "/images/submariner/cadran-vert.png" },
-          { "id": "gris",         "nom": "Gris Anthracite",  "hex": "#3D3D3D", "modele": "submariner",   "img": "/images/submariner/cadran-gris-anthracite.png" },
-          { "id": "blanc",        "nom": "Blanc",            "hex": "#F0EBE0", "modele": "yacht-master", "img": "/images/submariner/cadran-blanc.png" },
-          { "id": "rose",         "nom": "Rose",             "hex": "#D4A0B0", "modele": "submariner",   "img": "/images/submariner/cadran-rose.png" }
-        ],
-        "styles": [
-          { "id": "baton", "nom": "Bâton" }
+        "sections": [
+          {
+            "id": "submariner",
+            "label": "Submariner",
+            "couleurs": [
+              {
+                "id": "noir",
+                "nom": "Noir",
+                "img": "/images/submariner/cadran-noir.png"
+              },
+              {
+                "id": "bleu-marine",
+                "nom": "Bleu Marine Or",
+                "img": "/images/submariner/cadran-bleu-marine.png"
+              },
+              {
+                "id": "bleu-acier",
+                "nom": "Bleu Marine Acier",
+                "img": "/images/submariner/cadran-bleu-acier.png"
+              },
+              {
+                "id": "bleu-clair",
+                "nom": "Bleu Clair",
+                "img": "/images/submariner/cadran-bleu-clair.png"
+              },
+              {
+                "id": "vert",
+                "nom": "Vert Forêt",
+                "img": "/images/submariner/cadran-vert.png"
+              },
+              {
+                "id": "gris-anthracite",
+                "nom": "Gris Anthracite",
+                "img": "/images/submariner/cadran-gris-anthracite.png"
+              }
+            ]
+          },
+          {
+            "id": "yacht-master",
+            "label": "Yacht Master",
+            "couleurs": [
+              {
+                "id": "blanc",
+                "nom": "Blanc",
+                "img": "/images/submariner/cadran-blanc.png"
+              },
+              {
+                "id": "rose",
+                "nom": "Rose",
+                "img": "/images/submariner/cadran-rose.png"
+              }
+            ]
+          }
         ]
       },
       "aiguilles": [
-        { "id": "mercedes-noir",  "nom": "Mercedes Noir",   "img": "/images/submariner/aiguilles/mercedes-noir.png" },
-        { "id": "mercedes-acier", "nom": "Mercedes Acier",  "img": "/images/submariner/aiguilles/mercedes-acier.png" },
-        { "id": "mercedes-or",    "nom": "Mercedes Or",     "img": "/images/submariner/aiguilles/mercedes-or.png" },
-        { "id": "baton-or",       "nom": "Bâton Or",        "img": "/images/submariner/aiguilles/baton-or.png" },
-        { "id": "baton-acier",    "nom": "Bâton Acier",     "img": "/images/submariner/aiguilles/baton-acier.png" },
-        { "id": "baton-acier-2",  "nom": "Bâton Acier II",  "img": "/images/submariner/aiguilles/baton-acier-2.png" }
+        {
+          "id": "mercedes-noir",
+          "nom": "Mercedes Noir",
+          "img": "/images/submariner/aiguilles/mercedes-noir.png"
+        },
+        {
+          "id": "mercedes-acier",
+          "nom": "Mercedes Acier",
+          "img": "/images/submariner/aiguilles/mercedes-acier.png"
+        },
+        {
+          "id": "mercedes-or",
+          "nom": "Mercedes Or",
+          "img": "/images/submariner/aiguilles/mercedes-or.png"
+        },
+        {
+          "id": "baton-or",
+          "nom": "Bâton Or",
+          "img": "/images/submariner/aiguilles/baton-or.png"
+        },
+        {
+          "id": "baton-acier",
+          "nom": "Bâton Acier",
+          "img": "/images/submariner/aiguilles/baton-acier.png"
+        },
+        {
+          "id": "baton-acier-2",
+          "nom": "Bâton Acier II",
+          "img": "/images/submariner/aiguilles/baton-acier-2.png"
+        }
       ],
       "bracelets": [
-        { "id": "oyster",  "nom": "Oyster Acier" },
-        { "id": "jubilee", "nom": "Jubilé" }
+        {
+          "id": "oyster",
+          "nom": "Oyster Acier"
+        },
+        {
+          "id": "jubilee",
+          "nom": "Jubilé"
+        }
       ]
     },
-
     {
       "id": "gmt",
       "nom": "GMT-Master",
       "prix": "210 €",
       "image": "/images/watch-gmt.jpg",
       "render": "/images/renders/gmt-preview.png",
-      "mouvements": ["nh34"],
+      "mouvements": [
+        "nh34"
+      ],
       "mouvementRecommande": "nh34",
-      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 47,
+        "rx": 28,
+        "ry": 28
+      },
       "boitiers": [
-        { "id": "noir-oyster",          "nom": "Bezel Noir + Oyster",          "hex": "#222222", "img": "/images/gmt/boitier-noir-oyster.png" },
-        { "id": "vert-oyster",          "nom": "Bezel Vert + Oyster",          "hex": "#2D5A3D", "img": "/images/gmt/boitier-vert-oyster.png" },
-        { "id": "bleu-oyster",          "nom": "Bezel Bleu + Oyster",          "hex": "#1B3B8A", "img": "/images/gmt/boitier-bleu-oyster.png" },
-        { "id": "rouge-oyster",         "nom": "Bezel Rouge + Oyster",         "hex": "#C0392B", "img": "/images/gmt/boitier-rouge-oyster.png" },
-        { "id": "coke-oyster",          "nom": "Coke (Rouge/Noir) + Oyster",   "hex": "#8B1A1A", "img": "/images/gmt/boitier-coke-oyster.png" },
-        { "id": "batman-oyster",        "nom": "Batman (Bleu/Noir) + Oyster",  "hex": "#1B3B8A", "img": "/images/gmt/boitier-batman-oyster.png" },
-        { "id": "blanc-oyster",         "nom": "Bezel Blanc + Oyster",         "hex": "#F0EBE0", "img": "/images/gmt/boitier-blanc-oyster.png" },
-        { "id": "noir-jubilee",         "nom": "Bezel Noir + Jubilé",          "hex": "#222222", "img": "/images/gmt/boitier-noir-jubilee.png" },
-        { "id": "black-pvd",            "nom": "Black PVD",                    "hex": "#111111", "img": "/images/gmt/boitier-black-pvd.png" },
-        { "id": "bicolor-bleu-jubilee", "nom": "Bicolor Or/Acier Bleu + Jubilé","hex": "#D4A437","img": "/images/gmt/boitier-bicolor-bleu-jubilee.png" },
-        { "id": "coke-jubilee",         "nom": "Coke (Rouge/Noir) + Jubilé",   "hex": "#8B1A1A", "img": "/images/gmt/boitier-coke-jubilee.png" },
-        { "id": "argent-jubilee",       "nom": "Bezel Argent + Jubilé",        "hex": "#B8BBBA", "img": "/images/gmt/boitier-argent-jubilee.png" },
-        { "id": "or-jubilee",           "nom": "Or Jaune + Jubilé",            "hex": "#D4A437", "img": "/images/gmt/boitier-or-jubilee.png" },
-        { "id": "or-rose",              "nom": "Or Rose + Président",          "hex": "#C9856A", "img": "/images/gmt/boitier-or-rose.png" },
-        { "id": "batman-jubilee",       "nom": "Batman (Bleu/Noir) + Jubilé",  "hex": "#1B3B8A", "img": "/images/gmt/boitier-batman-jubilee.png" },
-        { "id": "fond-transparent",     "nom": "Fond Transparent",             "hex": "#C8D8F0", "cat": "option", "note": "Fond saphir transparent — précisez le coloris du boîtier sur WhatsApp" }
+        {
+          "id": "noir-oyster",
+          "nom": "Bezel Noir + Oyster",
+          "hex": "#222222",
+          "img": "/images/gmt/boitier-noir-oyster.png"
+        },
+        {
+          "id": "vert-oyster",
+          "nom": "Bezel Vert + Oyster",
+          "hex": "#2D5A3D",
+          "img": "/images/gmt/boitier-vert-oyster.png"
+        },
+        {
+          "id": "bleu-oyster",
+          "nom": "Bezel Bleu + Oyster",
+          "hex": "#1B3B8A",
+          "img": "/images/gmt/boitier-bleu-oyster.png"
+        },
+        {
+          "id": "rouge-oyster",
+          "nom": "Bezel Rouge + Oyster",
+          "hex": "#C0392B",
+          "img": "/images/gmt/boitier-rouge-oyster.png"
+        },
+        {
+          "id": "coke-oyster",
+          "nom": "Coke (Rouge/Noir) + Oyster",
+          "hex": "#8B1A1A",
+          "img": "/images/gmt/boitier-coke-oyster.png"
+        },
+        {
+          "id": "batman-oyster",
+          "nom": "Batman (Bleu/Noir) + Oyster",
+          "hex": "#1B3B8A",
+          "img": "/images/gmt/boitier-batman-oyster.png"
+        },
+        {
+          "id": "blanc-oyster",
+          "nom": "Bezel Blanc + Oyster",
+          "hex": "#F0EBE0",
+          "img": "/images/gmt/boitier-blanc-oyster.png"
+        },
+        {
+          "id": "noir-jubilee",
+          "nom": "Bezel Noir + Jubilé",
+          "hex": "#222222",
+          "img": "/images/gmt/boitier-noir-jubilee.png"
+        },
+        {
+          "id": "black-pvd",
+          "nom": "Black PVD",
+          "hex": "#111111",
+          "img": "/images/gmt/boitier-black-pvd.png"
+        },
+        {
+          "id": "bicolor-bleu-jubilee",
+          "nom": "Bicolor Or/Acier Bleu + Jubilé",
+          "hex": "#D4A437",
+          "img": "/images/gmt/boitier-bicolor-bleu-jubilee.png"
+        },
+        {
+          "id": "coke-jubilee",
+          "nom": "Coke (Rouge/Noir) + Jubilé",
+          "hex": "#8B1A1A",
+          "img": "/images/gmt/boitier-coke-jubilee.png"
+        },
+        {
+          "id": "argent-jubilee",
+          "nom": "Bezel Argent + Jubilé",
+          "hex": "#B8BBBA",
+          "img": "/images/gmt/boitier-argent-jubilee.png"
+        },
+        {
+          "id": "or-jubilee",
+          "nom": "Or Jaune + Jubilé",
+          "hex": "#D4A437",
+          "img": "/images/gmt/boitier-or-jubilee.png"
+        },
+        {
+          "id": "or-rose",
+          "nom": "Or Rose + Président",
+          "hex": "#C9856A",
+          "img": "/images/gmt/boitier-or-rose.png"
+        },
+        {
+          "id": "batman-jubilee",
+          "nom": "Batman (Bleu/Noir) + Jubilé",
+          "hex": "#1B3B8A",
+          "img": "/images/gmt/boitier-batman-jubilee.png"
+        },
+        {
+          "id": "fond-transparent",
+          "nom": "Fond Transparent",
+          "hex": "#C8D8F0",
+          "cat": "option",
+          "note": "Fond saphir transparent — précisez le coloris du boîtier sur WhatsApp"
+        }
       ],
       "cadrans": {
-        "catalogue": true,
-        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
-        "categories": [
-          { "id": "baton", "nom": "Bâton", "img": "/images/gmt/cadran-baton.png", "note": "7 coloris disponibles" }
+        "sections": [
+          {
+            "id": "cadrans-gmt",
+            "label": "Cadrans GMT",
+            "couleurs": [
+              {
+                "id": "noir-et-blanc",
+                "nom": "Noir & Blanc",
+                "img": "/images/cadrans/gmt/noir-et-blanc.png"
+              },
+              {
+                "id": "noir-et-bleu",
+                "nom": "Noir & Bleu",
+                "img": "/images/cadrans/gmt/noir-et-bleu.png"
+              },
+              {
+                "id": "noir-et-vert",
+                "nom": "Noir & Vert",
+                "img": "/images/cadrans/gmt/noir-et-vert.png"
+              }
+            ]
+          }
         ]
       },
       "aiguilles": [
-        { "id": "gmt-acier",      "nom": "GMT Acier",      "img": "/images/gmt/aiguilles/gmt-acier.png",      "recommande": true },
-        { "id": "gmt-acier-bleu", "nom": "GMT Acier Bleu", "img": "/images/gmt/aiguilles/gmt-acier-bleu.png" },
-        { "id": "gmt-acier-vert", "nom": "GMT Acier Vert", "img": "/images/gmt/aiguilles/gmt-acier-vert.png" },
-        { "id": "gmt-or",         "nom": "GMT Or",         "img": "/images/gmt/aiguilles/gmt-or.png" },
-        { "id": "gmt-or-rose",    "nom": "GMT Or Rose",    "img": "/images/gmt/aiguilles/gmt-or-rose.png" },
-        { "id": "gmt-acier-2",    "nom": "GMT Acier II",   "img": "/images/gmt/aiguilles/gmt-acier-2.png",    "recommande": true },
-        { "id": "gmt-noir",       "nom": "GMT Noir",       "img": "/images/gmt/aiguilles/gmt-noir.png" }
+        {
+          "id": "gmt-acier",
+          "nom": "GMT Acier",
+          "img": "/images/gmt/aiguilles/gmt-acier.png",
+          "recommande": true
+        },
+        {
+          "id": "gmt-acier-bleu",
+          "nom": "GMT Acier Bleu",
+          "img": "/images/gmt/aiguilles/gmt-acier-bleu.png"
+        },
+        {
+          "id": "gmt-acier-vert",
+          "nom": "GMT Acier Vert",
+          "img": "/images/gmt/aiguilles/gmt-acier-vert.png"
+        },
+        {
+          "id": "gmt-or",
+          "nom": "GMT Or",
+          "img": "/images/gmt/aiguilles/gmt-or.png"
+        },
+        {
+          "id": "gmt-or-rose",
+          "nom": "GMT Or Rose",
+          "img": "/images/gmt/aiguilles/gmt-or-rose.png"
+        },
+        {
+          "id": "gmt-acier-2",
+          "nom": "GMT Acier II",
+          "img": "/images/gmt/aiguilles/gmt-acier-2.png",
+          "recommande": true
+        },
+        {
+          "id": "gmt-noir",
+          "nom": "GMT Noir",
+          "img": "/images/gmt/aiguilles/gmt-noir.png"
+        }
       ],
       "bracelets": [
-        { "id": "inclus", "nom": "Inclus avec le boîtier", "note": "Le bracelet est compris dans votre choix de boîtier" }
+        {
+          "id": "inclus",
+          "nom": "Inclus avec le boîtier",
+          "note": "Le bracelet est compris dans votre choix de boîtier"
+        }
       ]
     },
-
     {
       "id": "royaloak",
       "nom": "Royal Oak",
       "prix": "210 €",
       "image": "/images/watch-royaloak.png",
       "render": "/images/renders/royaloak-preview.png",
-      "mouvements": ["nh35", "nh70"],
+      "mouvements": [
+        "nh35",
+        "nh70"
+      ],
       "mouvementRecommande": "nh35",
-      "dialClip": { "cx": 50, "cy": 48, "rx": 29, "ry": 29 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 48,
+        "rx": 29,
+        "ry": 29
+      },
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",     "hex": "#B8BBBA", "img": "/images/royaloak/boitier-acier.png" },
-        { "id": "black",   "nom": "Black PVD", "hex": "#222222", "img": "/images/royaloak/boitier-black.png" },
-        { "id": "or",      "nom": "Or Jaune",  "hex": "#D4A437", "img": "/images/royaloak/boitier-or.png" },
-        { "id": "or-rose", "nom": "Or Rose",   "hex": "#C9856A", "img": "/images/royaloak/boitier-or-rose.png" },
-        { "id": "frosted", "nom": "Frosted",   "hex": "#DADADA", "img": "/images/royaloak/boitier-frosted.png" }
+        {
+          "id": "acier",
+          "nom": "Acier",
+          "hex": "#B8BBBA",
+          "img": "/images/royaloak/boitier-acier.png"
+        },
+        {
+          "id": "black",
+          "nom": "Black PVD",
+          "hex": "#222222",
+          "img": "/images/royaloak/boitier-black.png"
+        },
+        {
+          "id": "or",
+          "nom": "Or Jaune",
+          "hex": "#D4A437",
+          "img": "/images/royaloak/boitier-or.png"
+        },
+        {
+          "id": "or-rose",
+          "nom": "Or Rose",
+          "hex": "#C9856A",
+          "img": "/images/royaloak/boitier-or-rose.png"
+        },
+        {
+          "id": "frosted",
+          "nom": "Frosted",
+          "hex": "#DADADA",
+          "img": "/images/royaloak/boitier-frosted.png"
+        }
       ],
       "cadrans": {
         "sections": [
           {
-            "id": "baton",
-            "label": "Cadrans Bâton",
+            "id": "cadrans",
+            "label": "Cadrans",
             "couleurs": [
-              { "id": "noir-argent",        "nom": "Noir Argent",        "hex": "#111111", "img": "/images/royaloak/cadran-noir-argent.png" },
-              { "id": "noir-or",            "nom": "Noir Or",            "hex": "#111111", "img": "/images/royaloak/cadran-noir-or.png" },
-              { "id": "gris-argent",        "nom": "Gris Argent",        "hex": "#B0B0B0", "img": "/images/royaloak/cadran-gris-argent.png" },
-              { "id": "anthracite-or",      "nom": "Anthracite Or",      "hex": "#3D3D3D", "img": "/images/royaloak/cadran-anthracite-or.png" },
-              { "id": "vert",               "nom": "Vert",               "hex": "#2D5A3D", "img": "/images/royaloak/cadran-vert.png" },
-              { "id": "bleu-marine-or",     "nom": "Bleu Marine Or",     "hex": "#1B2F6E", "img": "/images/royaloak/cadran-bleu-marine-or.png" },
-              { "id": "bleu-marine-argent", "nom": "Bleu Marine Argent", "hex": "#1E3A6E", "img": "/images/royaloak/cadran-bleu-marine-argent.png" },
-              { "id": "turquoise",          "nom": "Turquoise",          "hex": "#2EBCB3", "img": "/images/royaloak/cadran-turquoise.png" },
-              { "id": "bleu-clair",         "nom": "Bleu Clair",         "hex": "#4A90D9", "img": "/images/royaloak/cadran-bleu-clair.png" },
-              { "id": "champagne",          "nom": "Champagne",          "hex": "#C8A86B", "img": "/images/royaloak/cadran-champagne.png" },
-              { "id": "rose",               "nom": "Rose",               "hex": "#D4A0B0", "img": "/images/royaloak/cadran-rose.png" }
+              {
+                "id": "blanc-index-argentes",
+                "nom": "Blanc Index Argentés",
+                "img": "/images/cadrans/royaloak/blanc-index-argentes.png"
+              },
+              {
+                "id": "blanc-index-or-jaune",
+                "nom": "Blanc Index Or Jaune",
+                "img": "/images/cadrans/royaloak/blanc-index-or-jaune.png"
+              },
+              {
+                "id": "blanc-index-or-rose",
+                "nom": "Blanc Index Or Rose",
+                "img": "/images/cadrans/royaloak/blanc-index-or-rose.png"
+              },
+              {
+                "id": "bleu-clair-index-argentes",
+                "nom": "Bleu Clair Index Argentés",
+                "img": "/images/cadrans/royaloak/bleu-clair-index-argentes.png"
+              },
+              {
+                "id": "bleu-degrade-index-argentes",
+                "nom": "Bleu Dégradé Index Argentés",
+                "img": "/images/cadrans/royaloak/bleu-degrade-index-argentes.png"
+              },
+              {
+                "id": "bleu-fonce-index-argentes",
+                "nom": "Bleu Foncé Index Argentés",
+                "img": "/images/cadrans/royaloak/bleu-fonce-index-argentes.png"
+              },
+              {
+                "id": "cuivre-index-or-rose",
+                "nom": "Cuivre Index Or Rose",
+                "img": "/images/cadrans/royaloak/cuivre-index-or-rose.png"
+              },
+              {
+                "id": "gris-index-argentes",
+                "nom": "Gris Index Argentés",
+                "img": "/images/cadrans/royaloak/gris-index-argentes.png"
+              },
+              {
+                "id": "jaune-index-argentes",
+                "nom": "Jaune Index Argentés",
+                "img": "/images/cadrans/royaloak/jaune-index-argentes.png"
+              },
+              {
+                "id": "jaune-pale-index-or-jaune",
+                "nom": "Jaune Pâle Index Or Jaune",
+                "img": "/images/cadrans/royaloak/jaune-pale-index-or-jaune.png"
+              },
+              {
+                "id": "noir-index-argentes",
+                "nom": "Noir Index Argentés",
+                "img": "/images/cadrans/royaloak/noir-index-argentes.png"
+              },
+              {
+                "id": "noir-index-or-jaune",
+                "nom": "Noir Index Or Jaune",
+                "img": "/images/cadrans/royaloak/noir-index-or-jaune.png"
+              },
+              {
+                "id": "noir-index-or-rose",
+                "nom": "Noir Index Or Rose",
+                "img": "/images/cadrans/royaloak/noir-index-or-rose.png"
+              },
+              {
+                "id": "orange-index-argentes",
+                "nom": "Orange Index Argentés",
+                "img": "/images/cadrans/royaloak/orange-index-argentes.png"
+              },
+              {
+                "id": "rouge-degrade-index-argentes",
+                "nom": "Rouge Dégradé Index Argentés",
+                "img": "/images/cadrans/royaloak/rouge-degrade-index-argentes.png"
+              },
+              {
+                "id": "rouge-index-argentes",
+                "nom": "Rouge Index Argentés",
+                "img": "/images/cadrans/royaloak/rouge-index-argentes.png"
+              },
+              {
+                "id": "vert-degrade-index-argentes",
+                "nom": "Vert Dégradé Index Argentés",
+                "img": "/images/cadrans/royaloak/vert-degrade-index-argentes.png"
+              },
+              {
+                "id": "vert-index-argentes",
+                "nom": "Vert Index Argentés",
+                "img": "/images/cadrans/royaloak/vert-index-argentes.png"
+              }
             ]
           },
           {
-            "id": "tapisserie",
-            "label": "Tapisserie",
+            "id": "arabic-dial",
+            "label": "Arabic Dial",
             "couleurs": [
-              { "id": "tapisserie-noir",      "nom": "Tapisserie Noir",      "hex": "#111111", "img": "/images/royaloak/cadran-tapisserie-noir.png" },
-              { "id": "tapisserie-turquoise", "nom": "Tapisserie Turquoise", "hex": "#2EBCB3", "img": "/images/royaloak/cadran-tapisserie-turquoise.png" },
-              { "id": "tapisserie-bleu",      "nom": "Tapisserie Bleu",      "hex": "#1B2F6E", "img": "/images/royaloak/cadran-tapisserie-bleu.png" }
+              {
+                "id": "arabic-dial-blanc-index-argentes",
+                "nom": "Arabic Dial Blanc Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-blanc-index-or-jaune",
+                "nom": "Arabic Dial Blanc Index Or Jaune",
+                "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-or-jaune.png"
+              },
+              {
+                "id": "arabic-dial-blanc-index-or-rose",
+                "nom": "Arabic Dial Blanc Index Or Rose",
+                "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-or-rose.png"
+              },
+              {
+                "id": "arabic-dial-bleu-clair-index-argentes",
+                "nom": "Arabic Dial Bleu Clair Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-bleu-clair-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-bleu-degrade-index-argentes",
+                "nom": "Arabic Dial Bleu Dégradé Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-bleu-degrade-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-bleu-fonce-index-argentes",
+                "nom": "Arabic Dial Bleu Foncé Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-bleu-fonce-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-jaune-index-argentes",
+                "nom": "Arabic Dial Jaune Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-jaune-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-noir-index-argentes",
+                "nom": "Arabic Dial Noir Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-noir-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-noir-index-or-jaune",
+                "nom": "Arabic Dial Noir Index Or Jaune",
+                "img": "/images/cadrans/royaloak/arabic-dial-noir-index-or-jaune.png"
+              },
+              {
+                "id": "arabic-dial-noir-index-or-rose",
+                "nom": "Arabic Dial Noir Index Or Rose",
+                "img": "/images/cadrans/royaloak/arabic-dial-noir-index-or-rose.png"
+              },
+              {
+                "id": "arabic-dial-orange-index-argentes",
+                "nom": "Arabic Dial Orange Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-orange-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-rose-index-argentes",
+                "nom": "Arabic Dial Rose Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-rose-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-rouge-degrade-index-argentes",
+                "nom": "Arabic Dial Rouge Dégradé Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-rouge-degrade-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-vert-index-argentes",
+                "nom": "Arabic Dial Vert Index Argentés",
+                "img": "/images/cadrans/royaloak/arabic-dial-vert-index-argentes.png"
+              }
             ]
           },
           {
-            "id": "skeleton",
-            "label": "Skeleton",
+            "id": "squelette",
+            "label": "Squelette",
+            "couleurs": [
+              {
+                "id": "squelette-beige-index-or-rose",
+                "nom": "Squelette Beige Index Or Rose",
+                "img": "/images/cadrans/royaloak/squelette-beige-index-or-rose.png"
+              },
+              {
+                "id": "squelette-blanc-index-argentes",
+                "nom": "Squelette Blanc Index Argentés",
+                "img": "/images/cadrans/royaloak/squelette-blanc-index-argentes.png"
+              },
+              {
+                "id": "squelette-blanc-index-or-rose",
+                "nom": "Squelette Blanc Index Or Rose",
+                "img": "/images/cadrans/royaloak/squelette-blanc-index-or-rose.png"
+              },
+              {
+                "id": "squelette-bleu-clair-index-argente",
+                "nom": "Squelette Bleu Clair Index Argenté",
+                "img": "/images/cadrans/royaloak/squelette-bleu-clair-index-argente.png"
+              },
+              {
+                "id": "squelette-bleu-marine-index-argentes",
+                "nom": "Squelette Bleu Marine Index Argentés",
+                "img": "/images/cadrans/royaloak/squelette-bleu-marine-index-argentes.png"
+              },
+              {
+                "id": "squelette-jaune-index-or-rose",
+                "nom": "Squelette Jaune Index Or Rose",
+                "img": "/images/cadrans/royaloak/squelette-jaune-index-or-rose.png"
+              },
+              {
+                "id": "squelette-noir-index-argentes",
+                "nom": "Squelette Noir Index Argentés",
+                "img": "/images/cadrans/royaloak/squelette-noir-index-argentes.png"
+              },
+              {
+                "id": "squelette-noir-index-or-jaune",
+                "nom": "Squelette Noir Index Or Jaune",
+                "img": "/images/cadrans/royaloak/squelette-noir-index-or-jaune.png"
+              },
+              {
+                "id": "squelette-noir-index-or-rose",
+                "nom": "Squelette Noir Index Or Rose",
+                "img": "/images/cadrans/royaloak/squelette-noir-index-or-rose.png"
+              },
+              {
+                "id": "squelette-turquoise-index-argentes",
+                "nom": "Squelette Turquoise Index Argentés",
+                "img": "/images/cadrans/royaloak/squelette-turquoise-index-argentes.png"
+              },
+              {
+                "id": "squelette-vert-index-argentes",
+                "nom": "Squelette Vert Index Argentés",
+                "img": "/images/cadrans/royaloak/squelette-vert-index-argentes.png"
+              }
+            ],
             "surcharge": 20,
-            "requiredMouvement": "nh70",
-            "couleurs": [
-              { "id": "skeleton-noir",         "nom": "Skeleton Noir",         "hex": "#111111", "img": "/images/royaloak/cadran-skeleton-noir.png" },
-              { "id": "skeleton-noir-or",      "nom": "Skeleton Noir Or",      "hex": "#111111", "img": "/images/royaloak/cadran-skeleton-noir-or.png" },
-              { "id": "skeleton-noir-argent",  "nom": "Skeleton Noir Argent",  "hex": "#222222", "img": "/images/royaloak/cadran-skeleton-noir-argent.png" },
-              { "id": "skeleton-blanc-argent", "nom": "Skeleton Blanc Argent", "hex": "#F0EBE0", "img": "/images/royaloak/cadran-skeleton-blanc-argent.png" },
-              { "id": "skeleton-blanc-or-rose","nom": "Skeleton Blanc Or Rose","hex": "#F0EBE0", "img": "/images/royaloak/cadran-skeleton-blanc-or-rose.png" },
-              { "id": "skeleton-turquoise",    "nom": "Skeleton Turquoise",    "hex": "#2EBCB3", "img": "/images/royaloak/cadran-skeleton-turquoise.png" },
-              { "id": "skeleton-bleu-clair",   "nom": "Skeleton Bleu Clair",   "hex": "#4A90D9", "img": "/images/royaloak/cadran-skeleton-bleu-clair.png" },
-              { "id": "skeleton-vert",         "nom": "Skeleton Vert",         "hex": "#2D5A3D", "img": "/images/royaloak/cadran-skeleton-vert.png" },
-              { "id": "skeleton-or-rose",      "nom": "Skeleton Or Rose",      "hex": "#C9856A", "img": "/images/royaloak/cadran-skeleton-or-rose.png" },
-              { "id": "skeleton-or-jaune",     "nom": "Skeleton Or Jaune",     "hex": "#D4A437", "img": "/images/royaloak/cadran-skeleton-or-jaune.png" }
-            ]
+            "requiredMouvement": "nh70"
           }
         ]
       },
       "aiguilles": [
-        { "id": "baton-noir",     "nom": "Bâton Noir",     "img": "/images/nautilus/aiguilles/baton-noir.png" },
-        { "id": "baton-acier",    "nom": "Bâton Acier",    "img": "/images/submariner/aiguilles/baton-acier.png" },
-        { "id": "baton-or",       "nom": "Bâton Or",       "img": "/images/submariner/aiguilles/baton-or.png" },
-        { "id": "baton-or-rose",  "nom": "Bâton Or Rose",  "img": "/images/nautilus/aiguilles/baton-or-rose.png" },
-        { "id": "mercedes-noir",  "nom": "Mercedes Noir",  "img": "/images/submariner/aiguilles/mercedes-noir.png" },
-        { "id": "mercedes-acier", "nom": "Mercedes Acier", "img": "/images/submariner/aiguilles/mercedes-acier.png" },
-        { "id": "mercedes-or",    "nom": "Mercedes Or",    "img": "/images/submariner/aiguilles/mercedes-or.png" }
+        {
+          "id": "baton-noir",
+          "nom": "Bâton Noir",
+          "img": "/images/nautilus/aiguilles/baton-noir.png"
+        },
+        {
+          "id": "baton-acier",
+          "nom": "Bâton Acier",
+          "img": "/images/submariner/aiguilles/baton-acier.png"
+        },
+        {
+          "id": "baton-or",
+          "nom": "Bâton Or",
+          "img": "/images/submariner/aiguilles/baton-or.png"
+        },
+        {
+          "id": "baton-or-rose",
+          "nom": "Bâton Or Rose",
+          "img": "/images/nautilus/aiguilles/baton-or-rose.png"
+        },
+        {
+          "id": "mercedes-noir",
+          "nom": "Mercedes Noir",
+          "img": "/images/submariner/aiguilles/mercedes-noir.png"
+        },
+        {
+          "id": "mercedes-acier",
+          "nom": "Mercedes Acier",
+          "img": "/images/submariner/aiguilles/mercedes-acier.png"
+        },
+        {
+          "id": "mercedes-or",
+          "nom": "Mercedes Or",
+          "img": "/images/submariner/aiguilles/mercedes-or.png"
+        }
       ],
       "bracelets": [
-        { "id": "integre", "nom": "Intégré Acier" }
+        {
+          "id": "integre",
+          "nom": "Intégré Acier"
+        }
       ]
     },
-
     {
       "id": "nautilus",
       "nom": "Nautilus",
       "prix": "210 €",
       "image": "/images/watch-nautilus.png",
       "render": "/images/renders/nautilus-preview.png",
-      "mouvements": ["nh35"],
+      "mouvements": [
+        "nh35"
+      ],
       "mouvementRecommande": "nh35",
-      "dialClip": { "cx": 50, "cy": 49, "rx": 25, "ry": 22 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 49,
+        "rx": 25,
+        "ry": 22
+      },
       "boitiers": [
-        { "id": "acier",   "nom": "Acier",   "hex": "#B8BBBA", "img": "/images/nautilus/boitier-acier.png" },
-        { "id": "black",   "nom": "Black",   "hex": "#222222", "img": "/images/nautilus/boitier-black.png" },
-        { "id": "or-rose", "nom": "Or Rose", "hex": "#C9856A", "img": "/images/nautilus/boitier-or-rose.png" }
+        {
+          "id": "acier",
+          "nom": "Acier",
+          "hex": "#B8BBBA",
+          "img": "/images/nautilus/boitier-acier.png"
+        },
+        {
+          "id": "black",
+          "nom": "Black",
+          "hex": "#222222",
+          "img": "/images/nautilus/boitier-black.png"
+        },
+        {
+          "id": "or-rose",
+          "nom": "Or Rose",
+          "hex": "#C9856A",
+          "img": "/images/nautilus/boitier-or-rose.png"
+        }
       ],
       "cadrans": {
-        "catalogue": true,
-        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
-        "categories": [
-          { "id": "baton",        "nom": "Bâton",          "img": "/images/nautilus/cadran-baton.png",        "note": "10 coloris disponibles" },
-          { "id": "open-heart",   "nom": "Open Heart",     "img": "/images/nautilus/cadran-open-heart.png",   "note": "10 coloris disponibles" },
-          { "id": "open-heart-2", "nom": "Open Heart II",  "img": "/images/nautilus/cadran-open-heart-2.png", "note": "7 coloris disponibles" },
-          { "id": "arabic",       "nom": "Arabic",         "img": "/images/nautilus/cadran-arabic.png",       "note": "7 coloris disponibles" },
-          { "id": "nacre",        "nom": "Nacré",          "img": "/images/nautilus/cadran-nacre.png",        "note": "7 coloris disponibles" }
+        "sections": [
+          {
+            "id": "cadrans-ouverts",
+            "label": "Cadrans Ouverts",
+            "couleurs": [
+              {
+                "id": "beige-index-or-rose-ouvert",
+                "nom": "Beige Index Or Rose Ouvert",
+                "img": "/images/cadrans/nautilus/beige-index-or-rose-ouvert.png"
+              },
+              {
+                "id": "blanc-index-argentes-ouvert",
+                "nom": "Blanc Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/blanc-index-argentes-ouvert.png"
+              },
+              {
+                "id": "blanc-index-dores-ouvert",
+                "nom": "Blanc Index Dorés Ouvert",
+                "img": "/images/cadrans/nautilus/blanc-index-dores-ouvert.png"
+              },
+              {
+                "id": "blanc-index-or-rose-ouvert",
+                "nom": "Blanc Index Or Rose Ouvert",
+                "img": "/images/cadrans/nautilus/blanc-index-or-rose-ouvert.png"
+              },
+              {
+                "id": "bleu-clair-index-argentes-ouvert",
+                "nom": "Bleu Clair Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/bleu-clair-index-argentes-ouvert.png"
+              },
+              {
+                "id": "bleu-degrade-index-argentes-ouvert",
+                "nom": "Bleu Dégradé Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/bleu-degrade-index-argentes-ouvert.png"
+              },
+              {
+                "id": "caramel-index-argentes-ouvert",
+                "nom": "Caramel Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/caramel-index-argentes-ouvert.png"
+              },
+              {
+                "id": "caramel-index-or-rose-ouvert",
+                "nom": "Caramel Index Or Rose Ouvert",
+                "img": "/images/cadrans/nautilus/caramel-index-or-rose-ouvert.png"
+              },
+              {
+                "id": "jaune-index-dores-ouvert",
+                "nom": "Jaune Index Dorés Ouvert",
+                "img": "/images/cadrans/nautilus/jaune-index-dores-ouvert.png"
+              },
+              {
+                "id": "marron-lisse-index-argentes-ouvert",
+                "nom": "Marron Lisse Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/marron-lisse-index-argentes-ouvert.png"
+              },
+              {
+                "id": "marron-lisse-index-or-rose-ouvert",
+                "nom": "Marron Lisse Index Or Rose Ouvert",
+                "img": "/images/cadrans/nautilus/marron-lisse-index-or-rose-ouvert.png"
+              },
+              {
+                "id": "noir-index-argentes-ouvert",
+                "nom": "Noir Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/noir-index-argentes-ouvert.png"
+              },
+              {
+                "id": "noir-lisse-index-dores-ouvert",
+                "nom": "Noir Lisse Index Dorés Ouvert",
+                "img": "/images/cadrans/nautilus/noir-lisse-index-dores-ouvert.png"
+              },
+              {
+                "id": "noir-lisse-index-or-rose-ouvert",
+                "nom": "Noir Lisse Index Or Rose Ouvert",
+                "img": "/images/cadrans/nautilus/noir-lisse-index-or-rose-ouvert.png"
+              },
+              {
+                "id": "tyffany-index-argentes-ouvert",
+                "nom": "Tyffany Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/tyffany-index-argentes-ouvert.png"
+              },
+              {
+                "id": "vert-degrade-index-argentes-ouvert",
+                "nom": "Vert Dégradé Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/vert-degrade-index-argentes-ouvert.png"
+              },
+              {
+                "id": "vert-fonce-index-argentes-ouvert",
+                "nom": "Vert Foncé Index Argentés Ouvert",
+                "img": "/images/cadrans/nautilus/vert-fonce-index-argentes-ouvert.png"
+              }
+            ]
+          },
+          {
+            "id": "index-argentes",
+            "label": "Index Argentés",
+            "couleurs": [
+              {
+                "id": "blanc-index-argentes",
+                "nom": "Blanc Index Argentés",
+                "img": "/images/cadrans/nautilus/blanc-index-argentes.png"
+              },
+              {
+                "id": "blanc-index-noir",
+                "nom": "Blanc Index Noir",
+                "img": "/images/cadrans/nautilus/blanc-index-noir.png"
+              },
+              {
+                "id": "blanc-index-or-rose",
+                "nom": "Blanc Index Or Rose",
+                "img": "/images/cadrans/nautilus/blanc-index-or-rose.png"
+              },
+              {
+                "id": "bleu-degrade-index-argentes",
+                "nom": "Bleu Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/bleu-degrade-index-argentes.png"
+              },
+              {
+                "id": "bleu-index-argentes",
+                "nom": "Bleu Index Argentés",
+                "img": "/images/cadrans/nautilus/bleu-index-argentes.png"
+              },
+              {
+                "id": "caramel-index-argentes",
+                "nom": "Caramel Index Argentés",
+                "img": "/images/cadrans/nautilus/caramel-index-argentes.png"
+              },
+              {
+                "id": "caramel-index-or-rose",
+                "nom": "Caramel Index Or Rose",
+                "img": "/images/cadrans/nautilus/caramel-index-or-rose.png"
+              },
+              {
+                "id": "champagne-index-dores",
+                "nom": "Champagne Index Dorés",
+                "img": "/images/cadrans/nautilus/champagne-index-dores.png"
+              },
+              {
+                "id": "gris-index-argentes",
+                "nom": "Gris Index Argentés",
+                "img": "/images/cadrans/nautilus/gris-index-argentes.png"
+              },
+              {
+                "id": "jaune-index-argentes",
+                "nom": "Jaune Index Argentés",
+                "img": "/images/cadrans/nautilus/jaune-index-argentes.png"
+              },
+              {
+                "id": "jaune-vert-degrade-index-argentes",
+                "nom": "Jaune Vert Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/jaune-vert-degrade-index-argentes.png"
+              },
+              {
+                "id": "marron-index-argentes",
+                "nom": "Marron Index Argentés",
+                "img": "/images/cadrans/nautilus/marron-index-argentes.png"
+              },
+              {
+                "id": "noir-index-argentes",
+                "nom": "Noir Index Argentés",
+                "img": "/images/cadrans/nautilus/noir-index-argentes.png"
+              },
+              {
+                "id": "noir-index-or-rose",
+                "nom": "Noir Index Or Rose",
+                "img": "/images/cadrans/nautilus/noir-index-or-rose.png"
+              },
+              {
+                "id": "rose-bleu-degrade-index-argentes",
+                "nom": "Rose Bleu Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/rose-bleu-degrade-index-argentes.png"
+              },
+              {
+                "id": "rose-index-noir",
+                "nom": "Rose Index Noir",
+                "img": "/images/cadrans/nautilus/rose-index-noir.png"
+              },
+              {
+                "id": "rouge-clair-index-argentes",
+                "nom": "Rouge Clair Index Argentés",
+                "img": "/images/cadrans/nautilus/rouge-clair-index-argentes.png"
+              },
+              {
+                "id": "rouge-degrade-index-argentes",
+                "nom": "Rouge Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/rouge-degrade-index-argentes.png"
+              },
+              {
+                "id": "rouge-fonce-index-argentes",
+                "nom": "Rouge Foncé Index Argentés",
+                "img": "/images/cadrans/nautilus/rouge-fonce-index-argentes.png"
+              },
+              {
+                "id": "tiffany-index-argentes",
+                "nom": "Tiffany Index Argentés",
+                "img": "/images/cadrans/nautilus/tiffany-index-argentes.png"
+              },
+              {
+                "id": "vert-degrade-index-argentes",
+                "nom": "Vert Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/vert-degrade-index-argentes.png"
+              },
+              {
+                "id": "vert-index-argentes",
+                "nom": "Vert Index Argentés",
+                "img": "/images/cadrans/nautilus/vert-index-argentes.png"
+              }
+            ]
+          },
+          {
+            "id": "arabic-dial",
+            "label": "Arabic Dial",
+            "couleurs": [
+              {
+                "id": "arabic-dial-blanc-index-argentes",
+                "nom": "Arabic Dial Blanc Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-blanc-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-blanc-index-or-rose",
+                "nom": "Arabic Dial Blanc Index Or Rose",
+                "img": "/images/cadrans/nautilus/arabic-dial-blanc-index-or-rose.png"
+              },
+              {
+                "id": "arabic-dial-bleu-degrade-index-argentes",
+                "nom": "Arabic Dial Bleu Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-bleu-degrade-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-bleu-index-argentes",
+                "nom": "Arabic Dial Bleu Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-bleu-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-caramel-index-argentes",
+                "nom": "Arabic Dial Caramel Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-caramel-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-caramel-index-or-rose",
+                "nom": "Arabic Dial Caramel Index Or Rose",
+                "img": "/images/cadrans/nautilus/arabic-dial-caramel-index-or-rose.png"
+              },
+              {
+                "id": "arabic-dial-noir-index-argentes",
+                "nom": "Arabic Dial Noir Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-noir-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-noir-index-or-rose",
+                "nom": "Arabic Dial Noir Index Or Rose",
+                "img": "/images/cadrans/nautilus/arabic-dial-noir-index-or-rose.png"
+              },
+              {
+                "id": "arabic-dial-tiffany-index-argentes",
+                "nom": "Arabic Dial Tiffany Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-tiffany-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-vert-degrade-index-argentes",
+                "nom": "Arabic Dial Vert Dégradé Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-vert-degrade-index-argentes.png"
+              },
+              {
+                "id": "arabic-dial-vert-index-argentes",
+                "nom": "Arabic Dial Vert Index Argentés",
+                "img": "/images/cadrans/nautilus/arabic-dial-vert-index-argentes.png"
+              }
+            ]
+          },
+          {
+            "id": "diamants",
+            "label": "Diamants",
+            "couleurs": [
+              {
+                "id": "beige-index-diamants",
+                "nom": "Beige Index Diamants",
+                "img": "/images/cadrans/nautilus/beige-index-diamants.png"
+              },
+              {
+                "id": "blanc-index-diamants",
+                "nom": "Blanc Index Diamants",
+                "img": "/images/cadrans/nautilus/blanc-index-diamants.png"
+              },
+              {
+                "id": "bleu-clair-index-diamants",
+                "nom": "Bleu Clair Index Diamants",
+                "img": "/images/cadrans/nautilus/bleu-clair-index-diamants.png"
+              },
+              {
+                "id": "bleu-degrade-index-diamants",
+                "nom": "Bleu Dégradé Index Diamants",
+                "img": "/images/cadrans/nautilus/bleu-degrade-index-diamants.png"
+              },
+              {
+                "id": "bleu-fonce-index-diamants",
+                "nom": "Bleu Foncé Index Diamants",
+                "img": "/images/cadrans/nautilus/bleu-fonce-index-diamants.png"
+              },
+              {
+                "id": "caramel-index-diamants",
+                "nom": "Caramel Index Diamants",
+                "img": "/images/cadrans/nautilus/caramel-index-diamants.png"
+              },
+              {
+                "id": "jaune-index-diamants",
+                "nom": "Jaune Index Diamants",
+                "img": "/images/cadrans/nautilus/jaune-index-diamants.png"
+              },
+              {
+                "id": "noir-index-diamants",
+                "nom": "Noir Index Diamants",
+                "img": "/images/cadrans/nautilus/noir-index-diamants.png"
+              },
+              {
+                "id": "tiffany-index-diamants",
+                "nom": "Tiffany Index Diamants",
+                "img": "/images/cadrans/nautilus/tiffany-index-diamants.png"
+              },
+              {
+                "id": "vert-degrade-index-diamants",
+                "nom": "Vert Dégradé Index Diamants",
+                "img": "/images/cadrans/nautilus/vert-degrade-index-diamants.png"
+              },
+              {
+                "id": "vert-fonce-index-diamants",
+                "nom": "Vert Foncé Index Diamants",
+                "img": "/images/cadrans/nautilus/vert-fonce-index-diamants.png"
+              }
+            ],
+            "surcharge": 20
+          },
+          {
+            "id": "squelette",
+            "label": "Squelette",
+            "couleurs": [
+              {
+                "id": "squelette-blanc-index-argentes",
+                "nom": "Squelette Blanc Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-blanc-index-argentes.png"
+              },
+              {
+                "id": "squelette-blanc-index-dores",
+                "nom": "Squelette Blanc Index Dorés",
+                "img": "/images/cadrans/nautilus/squelette-blanc-index-dores.png"
+              },
+              {
+                "id": "squelette-blanc-index-or-rose",
+                "nom": "Squelette Blanc Index Or Rose",
+                "img": "/images/cadrans/nautilus/squelette-blanc-index-or-rose.png"
+              },
+              {
+                "id": "squelette-bleu-index-argentes",
+                "nom": "Squelette Bleu Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-bleu-index-argentes.png"
+              },
+              {
+                "id": "squelette-caramel-index-argentes",
+                "nom": "Squelette Caramel Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-caramel-index-argentes.png"
+              },
+              {
+                "id": "squelette-caramel-index-or-rose",
+                "nom": "Squelette Caramel Index Or Rose",
+                "img": "/images/cadrans/nautilus/squelette-caramel-index-or-rose.png"
+              },
+              {
+                "id": "squelette-dore-index-dores",
+                "nom": "Squelette Doré Index Dorés",
+                "img": "/images/cadrans/nautilus/squelette-dore-index-dores.png"
+              },
+              {
+                "id": "squelette-noir-index-argentes",
+                "nom": "Squelette Noir Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-noir-index-argentes.png"
+              },
+              {
+                "id": "squelette-noir-index-dores",
+                "nom": "Squelette Noir Index Dorés",
+                "img": "/images/cadrans/nautilus/squelette-noir-index-dores.png"
+              },
+              {
+                "id": "squelette-noir-index-or-rose",
+                "nom": "Squelette Noir Index Or Rose",
+                "img": "/images/cadrans/nautilus/squelette-noir-index-or-rose.png"
+              },
+              {
+                "id": "squelette-tiffany-index-argentes",
+                "nom": "Squelette Tiffany Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-tiffany-index-argentes.png"
+              },
+              {
+                "id": "squelette-vert-index-argentes",
+                "nom": "Squelette Vert Index Argentés",
+                "img": "/images/cadrans/nautilus/squelette-vert-index-argentes.png"
+              }
+            ],
+            "surcharge": 20,
+            "requiredMouvement": "nh70"
+          }
         ]
       },
       "aiguilles": [
-        { "id": "baton-noir",    "nom": "Bâton Noir",    "img": "/images/nautilus/aiguilles/baton-noir.png" },
-        { "id": "baton-acier",   "nom": "Bâton Acier",   "img": "/images/nautilus/aiguilles/baton-acier.png" },
-        { "id": "baton-or",      "nom": "Bâton Or",      "img": "/images/nautilus/aiguilles/baton-or.png" },
-        { "id": "baton-or-rose", "nom": "Bâton Or Rose", "img": "/images/nautilus/aiguilles/baton-or-rose.png" }
+        {
+          "id": "baton-noir",
+          "nom": "Bâton Noir",
+          "img": "/images/nautilus/aiguilles/baton-noir.png"
+        },
+        {
+          "id": "baton-acier",
+          "nom": "Bâton Acier",
+          "img": "/images/nautilus/aiguilles/baton-acier.png"
+        },
+        {
+          "id": "baton-or",
+          "nom": "Bâton Or",
+          "img": "/images/nautilus/aiguilles/baton-or.png"
+        },
+        {
+          "id": "baton-or-rose",
+          "nom": "Bâton Or Rose",
+          "img": "/images/nautilus/aiguilles/baton-or-rose.png"
+        }
       ],
       "bracelets": [
-        { "id": "integre", "nom": "Intégré Acier" },
-        { "id": "jubilee", "nom": "Jubilé" }
+        {
+          "id": "integre",
+          "nom": "Intégré Acier"
+        },
+        {
+          "id": "jubilee",
+          "nom": "Jubilé"
+        }
       ]
     },
-
     {
       "id": "santos",
       "nom": "Santos",
       "prix": "210 €",
       "image": "/images/watch-santos.png",
-      "mouvements": ["nh35"],
+      "mouvements": [
+        "nh35"
+      ],
       "mouvementRecommande": "nh35",
-      "dialClip": { "cx": 50, "cy": 46, "rx": 27, "ry": 27 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 46,
+        "rx": 27,
+        "ry": 27
+      },
       "boitiers": [
-        { "id": "acier", "nom": "Acier", "hex": "#B8BBBA", "img": "/images/santos/boitier-acier.png" }
+        {
+          "id": "acier",
+          "nom": "Acier",
+          "hex": "#B8BBBA",
+          "img": "/images/santos/boitier-acier.png"
+        }
       ],
       "cadrans": {
         "catalogue": true,
         "note": "Précisez votre couleur et style de cadran sur WhatsApp",
         "categories": [
-          { "id": "romain", "nom": "Romain",   "img": "/images/santos/cadran-romain.png", "note": "6 coloris disponibles" },
-          { "id": "arabic", "nom": "Arabic",   "img": "/images/santos/cadran-arabic.png", "note": "7 coloris disponibles" },
-          { "id": "fuck95", "nom": "F*ck 9-5", "img": "/images/santos/cadran-fuck95.png", "note": "Édition unique" }
+          {
+            "id": "romain",
+            "nom": "Romain",
+            "img": "/images/santos/cadran-romain.png",
+            "note": "6 coloris disponibles"
+          },
+          {
+            "id": "arabic",
+            "nom": "Arabic",
+            "img": "/images/santos/cadran-arabic.png",
+            "note": "7 coloris disponibles"
+          },
+          {
+            "id": "fuck95",
+            "nom": "F*ck 9-5",
+            "img": "/images/santos/cadran-fuck95.png",
+            "note": "Édition unique"
+          }
         ]
       },
       "aiguilles": [
-        { "id": "santos-acier", "nom": "Santos Acier", "img": "/images/santos/aiguilles/santos-acier.png" }
+        {
+          "id": "santos-acier",
+          "nom": "Santos Acier",
+          "img": "/images/santos/aiguilles/santos-acier.png"
+        }
       ],
       "bracelets": [
-        { "id": "integre", "nom": "Intégré Acier" }
+        {
+          "id": "integre",
+          "nom": "Intégré Acier"
+        }
       ]
     },
-
     {
       "id": "daytona",
       "nom": "Daytona",
@@ -256,82 +1233,272 @@
       "image": "/images/watch-seiko.png",
       "render": "/images/renders/daytona-preview.png",
       "allchinabuy": true,
-      "mouvements": ["vk63"],
+      "mouvements": [
+        "vk63"
+      ],
       "mouvementRecommande": "vk63",
-      "dialClip": { "cx": 50, "cy": 47, "rx": 28, "ry": 28 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 47,
+        "rx": 28,
+        "ry": 28
+      },
       "boitiers": [
-        { "id": "acier",              "nom": "Acier",                 "hex": "#B8BBBA", "img": "/images/daytona/boitier-acier.png" },
-        { "id": "acier-noir",         "nom": "Acier Bezel Noir",      "hex": "#2A2A2A", "img": "/images/daytona/boitier-acier-noir.png" },
-        { "id": "noir",               "nom": "Noir PVD",              "hex": "#111111", "img": "/images/daytona/boitier-noir.png" },
-        { "id": "or",                 "nom": "Or Jaune",              "hex": "#D4A437", "img": "/images/daytona/boitier-or.png" },
-        { "id": "or-caoutchouc",      "nom": "Or + Caoutchouc",       "hex": "#D4A437", "img": "/images/daytona/boitier-or-caoutchouc.png" },
-        { "id": "or-rose-caoutchouc", "nom": "Or Rose + Caoutchouc",  "hex": "#C9856A", "img": "/images/daytona/boitier-or-rose-caoutchouc.png" },
-        { "id": "diamant",            "nom": "Édition Diamant",       "hex": "#C8D8F0", "img": "/images/daytona/boitier-diamant.png", "cat": "diamant", "note": "9 coloris disponibles — précisez la couleur sur WhatsApp" }
+        {
+          "id": "acier",
+          "nom": "Acier",
+          "hex": "#B8BBBA",
+          "img": "/images/daytona/boitier-acier.png"
+        },
+        {
+          "id": "acier-noir",
+          "nom": "Acier Bezel Noir",
+          "hex": "#2A2A2A",
+          "img": "/images/daytona/boitier-acier-noir.png"
+        },
+        {
+          "id": "noir",
+          "nom": "Noir PVD",
+          "hex": "#111111",
+          "img": "/images/daytona/boitier-noir.png"
+        },
+        {
+          "id": "or",
+          "nom": "Or Jaune",
+          "hex": "#D4A437",
+          "img": "/images/daytona/boitier-or.png"
+        },
+        {
+          "id": "or-caoutchouc",
+          "nom": "Or + Caoutchouc",
+          "hex": "#D4A437",
+          "img": "/images/daytona/boitier-or-caoutchouc.png"
+        },
+        {
+          "id": "or-rose-caoutchouc",
+          "nom": "Or Rose + Caoutchouc",
+          "hex": "#C9856A",
+          "img": "/images/daytona/boitier-or-rose-caoutchouc.png"
+        },
+        {
+          "id": "diamant",
+          "nom": "Édition Diamant",
+          "hex": "#C8D8F0",
+          "img": "/images/daytona/boitier-diamant.png",
+          "cat": "diamant",
+          "note": "9 coloris disponibles — précisez la couleur sur WhatsApp"
+        }
       ],
       "cadrans": {
-        "modeles": [],
-        "couleurs": [
-          { "id": "noir-argent",   "nom": "Noir Argent",   "hex": "#111111", "img": "/images/daytona/cadran-noir-argent.png" },
-          { "id": "noir-or-rose",  "nom": "Noir Or Rose",  "hex": "#1A0E0A", "img": "/images/daytona/cadran-noir-or-rose.png" },
-          { "id": "noir-or",       "nom": "Noir Or",       "hex": "#120D00", "img": "/images/daytona/cadran-noir-or.png" },
-          { "id": "blanc-panda",   "nom": "Blanc Panda",   "hex": "#F0EBE0", "img": "/images/daytona/cadran-blanc-panda.png" },
-          { "id": "blanc-or",      "nom": "Blanc Or",      "hex": "#EDE0C4", "img": "/images/daytona/cadran-blanc-or.png" },
-          { "id": "blanc-argent",  "nom": "Blanc Argent",  "hex": "#E8E8E8", "img": "/images/daytona/cadran-blanc-argent.png" },
-          { "id": "champagne",     "nom": "Champagne",     "hex": "#C8A86B", "img": "/images/daytona/cadran-champagne.png" },
-          { "id": "vert",          "nom": "Vert",          "hex": "#2D5A3D", "img": "/images/daytona/cadran-vert.png" },
-          { "id": "bleu-glace",    "nom": "Bleu Glacé",    "hex": "#7A9BB5", "img": "/images/daytona/cadran-bleu-glace.png" },
-          { "id": "irise",         "nom": "Irisé",         "hex": "#C0B8D8", "img": "/images/daytona/cadran-irise.png" }
-        ],
-        "styles": [
-          { "id": "daytona", "nom": "Daytona" }
+        "sections": [
+          {
+            "id": "noir",
+            "label": "Cadrans Noirs",
+            "couleurs": [
+              {
+                "id": "noir-argent",
+                "nom": "Noir Argent",
+                "img": "/images/daytona/cadran-noir-argent.png"
+              },
+              {
+                "id": "noir-or-rose",
+                "nom": "Noir Or Rose",
+                "img": "/images/daytona/cadran-noir-or-rose.png"
+              },
+              {
+                "id": "noir-or",
+                "nom": "Noir Or",
+                "img": "/images/daytona/cadran-noir-or.png"
+              }
+            ]
+          },
+          {
+            "id": "blanc",
+            "label": "Cadrans Blancs",
+            "couleurs": [
+              {
+                "id": "blanc-panda",
+                "nom": "Blanc Panda",
+                "img": "/images/daytona/cadran-blanc-panda.png"
+              },
+              {
+                "id": "blanc-or",
+                "nom": "Blanc Or",
+                "img": "/images/daytona/cadran-blanc-or.png"
+              },
+              {
+                "id": "blanc-argent",
+                "nom": "Blanc Argent",
+                "img": "/images/daytona/cadran-blanc-argent.png"
+              }
+            ]
+          },
+          {
+            "id": "couleurs",
+            "label": "Cadrans Colorés",
+            "couleurs": [
+              {
+                "id": "champagne",
+                "nom": "Champagne",
+                "img": "/images/daytona/cadran-champagne.png"
+              },
+              {
+                "id": "vert",
+                "nom": "Vert",
+                "img": "/images/daytona/cadran-vert.png"
+              },
+              {
+                "id": "bleu-glace",
+                "nom": "Bleu Glacé",
+                "img": "/images/daytona/cadran-bleu-glace.png"
+              },
+              {
+                "id": "irise",
+                "nom": "Irisé",
+                "img": "/images/daytona/cadran-irise.png"
+              }
+            ]
+          }
         ]
       },
       "aiguilles": [
-        { "id": "daytona-noir",    "nom": "Daytona Noir",    "img": "/images/daytona/aiguilles/daytona-noir.png" },
-        { "id": "daytona-acier",   "nom": "Daytona Acier",   "img": "/images/daytona/aiguilles/daytona-acier.png" },
-        { "id": "daytona-or",      "nom": "Daytona Or",      "img": "/images/daytona/aiguilles/daytona-or.png" },
-        { "id": "daytona-or-rose", "nom": "Daytona Or Rose", "img": "/images/daytona/aiguilles/daytona-or-rose.png" }
+        {
+          "id": "daytona-noir",
+          "nom": "Daytona Noir",
+          "img": "/images/daytona/aiguilles/daytona-noir.png"
+        },
+        {
+          "id": "daytona-acier",
+          "nom": "Daytona Acier",
+          "img": "/images/daytona/aiguilles/daytona-acier.png"
+        },
+        {
+          "id": "daytona-or",
+          "nom": "Daytona Or",
+          "img": "/images/daytona/aiguilles/daytona-or.png"
+        },
+        {
+          "id": "daytona-or-rose",
+          "nom": "Daytona Or Rose",
+          "img": "/images/daytona/aiguilles/daytona-or-rose.png"
+        }
       ],
       "bracelets": [
-        { "id": "oyster-acier",  "nom": "Oyster Acier", "desc": "Bracelet acier classique",  "img": "/images/daytona/bracelets/oyster-acier.png" },
-        { "id": "jubilee-acier", "nom": "Jubilé Acier", "desc": "Bracelet acier 5 maillons", "img": "/images/daytona/bracelets/jubilee-acier.png" },
-        { "id": "oyster-noir",   "nom": "Oyster Noir",  "desc": "Bracelet PVD noir",         "img": "/images/daytona/bracelets/oyster-noir.png" },
-        { "id": "oyster-or",     "nom": "Oyster Or",    "desc": "Bracelet doré classique",   "img": "/images/daytona/bracelets/oyster-or.png" },
-        { "id": "jubilee-or",    "nom": "Jubilé Or",    "desc": "Bracelet doré 5 maillons",  "img": "/images/daytona/bracelets/jubilee-or.png" }
+        {
+          "id": "oyster-acier",
+          "nom": "Oyster Acier",
+          "desc": "Bracelet acier classique",
+          "img": "/images/daytona/bracelets/oyster-acier.png"
+        },
+        {
+          "id": "jubilee-acier",
+          "nom": "Jubilé Acier",
+          "desc": "Bracelet acier 5 maillons",
+          "img": "/images/daytona/bracelets/jubilee-acier.png"
+        },
+        {
+          "id": "oyster-noir",
+          "nom": "Oyster Noir",
+          "desc": "Bracelet PVD noir",
+          "img": "/images/daytona/bracelets/oyster-noir.png"
+        },
+        {
+          "id": "oyster-or",
+          "nom": "Oyster Or",
+          "desc": "Bracelet doré classique",
+          "img": "/images/daytona/bracelets/oyster-or.png"
+        },
+        {
+          "id": "jubilee-or",
+          "nom": "Jubilé Or",
+          "desc": "Bracelet doré 5 maillons",
+          "img": "/images/daytona/bracelets/jubilee-or.png"
+        }
       ]
     },
-
     {
       "id": "daydate",
       "nom": "Day-Date",
       "prix": "210 €",
       "image": "/images/watch-daydate.png",
       "render": "/images/renders/daydate-preview.png",
-      "mouvements": ["miyota8285"],
+      "mouvements": [
+        "miyota8285"
+      ],
       "mouvementRecommande": "miyota8285",
-      "dialClip": { "cx": 50, "cy": 47, "rx": 29, "ry": 29 },
+      "dialClip": {
+        "cx": 50,
+        "cy": 47,
+        "rx": 29,
+        "ry": 29
+      },
       "boitiers": [
-        { "id": "acier", "nom": "Acier (Président)", "hex": "#B8BBBA" },
-        { "id": "or",    "nom": "Or Jaune (Président)", "hex": "#D4A437" }
+        {
+          "id": "acier",
+          "nom": "Acier (Président)",
+          "hex": "#B8BBBA"
+        },
+        {
+          "id": "or",
+          "nom": "Or Jaune (Président)",
+          "hex": "#D4A437"
+        }
       ],
       "cadrans": {
-        "catalogue": true,
-        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
-        "categories": [
-          { "id": "baton",  "nom": "Bâton",  "img": "/images/daydate/cadran-baton.png",  "note": "7 coloris disponibles" },
-          { "id": "romain", "nom": "Romain", "img": "/images/daydate/cadran-romain.png", "note": "7 coloris disponibles" },
-          { "id": "arabic", "nom": "Arabic", "img": "/images/daydate/cadran-arabic.png", "note": "7 coloris disponibles" }
+        "sections": [
+          {
+            "id": "cadrans",
+            "label": "Cadrans",
+            "couleurs": [
+              {
+                "id": "arabic-dial-caramel-index-or-rose",
+                "nom": "Arabic Dial Caramel Index Or Rose",
+                "img": "/images/cadrans/daydate/arabic-dial-caramel-index-or-rose.png"
+              },
+              {
+                "id": "blanc",
+                "nom": "Blanc",
+                "img": "/images/cadrans/daydate/blanc.png"
+              },
+              {
+                "id": "noir",
+                "nom": "Noir",
+                "img": "/images/cadrans/daydate/noir.png"
+              }
+            ]
+          }
         ]
       },
       "aiguilles": [
-        { "id": "daydate-acier",   "nom": "Day-Date Acier",   "img": "/images/daydate/aiguilles/daydate-acier.png" },
-        { "id": "daydate-or",      "nom": "Day-Date Or",      "img": "/images/daydate/aiguilles/daydate-or.png" },
-        { "id": "daydate-or-rose", "nom": "Day-Date Or Rose", "img": "/images/daydate/aiguilles/daydate-or-rose.png" }
+        {
+          "id": "daydate-acier",
+          "nom": "Day-Date Acier",
+          "img": "/images/daydate/aiguilles/daydate-acier.png"
+        },
+        {
+          "id": "daydate-or",
+          "nom": "Day-Date Or",
+          "img": "/images/daydate/aiguilles/daydate-or.png"
+        },
+        {
+          "id": "daydate-or-rose",
+          "nom": "Day-Date Or Rose",
+          "img": "/images/daydate/aiguilles/daydate-or-rose.png"
+        }
       ],
       "bracelets": [
-        { "id": "president", "nom": "Président" },
-        { "id": "jubilee",   "nom": "Jubilé" },
-        { "id": "oyster",    "nom": "Oyster Acier" }
+        {
+          "id": "president",
+          "nom": "Président"
+        },
+        {
+          "id": "jubilee",
+          "nom": "Jubilé"
+        },
+        {
+          "id": "oyster",
+          "nom": "Oyster Acier"
+        }
       ]
     }
   ]

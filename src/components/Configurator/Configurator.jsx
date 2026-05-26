@@ -436,9 +436,6 @@ const BoitierName = styled.span`
 `
 
 function LayerPreview({ modele, sel }) {
-  /* Si le modèle a un render yansmode, on l'utilise comme base */
-  const renderSrc = modele?.render || null
-
   if (!modele) {
     return (
       <WatchPlaceholder>
@@ -452,7 +449,21 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
-  /* Modèle avec render haute qualité */
+  /* Cadran sélectionné avec image → aperçu close-up du cadran */
+  const cadranImg = sel.cadranCouleur?.img
+  if (cadranImg) {
+    return (
+      <WatchImg
+        key={cadranImg}
+        src={cadranImg}
+        alt={sel.cadranCouleur.nom}
+        onError={e => { e.target.src = modele.render || modele.image }}
+      />
+    )
+  }
+
+  /* Render haute qualité yansmode */
+  const renderSrc = modele.render || null
   if (renderSrc) {
     return (
       <WatchImg
@@ -466,10 +477,9 @@ function LayerPreview({ modele, sel }) {
 
   /* Fallback : layer compositing ou image catalogue */
   const boitierSrc   = toLayer(sel.boitier?.img)
-  const cadranSrc    = toLayer(sel.cadranCouleur?.img)
   const aiguillesSrc = toLayer(sel.aiguilles?.img)
   const braceletSrc  = toLayer(sel.bracelet?.img)
-  const hasLayers    = boitierSrc || cadranSrc || aiguillesSrc || braceletSrc
+  const hasLayers    = boitierSrc || aiguillesSrc || braceletSrc
 
   if (!hasLayers) {
     return <WatchImg src={modele.image} alt={modele.nom} onError={e => { e.target.style.opacity = 0.3 }} />
@@ -479,7 +489,6 @@ function LayerPreview({ modele, sel }) {
     <LayerWrap>
       {braceletSrc  && <LayerImg key={braceletSrc}   src={braceletSrc}   alt="bracelet"  style={{ zIndex: 1 }} onError={e => { e.target.style.display='none' }} />}
       {boitierSrc   && <LayerImg key={boitierSrc}    src={boitierSrc}    alt="boitier"   style={{ zIndex: 2 }} onError={e => { e.target.style.display='none' }} />}
-      {cadranSrc    && <LayerImg key={cadranSrc}     src={cadranSrc}     alt="cadran"    style={{ zIndex: 3 }} onError={e => { e.target.style.display='none' }} />}
       {aiguillesSrc && <LayerImg key={aiguillesSrc}  src={aiguillesSrc}  alt="aiguilles" style={{ zIndex: 4 }} onError={e => { e.target.style.display='none' }} />}
     </LayerWrap>
   )
@@ -542,8 +551,9 @@ export default function Configurator({ onCommander }) {
   const cadranSections  = modele?.cadrans.sections
   const cadranCatalogue = modele?.cadrans.catalogue
   const cadranComplete  = (cadranSections || cadranCatalogue) ? !!sel.cadranCouleur : !!(sel.cadranCouleur && sel.cadranStyle)
-  const isRoyalOak = modele?.id === 'royaloak'
-  const isComplete = sel.modele && sel.boitier && cadranComplete && sel.mouvement && sel.aiguilles && (isRoyalOak || sel.bracelet) && livraison
+  /* Modèles avec 1 seul bracelet (pas de choix réel) → on saute l'onglet bracelet */
+  const hasBraceletChoice = modele ? modele.bracelets.length > 1 : false
+  const isComplete = sel.modele && sel.boitier && cadranComplete && sel.mouvement && sel.aiguilles && (!hasBraceletChoice || sel.bracelet) && livraison
 
   function buildWaUrl() {
     const livraisonText = livraison === 'remise'
@@ -558,10 +568,10 @@ export default function Configurator({ onCommander }) {
         ? `• Cadran : ${sel.cadranCouleur?.nom} — couleur à préciser sur WhatsApp`
         : cadranSections
           ? `• Cadran : ${sel.cadranCouleur?.nom}${sel.cadranCouleur?.surcharge ? ` (+${sel.cadranCouleur.surcharge} €, NH70 requis)` : ''}`
-          : (sel.cadranModele ? `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom} · ${sel.cadranModele?.nom}` : `• Cadran : ${sel.cadranCouleur?.nom} · ${sel.cadranStyle?.nom}`),
+          : `• Cadran : ${sel.cadranCouleur?.nom}`,
       `• Mouvement : ${sel.mouvement?.nom}`,
       `• Aiguilles : ${sel.aiguilles?.nom}`,
-      ...(!isRoyalOak && sel.bracelet ? [`• Bracelet : ${sel.bracelet?.nom}`] : []),
+      ...(hasBraceletChoice && sel.bracelet ? [`• Bracelet : ${sel.bracelet?.nom}`] : []),
       `• Livraison : ${livraisonText}`,
       '',
       'Je suis intéressé(e), pouvez-vous me donner plus d\'infos ? 🙏',
@@ -578,9 +588,9 @@ export default function Configurator({ onCommander }) {
     bracelet:  !!sel.bracelet,
   }
 
-  const TAB_ORDER = isRoyalOak
-    ? ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles']
-    : ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles', 'bracelet']
+  const TAB_ORDER = hasBraceletChoice
+    ? ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles', 'bracelet']
+    : ['modele', 'boitier', 'cadran', 'mouvement', 'aiguilles']
   function nextTab(id) {
     const idx = TAB_ORDER.indexOf(id)
     return idx < TAB_ORDER.length - 1 ? TAB_ORDER[idx + 1] : null
@@ -895,7 +905,7 @@ export default function Configurator({ onCommander }) {
     { label: 'Cadran',    val: cadranSummary() },
     { label: 'Mouvement', val: sel.mouvement?.nom },
     { label: 'Aiguilles', val: sel.aiguilles?.nom },
-    ...(!isRoyalOak ? [{ label: 'Bracelet', val: sel.bracelet?.nom }] : []),
+    ...(hasBraceletChoice ? [{ label: 'Bracelet', val: sel.bracelet?.nom }] : []),
     { label: 'Livraison', val: livraison === 'remise' ? 'Remise main propre' : livraison === 'envoi' ? 'Envoi postal +15 €' : null },
   ]
 
@@ -937,7 +947,7 @@ export default function Configurator({ onCommander }) {
 
           <SelectionPanel>
             <TabsRow>
-              {TABS.filter(t => !(isRoyalOak && t.id === 'bracelet')).map(t => (
+              {TABS.filter(t => !(t.id === 'bracelet' && !hasBraceletChoice)).map(t => (
                 <Tab key={t.id} $active={tab === t.id} onClick={() => setTab(t.id)}>
                   {t.label}
                   {tabDone[t.id] && <TabDot />}
@@ -963,7 +973,7 @@ export default function Configurator({ onCommander }) {
               </CustomNoteText>
             </CustomNote>
 
-            {(isRoyalOak ? sel.aiguilles : sel.bracelet) && (
+            {(!hasBraceletChoice ? sel.aiguilles : sel.bracelet) && (
               <>
                 <OrderDivider />
                 <OrderSection>

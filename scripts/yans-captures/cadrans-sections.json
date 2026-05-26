@@ -1,0 +1,783 @@
+{
+  "nautilus": {
+    "sections": [
+      {
+        "id": "cadrans-ouverts",
+        "label": "Cadrans Ouverts",
+        "couleurs": [
+          {
+            "id": "beige-index-or-rose-ouvert",
+            "nom": "Beige Index Or Rose Ouvert",
+            "img": "/images/cadrans/nautilus/beige-index-or-rose-ouvert.png"
+          },
+          {
+            "id": "blanc-index-argentes-ouvert",
+            "nom": "Blanc Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/blanc-index-argentes-ouvert.png"
+          },
+          {
+            "id": "blanc-index-dores-ouvert",
+            "nom": "Blanc Index Dorés Ouvert",
+            "img": "/images/cadrans/nautilus/blanc-index-dores-ouvert.png"
+          },
+          {
+            "id": "blanc-index-or-rose-ouvert",
+            "nom": "Blanc Index Or Rose Ouvert",
+            "img": "/images/cadrans/nautilus/blanc-index-or-rose-ouvert.png"
+          },
+          {
+            "id": "bleu-clair-index-argentes-ouvert",
+            "nom": "Bleu Clair Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/bleu-clair-index-argentes-ouvert.png"
+          },
+          {
+            "id": "bleu-degrade-index-argentes-ouvert",
+            "nom": "Bleu Dégradé Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/bleu-degrade-index-argentes-ouvert.png"
+          },
+          {
+            "id": "caramel-index-argentes-ouvert",
+            "nom": "Caramel Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/caramel-index-argentes-ouvert.png"
+          },
+          {
+            "id": "caramel-index-or-rose-ouvert",
+            "nom": "Caramel Index Or Rose Ouvert",
+            "img": "/images/cadrans/nautilus/caramel-index-or-rose-ouvert.png"
+          },
+          {
+            "id": "jaune-index-dores-ouvert",
+            "nom": "Jaune Index Dorés Ouvert",
+            "img": "/images/cadrans/nautilus/jaune-index-dores-ouvert.png"
+          },
+          {
+            "id": "marron-lisse-index-argentes-ouvert",
+            "nom": "Marron Lisse Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/marron-lisse-index-argentes-ouvert.png"
+          },
+          {
+            "id": "marron-lisse-index-or-rose-ouvert",
+            "nom": "Marron Lisse Index Or Rose Ouvert",
+            "img": "/images/cadrans/nautilus/marron-lisse-index-or-rose-ouvert.png"
+          },
+          {
+            "id": "noir-index-argentes-ouvert",
+            "nom": "Noir Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/noir-index-argentes-ouvert.png"
+          },
+          {
+            "id": "noir-lisse-index-dores-ouvert",
+            "nom": "Noir Lisse Index Dorés Ouvert",
+            "img": "/images/cadrans/nautilus/noir-lisse-index-dores-ouvert.png"
+          },
+          {
+            "id": "noir-lisse-index-or-rose-ouvert",
+            "nom": "Noir Lisse Index Or Rose Ouvert",
+            "img": "/images/cadrans/nautilus/noir-lisse-index-or-rose-ouvert.png"
+          },
+          {
+            "id": "tyffany-index-argentes-ouvert",
+            "nom": "Tyffany Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/tyffany-index-argentes-ouvert.png"
+          },
+          {
+            "id": "vert-degrade-index-argentes-ouvert",
+            "nom": "Vert Dégradé Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/vert-degrade-index-argentes-ouvert.png"
+          },
+          {
+            "id": "vert-fonce-index-argentes-ouvert",
+            "nom": "Vert Foncé Index Argentés Ouvert",
+            "img": "/images/cadrans/nautilus/vert-fonce-index-argentes-ouvert.png"
+          }
+        ]
+      },
+      {
+        "id": "index-argentes",
+        "label": "Index Argentés",
+        "couleurs": [
+          {
+            "id": "blanc-index-argentes",
+            "nom": "Blanc Index Argentés",
+            "img": "/images/cadrans/nautilus/blanc-index-argentes.png"
+          },
+          {
+            "id": "blanc-index-noir",
+            "nom": "Blanc Index Noir",
+            "img": "/images/cadrans/nautilus/blanc-index-noir.png"
+          },
+          {
+            "id": "blanc-index-or-rose",
+            "nom": "Blanc Index Or Rose",
+            "img": "/images/cadrans/nautilus/blanc-index-or-rose.png"
+          },
+          {
+            "id": "bleu-degrade-index-argentes",
+            "nom": "Bleu Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/bleu-degrade-index-argentes.png"
+          },
+          {
+            "id": "bleu-index-argentes",
+            "nom": "Bleu Index Argentés",
+            "img": "/images/cadrans/nautilus/bleu-index-argentes.png"
+          },
+          {
+            "id": "caramel-index-argentes",
+            "nom": "Caramel Index Argentés",
+            "img": "/images/cadrans/nautilus/caramel-index-argentes.png"
+          },
+          {
+            "id": "caramel-index-or-rose",
+            "nom": "Caramel Index Or Rose",
+            "img": "/images/cadrans/nautilus/caramel-index-or-rose.png"
+          },
+          {
+            "id": "champagne-index-dores",
+            "nom": "Champagne Index Dorés",
+            "img": "/images/cadrans/nautilus/champagne-index-dores.png"
+          },
+          {
+            "id": "gris-index-argentes",
+            "nom": "Gris Index Argentés",
+            "img": "/images/cadrans/nautilus/gris-index-argentes.png"
+          },
+          {
+            "id": "jaune-index-argentes",
+            "nom": "Jaune Index Argentés",
+            "img": "/images/cadrans/nautilus/jaune-index-argentes.png"
+          },
+          {
+            "id": "jaune-vert-degrade-index-argentes",
+            "nom": "Jaune Vert Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/jaune-vert-degrade-index-argentes.png"
+          },
+          {
+            "id": "marron-index-argentes",
+            "nom": "Marron Index Argentés",
+            "img": "/images/cadrans/nautilus/marron-index-argentes.png"
+          },
+          {
+            "id": "noir-index-argentes",
+            "nom": "Noir Index Argentés",
+            "img": "/images/cadrans/nautilus/noir-index-argentes.png"
+          },
+          {
+            "id": "noir-index-or-rose",
+            "nom": "Noir Index Or Rose",
+            "img": "/images/cadrans/nautilus/noir-index-or-rose.png"
+          },
+          {
+            "id": "rose-bleu-degrade-index-argentes",
+            "nom": "Rose Bleu Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/rose-bleu-degrade-index-argentes.png"
+          },
+          {
+            "id": "rose-index-noir",
+            "nom": "Rose Index Noir",
+            "img": "/images/cadrans/nautilus/rose-index-noir.png"
+          },
+          {
+            "id": "rouge-clair-index-argentes",
+            "nom": "Rouge Clair Index Argentés",
+            "img": "/images/cadrans/nautilus/rouge-clair-index-argentes.png"
+          },
+          {
+            "id": "rouge-degrade-index-argentes",
+            "nom": "Rouge Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/rouge-degrade-index-argentes.png"
+          },
+          {
+            "id": "rouge-fonce-index-argentes",
+            "nom": "Rouge Foncé Index Argentés",
+            "img": "/images/cadrans/nautilus/rouge-fonce-index-argentes.png"
+          },
+          {
+            "id": "tiffany-index-argentes",
+            "nom": "Tiffany Index Argentés",
+            "img": "/images/cadrans/nautilus/tiffany-index-argentes.png"
+          },
+          {
+            "id": "vert-degrade-index-argentes",
+            "nom": "Vert Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/vert-degrade-index-argentes.png"
+          },
+          {
+            "id": "vert-index-argentes",
+            "nom": "Vert Index Argentés",
+            "img": "/images/cadrans/nautilus/vert-index-argentes.png"
+          }
+        ]
+      },
+      {
+        "id": "arabic-dial",
+        "label": "Arabic Dial",
+        "couleurs": [
+          {
+            "id": "arabic-dial-blanc-index-argentes",
+            "nom": "Arabic Dial Blanc Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-blanc-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-blanc-index-or-rose",
+            "nom": "Arabic Dial Blanc Index Or Rose",
+            "img": "/images/cadrans/nautilus/arabic-dial-blanc-index-or-rose.png"
+          },
+          {
+            "id": "arabic-dial-bleu-degrade-index-argentes",
+            "nom": "Arabic Dial Bleu Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-bleu-degrade-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-bleu-index-argentes",
+            "nom": "Arabic Dial Bleu Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-bleu-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-caramel-index-argentes",
+            "nom": "Arabic Dial Caramel Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-caramel-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-caramel-index-or-rose",
+            "nom": "Arabic Dial Caramel Index Or Rose",
+            "img": "/images/cadrans/nautilus/arabic-dial-caramel-index-or-rose.png"
+          },
+          {
+            "id": "arabic-dial-noir-index-argentes",
+            "nom": "Arabic Dial Noir Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-noir-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-noir-index-or-rose",
+            "nom": "Arabic Dial Noir Index Or Rose",
+            "img": "/images/cadrans/nautilus/arabic-dial-noir-index-or-rose.png"
+          },
+          {
+            "id": "arabic-dial-tiffany-index-argentes",
+            "nom": "Arabic Dial Tiffany Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-tiffany-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-vert-degrade-index-argentes",
+            "nom": "Arabic Dial Vert Dégradé Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-vert-degrade-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-vert-index-argentes",
+            "nom": "Arabic Dial Vert Index Argentés",
+            "img": "/images/cadrans/nautilus/arabic-dial-vert-index-argentes.png"
+          }
+        ]
+      },
+      {
+        "id": "diamants",
+        "label": "Diamants",
+        "couleurs": [
+          {
+            "id": "beige-index-diamants",
+            "nom": "Beige Index Diamants",
+            "img": "/images/cadrans/nautilus/beige-index-diamants.png"
+          },
+          {
+            "id": "blanc-index-diamants",
+            "nom": "Blanc Index Diamants",
+            "img": "/images/cadrans/nautilus/blanc-index-diamants.png"
+          },
+          {
+            "id": "bleu-clair-index-diamants",
+            "nom": "Bleu Clair Index Diamants",
+            "img": "/images/cadrans/nautilus/bleu-clair-index-diamants.png"
+          },
+          {
+            "id": "bleu-degrade-index-diamants",
+            "nom": "Bleu Dégradé Index Diamants",
+            "img": "/images/cadrans/nautilus/bleu-degrade-index-diamants.png"
+          },
+          {
+            "id": "bleu-fonce-index-diamants",
+            "nom": "Bleu Foncé Index Diamants",
+            "img": "/images/cadrans/nautilus/bleu-fonce-index-diamants.png"
+          },
+          {
+            "id": "caramel-index-diamants",
+            "nom": "Caramel Index Diamants",
+            "img": "/images/cadrans/nautilus/caramel-index-diamants.png"
+          },
+          {
+            "id": "jaune-index-diamants",
+            "nom": "Jaune Index Diamants",
+            "img": "/images/cadrans/nautilus/jaune-index-diamants.png"
+          },
+          {
+            "id": "noir-index-diamants",
+            "nom": "Noir Index Diamants",
+            "img": "/images/cadrans/nautilus/noir-index-diamants.png"
+          },
+          {
+            "id": "tiffany-index-diamants",
+            "nom": "Tiffany Index Diamants",
+            "img": "/images/cadrans/nautilus/tiffany-index-diamants.png"
+          },
+          {
+            "id": "vert-degrade-index-diamants",
+            "nom": "Vert Dégradé Index Diamants",
+            "img": "/images/cadrans/nautilus/vert-degrade-index-diamants.png"
+          },
+          {
+            "id": "vert-fonce-index-diamants",
+            "nom": "Vert Foncé Index Diamants",
+            "img": "/images/cadrans/nautilus/vert-fonce-index-diamants.png"
+          }
+        ],
+        "surcharge": 20
+      },
+      {
+        "id": "squelette",
+        "label": "Squelette",
+        "couleurs": [
+          {
+            "id": "squelette-blanc-index-argentes",
+            "nom": "Squelette Blanc Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-blanc-index-argentes.png"
+          },
+          {
+            "id": "squelette-blanc-index-dores",
+            "nom": "Squelette Blanc Index Dorés",
+            "img": "/images/cadrans/nautilus/squelette-blanc-index-dores.png"
+          },
+          {
+            "id": "squelette-blanc-index-or-rose",
+            "nom": "Squelette Blanc Index Or Rose",
+            "img": "/images/cadrans/nautilus/squelette-blanc-index-or-rose.png"
+          },
+          {
+            "id": "squelette-bleu-index-argentes",
+            "nom": "Squelette Bleu Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-bleu-index-argentes.png"
+          },
+          {
+            "id": "squelette-caramel-index-argentes",
+            "nom": "Squelette Caramel Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-caramel-index-argentes.png"
+          },
+          {
+            "id": "squelette-caramel-index-or-rose",
+            "nom": "Squelette Caramel Index Or Rose",
+            "img": "/images/cadrans/nautilus/squelette-caramel-index-or-rose.png"
+          },
+          {
+            "id": "squelette-dore-index-dores",
+            "nom": "Squelette Doré Index Dorés",
+            "img": "/images/cadrans/nautilus/squelette-dore-index-dores.png"
+          },
+          {
+            "id": "squelette-noir-index-argentes",
+            "nom": "Squelette Noir Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-noir-index-argentes.png"
+          },
+          {
+            "id": "squelette-noir-index-dores",
+            "nom": "Squelette Noir Index Dorés",
+            "img": "/images/cadrans/nautilus/squelette-noir-index-dores.png"
+          },
+          {
+            "id": "squelette-noir-index-or-rose",
+            "nom": "Squelette Noir Index Or Rose",
+            "img": "/images/cadrans/nautilus/squelette-noir-index-or-rose.png"
+          },
+          {
+            "id": "squelette-tiffany-index-argentes",
+            "nom": "Squelette Tiffany Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-tiffany-index-argentes.png"
+          },
+          {
+            "id": "squelette-vert-index-argentes",
+            "nom": "Squelette Vert Index Argentés",
+            "img": "/images/cadrans/nautilus/squelette-vert-index-argentes.png"
+          }
+        ],
+        "surcharge": 20,
+        "requiredMouvement": "nh70"
+      }
+    ]
+  },
+  "royaloak": {
+    "sections": [
+      {
+        "id": "cadrans",
+        "label": "Cadrans",
+        "couleurs": [
+          {
+            "id": "blanc-index-argentes",
+            "nom": "Blanc Index Argentés",
+            "img": "/images/cadrans/royaloak/blanc-index-argentes.png"
+          },
+          {
+            "id": "blanc-index-or-jaune",
+            "nom": "Blanc Index Or Jaune",
+            "img": "/images/cadrans/royaloak/blanc-index-or-jaune.png"
+          },
+          {
+            "id": "blanc-index-or-rose",
+            "nom": "Blanc Index Or Rose",
+            "img": "/images/cadrans/royaloak/blanc-index-or-rose.png"
+          },
+          {
+            "id": "bleu-clair-index-argentes",
+            "nom": "Bleu Clair Index Argentés",
+            "img": "/images/cadrans/royaloak/bleu-clair-index-argentes.png"
+          },
+          {
+            "id": "bleu-degrade-index-argentes",
+            "nom": "Bleu Dégradé Index Argentés",
+            "img": "/images/cadrans/royaloak/bleu-degrade-index-argentes.png"
+          },
+          {
+            "id": "bleu-fonce-index-argentes",
+            "nom": "Bleu Foncé Index Argentés",
+            "img": "/images/cadrans/royaloak/bleu-fonce-index-argentes.png"
+          },
+          {
+            "id": "cuivre-index-or-rose",
+            "nom": "Cuivre Index Or Rose",
+            "img": "/images/cadrans/royaloak/cuivre-index-or-rose.png"
+          },
+          {
+            "id": "gris-index-argentes",
+            "nom": "Gris Index Argentés",
+            "img": "/images/cadrans/royaloak/gris-index-argentes.png"
+          },
+          {
+            "id": "jaune-index-argentes",
+            "nom": "Jaune Index Argentés",
+            "img": "/images/cadrans/royaloak/jaune-index-argentes.png"
+          },
+          {
+            "id": "jaune-pale-index-or-jaune",
+            "nom": "Jaune Pâle Index Or Jaune",
+            "img": "/images/cadrans/royaloak/jaune-pale-index-or-jaune.png"
+          },
+          {
+            "id": "noir-index-argentes",
+            "nom": "Noir Index Argentés",
+            "img": "/images/cadrans/royaloak/noir-index-argentes.png"
+          },
+          {
+            "id": "noir-index-or-jaune",
+            "nom": "Noir Index Or Jaune",
+            "img": "/images/cadrans/royaloak/noir-index-or-jaune.png"
+          },
+          {
+            "id": "noir-index-or-rose",
+            "nom": "Noir Index Or Rose",
+            "img": "/images/cadrans/royaloak/noir-index-or-rose.png"
+          },
+          {
+            "id": "orange-index-argentes",
+            "nom": "Orange Index Argentés",
+            "img": "/images/cadrans/royaloak/orange-index-argentes.png"
+          },
+          {
+            "id": "rouge-degrade-index-argentes",
+            "nom": "Rouge Dégradé Index Argentés",
+            "img": "/images/cadrans/royaloak/rouge-degrade-index-argentes.png"
+          },
+          {
+            "id": "rouge-index-argentes",
+            "nom": "Rouge Index Argentés",
+            "img": "/images/cadrans/royaloak/rouge-index-argentes.png"
+          },
+          {
+            "id": "vert-degrade-index-argentes",
+            "nom": "Vert Dégradé Index Argentés",
+            "img": "/images/cadrans/royaloak/vert-degrade-index-argentes.png"
+          },
+          {
+            "id": "vert-index-argentes",
+            "nom": "Vert Index Argentés",
+            "img": "/images/cadrans/royaloak/vert-index-argentes.png"
+          }
+        ]
+      },
+      {
+        "id": "arabic-dial",
+        "label": "Arabic Dial",
+        "couleurs": [
+          {
+            "id": "arabic-dial-blanc-index-argentes",
+            "nom": "Arabic Dial Blanc Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-blanc-index-or-jaune",
+            "nom": "Arabic Dial Blanc Index Or Jaune",
+            "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-or-jaune.png"
+          },
+          {
+            "id": "arabic-dial-blanc-index-or-rose",
+            "nom": "Arabic Dial Blanc Index Or Rose",
+            "img": "/images/cadrans/royaloak/arabic-dial-blanc-index-or-rose.png"
+          },
+          {
+            "id": "arabic-dial-bleu-clair-index-argentes",
+            "nom": "Arabic Dial Bleu Clair Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-bleu-clair-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-bleu-degrade-index-argentes",
+            "nom": "Arabic Dial Bleu Dégradé Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-bleu-degrade-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-bleu-fonce-index-argentes",
+            "nom": "Arabic Dial Bleu Foncé Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-bleu-fonce-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-jaune-index-argentes",
+            "nom": "Arabic Dial Jaune Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-jaune-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-noir-index-argentes",
+            "nom": "Arabic Dial Noir Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-noir-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-noir-index-or-jaune",
+            "nom": "Arabic Dial Noir Index Or Jaune",
+            "img": "/images/cadrans/royaloak/arabic-dial-noir-index-or-jaune.png"
+          },
+          {
+            "id": "arabic-dial-noir-index-or-rose",
+            "nom": "Arabic Dial Noir Index Or Rose",
+            "img": "/images/cadrans/royaloak/arabic-dial-noir-index-or-rose.png"
+          },
+          {
+            "id": "arabic-dial-orange-index-argentes",
+            "nom": "Arabic Dial Orange Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-orange-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-rose-index-argentes",
+            "nom": "Arabic Dial Rose Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-rose-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-rouge-degrade-index-argentes",
+            "nom": "Arabic Dial Rouge Dégradé Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-rouge-degrade-index-argentes.png"
+          },
+          {
+            "id": "arabic-dial-vert-index-argentes",
+            "nom": "Arabic Dial Vert Index Argentés",
+            "img": "/images/cadrans/royaloak/arabic-dial-vert-index-argentes.png"
+          }
+        ]
+      },
+      {
+        "id": "squelette",
+        "label": "Squelette",
+        "couleurs": [
+          {
+            "id": "squelette-beige-index-or-rose",
+            "nom": "Squelette Beige Index Or Rose",
+            "img": "/images/cadrans/royaloak/squelette-beige-index-or-rose.png"
+          },
+          {
+            "id": "squelette-blanc-index-argentes",
+            "nom": "Squelette Blanc Index Argentés",
+            "img": "/images/cadrans/royaloak/squelette-blanc-index-argentes.png"
+          },
+          {
+            "id": "squelette-blanc-index-or-rose",
+            "nom": "Squelette Blanc Index Or Rose",
+            "img": "/images/cadrans/royaloak/squelette-blanc-index-or-rose.png"
+          },
+          {
+            "id": "squelette-bleu-clair-index-argente",
+            "nom": "Squelette Bleu Clair Index Argenté",
+            "img": "/images/cadrans/royaloak/squelette-bleu-clair-index-argente.png"
+          },
+          {
+            "id": "squelette-bleu-marine-index-argentes",
+            "nom": "Squelette Bleu Marine Index Argentés",
+            "img": "/images/cadrans/royaloak/squelette-bleu-marine-index-argentes.png"
+          },
+          {
+            "id": "squelette-jaune-index-or-rose",
+            "nom": "Squelette Jaune Index Or Rose",
+            "img": "/images/cadrans/royaloak/squelette-jaune-index-or-rose.png"
+          },
+          {
+            "id": "squelette-noir-index-argentes",
+            "nom": "Squelette Noir Index Argentés",
+            "img": "/images/cadrans/royaloak/squelette-noir-index-argentes.png"
+          },
+          {
+            "id": "squelette-noir-index-or-jaune",
+            "nom": "Squelette Noir Index Or Jaune",
+            "img": "/images/cadrans/royaloak/squelette-noir-index-or-jaune.png"
+          },
+          {
+            "id": "squelette-noir-index-or-rose",
+            "nom": "Squelette Noir Index Or Rose",
+            "img": "/images/cadrans/royaloak/squelette-noir-index-or-rose.png"
+          },
+          {
+            "id": "squelette-turquoise-index-argentes",
+            "nom": "Squelette Turquoise Index Argentés",
+            "img": "/images/cadrans/royaloak/squelette-turquoise-index-argentes.png"
+          },
+          {
+            "id": "squelette-vert-index-argentes",
+            "nom": "Squelette Vert Index Argentés",
+            "img": "/images/cadrans/royaloak/squelette-vert-index-argentes.png"
+          }
+        ],
+        "surcharge": 20,
+        "requiredMouvement": "nh70"
+      }
+    ]
+  },
+  "daytona": {
+    "sections": [
+      {
+        "id": "cadrans",
+        "label": "Cadrans",
+        "couleurs": [
+          {
+            "id": "blanc",
+            "nom": "Blanc",
+            "img": "/images/cadrans/daytona/blanc.png"
+          },
+          {
+            "id": "noir",
+            "nom": "Noir",
+            "img": "/images/cadrans/daytona/noir.png"
+          },
+          {
+            "id": "or-rose",
+            "nom": "Or Rose",
+            "img": "/images/cadrans/daytona/or-rose.png"
+          }
+        ]
+      }
+    ]
+  },
+  "gmt": {
+    "sections": [
+      {
+        "id": "cadrans-gmt",
+        "label": "Cadrans GMT",
+        "couleurs": [
+          {
+            "id": "noir-et-blanc",
+            "nom": "Noir & Blanc",
+            "img": "/images/cadrans/gmt/noir-et-blanc.png"
+          },
+          {
+            "id": "noir-et-bleu",
+            "nom": "Noir & Bleu",
+            "img": "/images/cadrans/gmt/noir-et-bleu.png"
+          },
+          {
+            "id": "noir-et-vert",
+            "nom": "Noir & Vert",
+            "img": "/images/cadrans/gmt/noir-et-vert.png"
+          }
+        ]
+      }
+    ]
+  },
+  "datejust": {
+    "sections": [
+      {
+        "id": "cadrans",
+        "label": "Cadrans",
+        "couleurs": [
+          {
+            "id": "blanc-index-argentes",
+            "nom": "Blanc Index Argentés",
+            "img": "/images/cadrans/datejust/blanc-index-argentes.png"
+          },
+          {
+            "id": "blanc-index-or-jaune",
+            "nom": "Blanc Index Or Jaune",
+            "img": "/images/cadrans/datejust/blanc-index-or-jaune.png"
+          },
+          {
+            "id": "blanc-index-or-rose",
+            "nom": "Blanc Index Or Rose",
+            "img": "/images/cadrans/datejust/blanc-index-or-rose.png"
+          },
+          {
+            "id": "bleu-clair-index-argentes",
+            "nom": "Bleu Clair Index Argentés",
+            "img": "/images/cadrans/datejust/bleu-clair-index-argentes.png"
+          },
+          {
+            "id": "bleu-fonce-index-argentes",
+            "nom": "Bleu Foncé Index Argentés",
+            "img": "/images/cadrans/datejust/bleu-fonce-index-argentes.png"
+          },
+          {
+            "id": "gris-index-argentes",
+            "nom": "Gris Index Argentés",
+            "img": "/images/cadrans/datejust/gris-index-argentes.png"
+          },
+          {
+            "id": "jaune-index-argentes",
+            "nom": "Jaune Index Argentés",
+            "img": "/images/cadrans/datejust/jaune-index-argentes.png"
+          },
+          {
+            "id": "noir-index-argentes",
+            "nom": "Noir Index Argentés",
+            "img": "/images/cadrans/datejust/noir-index-argentes.png"
+          },
+          {
+            "id": "noir-index-or-jaune",
+            "nom": "Noir Index Or Jaune",
+            "img": "/images/cadrans/datejust/noir-index-or-jaune.png"
+          },
+          {
+            "id": "or-rose-index-or-rose",
+            "nom": "Or Rose Index Or Rose",
+            "img": "/images/cadrans/datejust/or-rose-index-or-rose.png"
+          },
+          {
+            "id": "vert-index-argentes",
+            "nom": "Vert Index Argentés",
+            "img": "/images/cadrans/datejust/vert-index-argentes.png"
+          }
+        ]
+      }
+    ]
+  },
+  "daydate": {
+    "sections": [
+      {
+        "id": "cadrans",
+        "label": "Cadrans",
+        "couleurs": [
+          {
+            "id": "arabic-dial-caramel-index-or-rose",
+            "nom": "Arabic Dial Caramel Index Or Rose",
+            "img": "/images/cadrans/daydate/arabic-dial-caramel-index-or-rose.png"
+          },
+          {
+            "id": "blanc",
+            "nom": "Blanc",
+            "img": "/images/cadrans/daydate/blanc.png"
+          },
+          {
+            "id": "noir",
+            "nom": "Noir",
+            "img": "/images/cadrans/daydate/noir.png"
+          }
+        ]
+      }
+    ]
+  }
+}
