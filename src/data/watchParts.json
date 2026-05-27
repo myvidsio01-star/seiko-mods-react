@@ -32,6 +32,10 @@
     "miyota8285": {
       "nom": "Miyota 8285",
       "desc": "Automatique · Date + Jour · Day-Date · 42h de réserve"
+    },
+    "nh68": {
+      "nom": "NH68",
+      "desc": "Automatique · Coeur ouvert · Trotteuse centrale · 42h de réserve"
     }
   },
   "modeles": [
@@ -179,7 +183,7 @@
       "id": "gmt",
       "nom": "GMT-Master",
       "prix": "235 €",
-      "image": "/images/watch-gmt.jpg",
+      "image": "/images/watch-gmt.png",
       "render": "/images/renders/gmt-preview.png",
       "mouvements": [
         "nh34"
@@ -722,9 +726,10 @@
       "image": "/images/watch-nautilus.png",
       "render": "/images/renders/nautilus-preview.png",
       "mouvements": [
-        "nh35"
+        "nh35",
+        "nh68"
       ],
-      "mouvementRecommande": "nh35",
+      "mouvementRecommande": "nh68",
       "dialClip": {
         "cx": 50,
         "cy": 49,
