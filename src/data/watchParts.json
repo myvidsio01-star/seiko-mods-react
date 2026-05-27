@@ -1094,67 +1094,6 @@
       ]
     },
     {
-      "id": "santos",
-      "nom": "Santos",
-      "prix": "230 €",
-      "image": "/images/watch-santos.png",
-      "mouvements": [
-        "nh35"
-      ],
-      "mouvementRecommande": "nh35",
-      "dialClip": {
-        "cx": 50,
-        "cy": 46,
-        "rx": 27,
-        "ry": 27
-      },
-      "boitiers": [
-        {
-          "id": "acier",
-          "nom": "Acier",
-          "hex": "#B8BBBA",
-          "img": "/images/santos/boitier-acier.png"
-        }
-      ],
-      "cadrans": {
-        "catalogue": true,
-        "note": "Précisez votre couleur et style de cadran sur WhatsApp",
-        "categories": [
-          {
-            "id": "romain",
-            "nom": "Romain",
-            "img": "/images/santos/cadran-romain.png",
-            "note": "6 coloris disponibles"
-          },
-          {
-            "id": "arabic",
-            "nom": "Arabic",
-            "img": "/images/santos/cadran-arabic.png",
-            "note": "7 coloris disponibles"
-          },
-          {
-            "id": "fuck95",
-            "nom": "F*ck 9-5",
-            "img": "/images/santos/cadran-fuck95.png",
-            "note": "Édition unique"
-          }
-        ]
-      },
-      "aiguilles": [
-        {
-          "id": "santos-acier",
-          "nom": "Santos Acier",
-          "img": "/images/santos/aiguilles/santos-acier.png"
-        }
-      ],
-      "bracelets": [
-        {
-          "id": "integre",
-          "nom": "Intégré Acier"
-        }
-      ]
-    },
-    {
       "id": "daytona",
       "nom": "Daytona",
       "prix": "235 €",

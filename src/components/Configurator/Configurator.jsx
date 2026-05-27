@@ -456,7 +456,7 @@ const BoitierName = styled.span`
   transition: color 200ms ease;
 `
 
-function LayerPreview({ modele, sel }) {
+function LayerPreview({ modele, sel, tab }) {
   if (!modele) {
     return (
       <WatchPlaceholder>
@@ -470,15 +470,27 @@ function LayerPreview({ modele, sel }) {
     )
   }
 
-  /* Priorité d'affichage :
-     1. Boîtier sélectionné (photo complète de la montre dans ce coloris)
-     2. Cadran sélectionné (visuel du cadran)
-     3. Render du modèle / image par défaut                               */
-  const previewSrc =
-    sel?.boitier?.img  ||
-    sel?.cadranCouleur?.img ||
-    modele.render      ||
-    modele.image
+  /* Priorité d'affichage selon l'onglet actif :
+     - boitier  → photo du boîtier sélectionné
+     - cadran   → image du cadran sélectionné
+     - aiguilles→ image des aiguilles sélectionnées
+     - bracelet → image du bracelet sélectionné
+     - sinon    → dernière sélection pertinente ou image du modèle        */
+  let previewSrc
+  if (tab === 'boitier')   previewSrc = sel?.boitier?.img
+  else if (tab === 'cadran')    previewSrc = sel?.cadranCouleur?.img
+  else if (tab === 'aiguilles') previewSrc = sel?.aiguilles?.img
+  else if (tab === 'bracelet')  previewSrc = sel?.bracelet?.img
+
+  // Fallback : priorité douce — boîtier puis cadran puis render
+  if (!previewSrc) {
+    previewSrc =
+      sel?.boitier?.img       ||
+      sel?.cadranCouleur?.img ||
+      sel?.aiguilles?.img     ||
+      modele.render           ||
+      modele.image
+  }
 
   return (
     <WatchImg
@@ -965,7 +977,7 @@ export default function Configurator({ onCommander }) {
         <Layout>
           <WatchPreview>
             <ImageWrap>
-              <LayerPreview modele={modele} sel={sel} />
+              <LayerPreview modele={modele} sel={sel} tab={tab} />
             </ImageWrap>
 
             {modele && (
