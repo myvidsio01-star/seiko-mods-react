@@ -1367,7 +1367,7 @@
               { "id": "arabic-noir-or-rose",   "nom": "Noir Or Rose",  "img": "/images/parts/nautilus/cadrans/arabic-dial-noir-index-or-rose.png" },
               { "id": "arabic-caramel-or-rose","nom": "Caramel Or Rose","img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-or-rose.png" }
             ]
-          },
+          }
         ]
       },
       "aiguilles": [
