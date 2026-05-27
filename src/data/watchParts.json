@@ -1237,72 +1237,45 @@
       "cadrans": {
         "sections": [
           {
-            "id": "cadrans-datejust",
-            "label": "Cadrans",
+            "id": "index",
+            "label": "Index",
             "couleurs": [
-              {
-                "id": "noir-index-argentes",
-                "nom": "Noir Index Argentés",
-                "img": "/images/parts/datejust/cadrans/noir-index-argentes.png"
-              },
-              {
-                "id": "blanc-index-argentes",
-                "nom": "Blanc Index Argentés",
-                "img": "/images/parts/datejust/cadrans/blanc-index-argentes.png"
-              },
-              {
-                "id": "bleu-clair-index-argentes",
-                "nom": "Bleu Clair Index Argentés",
-                "img": "/images/parts/datejust/cadrans/bleu-clair-index-argentes.png"
-              },
-              {
-                "id": "bleu-fonce-index-argentes",
-                "nom": "Bleu Foncé Index Argentés",
-                "img": "/images/parts/datejust/cadrans/bleu-fonce-index-argentes.png"
-              },
-              {
-                "id": "vert-index-argentes",
-                "nom": "Vert Index Argentés",
-                "img": "/images/parts/datejust/cadrans/vert-index-argentes.png"
-              },
-              {
-                "id": "jaune-index-argentes",
-                "nom": "Jaune Index Argentés",
-                "img": "/images/parts/datejust/cadrans/jaune-index-argentes.png"
-              },
-              {
-                "id": "gris-index-argentes",
-                "nom": "Gris Index Argentés",
-                "img": "/images/parts/datejust/cadrans/gris-index-argentes.png"
-              },
-              {
-                "id": "or-rose-index-or-rose",
-                "nom": "Or Rose Index Or Rose",
-                "img": "/images/parts/datejust/cadrans/or-rose-index-or-rose.png"
-              },
-              {
-                "id": "blanc-index-or-rose",
-                "nom": "Blanc Index Or Rose",
-                "img": "/images/parts/datejust/cadrans/blanc-index-or-rose.png"
-              },
-              {
-                "id": "blanc-index-or-jaune",
-                "nom": "Blanc Index Or Jaune",
-                "img": "/images/parts/datejust/cadrans/blanc-index-or-jaune.png"
-              },
-              {
-                "id": "noir-index-or-jaune",
-                "nom": "Noir Index Or Jaune",
-                "img": "/images/parts/datejust/cadrans/noir-index-or-jaune.png"
-              }
+              { "id": "noir-index-argentes",       "nom": "Noir",            "img": "/images/parts/datejust/cadrans/noir-index-argentes.png" },
+              { "id": "blanc-index-argentes",      "nom": "Blanc",           "img": "/images/parts/datejust/cadrans/blanc-index-argentes.png" },
+              { "id": "bleu-clair-index-argentes", "nom": "Bleu Clair",      "img": "/images/parts/datejust/cadrans/bleu-clair-index-argentes.png" },
+              { "id": "bleu-fonce-index-argentes", "nom": "Bleu Foncé",      "img": "/images/parts/datejust/cadrans/bleu-fonce-index-argentes.png" },
+              { "id": "vert-index-argentes",       "nom": "Vert",            "img": "/images/parts/datejust/cadrans/vert-index-argentes.png" },
+              { "id": "jaune-index-argentes",      "nom": "Jaune",           "img": "/images/parts/datejust/cadrans/jaune-index-argentes.png" },
+              { "id": "gris-index-argentes",       "nom": "Gris",            "img": "/images/parts/datejust/cadrans/gris-index-argentes.png" },
+              { "id": "or-rose-index-or-rose",     "nom": "Or Rose",         "img": "/images/parts/datejust/cadrans/or-rose-index-or-rose.png" },
+              { "id": "blanc-index-or-rose",       "nom": "Blanc Or Rose",   "img": "/images/parts/datejust/cadrans/blanc-index-or-rose.png" },
+              { "id": "blanc-index-or-jaune",      "nom": "Blanc Or Jaune",  "img": "/images/parts/datejust/cadrans/blanc-index-or-jaune.png" },
+              { "id": "noir-index-or-jaune",       "nom": "Noir Or Jaune",   "img": "/images/parts/datejust/cadrans/noir-index-or-jaune.png" }
+            ]
+          },
+          {
+            "id": "arabic",
+            "label": "Arabic Dial",
+            "couleurs": [
+              { "id": "arabic-noir",            "nom": "Noir",           "img": "/images/parts/nautilus/cadrans/arabic-dial-noir-index-argentes.png" },
+              { "id": "arabic-blanc",           "nom": "Blanc",          "img": "/images/parts/nautilus/cadrans/arabic-dial-blanc-index-argentes.png" },
+              { "id": "arabic-bleu",            "nom": "Bleu",           "img": "/images/parts/nautilus/cadrans/arabic-dial-bleu-index-argentes.png" },
+              { "id": "arabic-bleu-degrade",    "nom": "Bleu Dégradé",   "img": "/images/parts/nautilus/cadrans/arabic-dial-bleu-degrade-index-argentes.png" },
+              { "id": "arabic-vert",            "nom": "Vert",           "img": "/images/parts/nautilus/cadrans/arabic-dial-vert-index-argentes.png" },
+              { "id": "arabic-vert-degrade",    "nom": "Vert Dégradé",   "img": "/images/parts/nautilus/cadrans/arabic-dial-vert-degrade-index-argentes.png" },
+              { "id": "arabic-caramel",         "nom": "Caramel",        "img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-argentes.png" },
+              { "id": "arabic-tiffany",         "nom": "Tiffany",        "img": "/images/parts/nautilus/cadrans/arabic-dial-tiffany-index-argentes.png" },
+              { "id": "arabic-blanc-or-rose",   "nom": "Blanc Or Rose",  "img": "/images/parts/nautilus/cadrans/arabic-dial-blanc-index-or-rose.png" },
+              { "id": "arabic-noir-or-rose",    "nom": "Noir Or Rose",   "img": "/images/parts/nautilus/cadrans/arabic-dial-noir-index-or-rose.png" },
+              { "id": "arabic-caramel-or-rose", "nom": "Caramel Or Rose","img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-or-rose.png" }
             ]
           }
         ]
       },
       "aiguilles": [
-        { "id": "argent",   "nom": "Argent",   "hex": "#C0C8CA", "img": "/images/parts/datejust/aiguilles/argent.png" },
-        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/parts/datejust/aiguilles/or-rose.png" },
-        { "id": "or-jaune", "nom": "Or Jaune", "hex": "#D4A437", "img": "/images/parts/datejust/aiguilles/or-jaune.jpg" }
+        { "id": "argent",   "nom": "Argent",   "hex": "#C0C8CA", "img": "/images/daydate/aiguilles/daydate-acier.png" },
+        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/daydate/aiguilles/daydate-or-rose.png" },
+        { "id": "or-jaune", "nom": "Or Jaune", "hex": "#D4A437", "img": "/images/daydate/aiguilles/daydate-or.png" }
       ],
       "aiguilleSrc": "/images/parts/datejust/aiguilles/argent.png",
       "bracelets": [
@@ -1360,40 +1333,69 @@
         }
       ],
       "cadrans": {
-        "catalogue": true,
-        "categories": [
+        "sections": [
           {
             "id": "baton",
-            "nom": "Bâton",
-            "img": "/images/daydate/cadran-baton.png",
-            "note": "Acier · Noir · Or · Or Rose"
+            "label": "Bâton",
+            "couleurs": [
+              { "id": "baton-noir",          "nom": "Noir",           "img": "/images/parts/datejust/cadrans/noir-index-argentes.png" },
+              { "id": "baton-blanc",         "nom": "Blanc",          "img": "/images/parts/datejust/cadrans/blanc-index-argentes.png" },
+              { "id": "baton-bleu-clair",    "nom": "Bleu Clair",     "img": "/images/parts/datejust/cadrans/bleu-clair-index-argentes.png" },
+              { "id": "baton-bleu-fonce",    "nom": "Bleu Foncé",     "img": "/images/parts/datejust/cadrans/bleu-fonce-index-argentes.png" },
+              { "id": "baton-vert",          "nom": "Vert",           "img": "/images/parts/datejust/cadrans/vert-index-argentes.png" },
+              { "id": "baton-jaune",         "nom": "Jaune",          "img": "/images/parts/datejust/cadrans/jaune-index-argentes.png" },
+              { "id": "baton-gris",          "nom": "Gris",           "img": "/images/parts/datejust/cadrans/gris-index-argentes.png" },
+              { "id": "baton-or-rose",       "nom": "Or Rose",        "img": "/images/parts/datejust/cadrans/or-rose-index-or-rose.png" },
+              { "id": "baton-blanc-or-rose", "nom": "Blanc Or Rose",  "img": "/images/parts/datejust/cadrans/blanc-index-or-rose.png" },
+              { "id": "baton-blanc-or-jaune","nom": "Blanc Or Jaune", "img": "/images/parts/datejust/cadrans/blanc-index-or-jaune.png" },
+              { "id": "baton-noir-or-jaune", "nom": "Noir Or Jaune",  "img": "/images/parts/datejust/cadrans/noir-index-or-jaune.png" }
+            ]
           },
           {
             "id": "arabic",
-            "nom": "Arabic Dial",
-            "img": "/images/daydate/cadran-arabic.png",
-            "note": "Chiffres arabes · couleur à préciser"
-          },
-          {
-            "id": "romain",
-            "nom": "Romain",
-            "img": "/images/daydate/cadran-romain.png",
-            "note": "Chiffres romains · couleur à préciser"
+            "label": "Arabic Dial",
+            "couleurs": [
+              { "id": "arabic-noir",           "nom": "Noir",          "img": "/images/parts/nautilus/cadrans/arabic-dial-noir-index-argentes.png" },
+              { "id": "arabic-blanc",          "nom": "Blanc",         "img": "/images/parts/nautilus/cadrans/arabic-dial-blanc-index-argentes.png" },
+              { "id": "arabic-bleu",           "nom": "Bleu",          "img": "/images/parts/nautilus/cadrans/arabic-dial-bleu-index-argentes.png" },
+              { "id": "arabic-bleu-degrade",   "nom": "Bleu Dégradé",  "img": "/images/parts/nautilus/cadrans/arabic-dial-bleu-degrade-index-argentes.png" },
+              { "id": "arabic-vert",           "nom": "Vert",          "img": "/images/parts/nautilus/cadrans/arabic-dial-vert-index-argentes.png" },
+              { "id": "arabic-vert-degrade",   "nom": "Vert Dégradé",  "img": "/images/parts/nautilus/cadrans/arabic-dial-vert-degrade-index-argentes.png" },
+              { "id": "arabic-caramel",        "nom": "Caramel",       "img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-argentes.png" },
+              { "id": "arabic-tiffany",        "nom": "Tiffany",       "img": "/images/parts/nautilus/cadrans/arabic-dial-tiffany-index-argentes.png" },
+              { "id": "arabic-blanc-or-rose",  "nom": "Blanc Or Rose", "img": "/images/parts/nautilus/cadrans/arabic-dial-blanc-index-or-rose.png" },
+              { "id": "arabic-noir-or-rose",   "nom": "Noir Or Rose",  "img": "/images/parts/nautilus/cadrans/arabic-dial-noir-index-or-rose.png" },
+              { "id": "arabic-caramel-or-rose","nom": "Caramel Or Rose","img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-or-rose.png" }
+            ]
           },
           {
             "id": "benz",
-            "nom": "Benz",
-            "note": "Noir · Or · Or Rose · Skeleton · Vintage"
+            "label": "Benz",
+            "couleurs": [
+              { "id": "benz-noir",          "nom": "Benz Noir" },
+              { "id": "benz-noir-complet",  "nom": "Benz Noir Complet" },
+              { "id": "benz-or",            "nom": "Benz Or" },
+              { "id": "benz-or-rose",       "nom": "Benz Or Rose" },
+              { "id": "benz-skeleton",      "nom": "Benz Skeleton" },
+              { "id": "benz-vintage-acier", "nom": "Benz Vintage Acier" }
+            ]
           },
           {
             "id": "index",
-            "nom": "Index",
-            "note": "Noir · Or · Or Rose"
+            "label": "Index",
+            "couleurs": [
+              { "id": "index-noir",    "nom": "Index Noir" },
+              { "id": "index-or",      "nom": "Index Or" },
+              { "id": "index-or-rose", "nom": "Index Or Rose" }
+            ]
           },
           {
             "id": "snowflakes",
-            "nom": "Snowflakes",
-            "note": "Noir · Or Rose"
+            "label": "Snowflakes",
+            "couleurs": [
+              { "id": "snowflakes-noir",    "nom": "Snowflakes Noir" },
+              { "id": "snowflakes-or-rose", "nom": "Snowflakes Or Rose" }
+            ]
           }
         ]
       },
