@@ -1360,66 +1360,40 @@
         }
       ],
       "cadrans": {
-        "sections": [
+        "catalogue": true,
+        "categories": [
           {
             "id": "baton",
-            "label": "Bâton",
-            "couleurs": [
-              { "id": "baton-acier",    "nom": "Bâton Acier" },
-              { "id": "baton-noir",     "nom": "Bâton Noir" },
-              { "id": "baton-or",       "nom": "Bâton Or" },
-              { "id": "baton-or-rose",  "nom": "Bâton Or Rose" }
-            ]
+            "nom": "Bâton",
+            "img": "/images/daydate/cadran-baton.png",
+            "note": "Acier · Noir · Or · Or Rose"
+          },
+          {
+            "id": "arabic",
+            "nom": "Arabic Dial",
+            "img": "/images/daydate/cadran-arabic.png",
+            "note": "Chiffres arabes · couleur à préciser"
+          },
+          {
+            "id": "romain",
+            "nom": "Romain",
+            "img": "/images/daydate/cadran-romain.png",
+            "note": "Chiffres romains · couleur à préciser"
           },
           {
             "id": "benz",
-            "label": "Benz",
-            "couleurs": [
-              { "id": "benz-noir",          "nom": "Benz Noir" },
-              { "id": "benz-noir-complet",  "nom": "Benz Noir Complet" },
-              { "id": "benz-or",            "nom": "Benz Or" },
-              { "id": "benz-or-rose",       "nom": "Benz Or Rose" },
-              { "id": "benz-skeleton",      "nom": "Benz Skeleton" },
-              { "id": "benz-vintage-acier", "nom": "Benz Vintage Acier" }
-            ]
+            "nom": "Benz",
+            "note": "Noir · Or · Or Rose · Skeleton · Vintage"
           },
           {
             "id": "index",
-            "label": "Index",
-            "couleurs": [
-              { "id": "index-noir",     "nom": "Index Noir" },
-              { "id": "index-or",       "nom": "Index Or" },
-              { "id": "index-or-rose",  "nom": "Index Or Rose" }
-            ]
+            "nom": "Index",
+            "note": "Noir · Or · Or Rose"
           },
           {
             "id": "snowflakes",
-            "label": "Snowflakes",
-            "couleurs": [
-              { "id": "snowflakes-noir",     "nom": "Snowflakes Noir" },
-              { "id": "snowflakes-or-rose",  "nom": "Snowflakes Or Rose" }
-            ]
-          },
-          {
-            "id": "classiques",
-            "label": "Classiques",
-            "couleurs": [
-              {
-                "id": "arabic-dial-caramel-index-or-rose",
-                "nom": "Arabic Caramel",
-                "img": "/images/parts/daydate/cadrans/arabic-dial-caramel-index-or-rose.png"
-              },
-              {
-                "id": "blanc",
-                "nom": "Blanc",
-                "img": "/images/parts/daydate/cadrans/blanc.png"
-              },
-              {
-                "id": "noir",
-                "nom": "Noir",
-                "img": "/images/parts/daydate/cadrans/noir.png"
-              }
-            ]
+            "nom": "Snowflakes",
+            "note": "Noir · Or Rose"
           }
         ]
       },
