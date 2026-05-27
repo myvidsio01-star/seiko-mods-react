@@ -15,6 +15,7 @@ import MapSection from './components/Contact/MapSection'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Testimonials from './components/Testimonials/Testimonials'
+import FAQ from './components/FAQ/FAQ'
 
 const pulse = keyframes`
   0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
@@ -72,6 +73,7 @@ export default function App() {
             <Catalogue />
             <Configurator />
             <Process />
+            <FAQ />
             <MapSection />
             <Contact />
           </main>

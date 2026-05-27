@@ -186,6 +186,51 @@ const RatingCount = styled.span`
   letter-spacing: 0.1em;
 `
 
+const SavGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+`
+
+const SavCard = styled.div`
+  background: #1C1917;
+  border: 1px solid #292524;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+
+const SavIcon = styled.div`
+  font-size: 28px;
+  line-height: 1;
+`
+
+const SavLabel = styled.span`
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #CA8A04;
+`
+
+const SavTitle = styled.span`
+  font-size: 15px;
+  font-weight: 400;
+  color: #F5F5F4;
+`
+
+const SavDesc = styled.p`
+  font-size: 13px;
+  font-weight: 300;
+  color: #78716C;
+  line-height: 1.6;
+  margin: 0;
+`
+
 const reviews = [
   {
     name:    'Kevin Hoarau',
@@ -292,6 +337,33 @@ export default function Testimonials() {
             <RatingCount>Basé sur 40+ commandes · La Réunion</RatingCount>
           </RatingInfo>
         </RatingBar>
+
+        <SavGrid>
+          <SavCard>
+            <SavIcon>🛡️</SavIcon>
+            <SavLabel>Garantie</SavLabel>
+            <SavTitle>30 jours satisfait</SavTitle>
+            <SavDesc>
+              Chaque montre est testée avant livraison. En cas de défaut dans les 30 premiers jours, on répare ou remplace sans frais.
+            </SavDesc>
+          </SavCard>
+          <SavCard>
+            <SavIcon>🔧</SavIcon>
+            <SavLabel>SAV</SavLabel>
+            <SavTitle>Suivi après-vente</SavTitle>
+            <SavDesc>
+              Un problème après livraison ? Contactez-nous sur WhatsApp. On vous accompagne et on trouve une solution, toujours.
+            </SavDesc>
+          </SavCard>
+          <SavCard>
+            <SavIcon>📦</SavIcon>
+            <SavLabel>Livraison</SavLabel>
+            <SavTitle>Boîte de présentation offerte</SavTitle>
+            <SavDesc>
+              Chaque montre arrive dans sa boîte de présentation. Livraison gratuite à Saint-Denis et La Possession, 15 € partout à La Réunion.
+            </SavDesc>
+          </SavCard>
+        </SavGrid>
       </Inner>
     </Section>
   )
