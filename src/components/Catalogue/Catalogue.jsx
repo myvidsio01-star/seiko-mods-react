@@ -232,7 +232,8 @@ const watches = [
   { name: 'GMT-Master',     price: '235 €', stars: 4, tag: 'Populaire',   img: '/images/watch-gmt.png'        },
   { name: 'Royal Oak',      price: '240 €', stars: 5, tag: 'Exclusif',    img: '/images/watch-royaloak.png'   },
   { name: 'Nautilus',       price: '270 €', stars: 4, tag: 'Premium',     img: '/images/watch-nautilus.png'   },
-  { name: 'Day-Date',       price: '240 €', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png'    },
+  { name: 'Day-Date',       price: '240 €', stars: 5, tag: 'Prestige',    img: '/images/watch-daydate.png'         },
+  { name: 'Datejust',       price: '220 €', stars: 4, tag: 'Classique',   img: '/images/renders/datejust-preview.png' },
 ]
 
 function StarRow({ count }) {
