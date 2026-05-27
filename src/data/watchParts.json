@@ -1368,35 +1368,6 @@
               { "id": "arabic-caramel-or-rose","nom": "Caramel Or Rose","img": "/images/parts/nautilus/cadrans/arabic-dial-caramel-index-or-rose.png" }
             ]
           },
-          {
-            "id": "benz",
-            "label": "Benz",
-            "couleurs": [
-              { "id": "benz-noir",          "nom": "Benz Noir" },
-              { "id": "benz-noir-complet",  "nom": "Benz Noir Complet" },
-              { "id": "benz-or",            "nom": "Benz Or" },
-              { "id": "benz-or-rose",       "nom": "Benz Or Rose" },
-              { "id": "benz-skeleton",      "nom": "Benz Skeleton" },
-              { "id": "benz-vintage-acier", "nom": "Benz Vintage Acier" }
-            ]
-          },
-          {
-            "id": "index",
-            "label": "Index",
-            "couleurs": [
-              { "id": "index-noir",    "nom": "Index Noir" },
-              { "id": "index-or",      "nom": "Index Or" },
-              { "id": "index-or-rose", "nom": "Index Or Rose" }
-            ]
-          },
-          {
-            "id": "snowflakes",
-            "label": "Snowflakes",
-            "couleurs": [
-              { "id": "snowflakes-noir",    "nom": "Snowflakes Noir" },
-              { "id": "snowflakes-or-rose", "nom": "Snowflakes Or Rose" }
-            ]
-          }
         ]
       },
       "aiguilles": [
