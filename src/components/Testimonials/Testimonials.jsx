@@ -188,10 +188,11 @@ const RatingCount = styled.span`
 
 const SavGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 56px;
-  @media (max-width: 640px) { grid-template-columns: 1fr; }
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
 `
 
 const SavCard = styled.div`
@@ -357,10 +358,18 @@ export default function Testimonials() {
           </SavCard>
           <SavCard>
             <SavIcon>📦</SavIcon>
-            <SavLabel>Livraison</SavLabel>
-            <SavTitle>Boîte de présentation offerte</SavTitle>
+            <SavLabel>Présentation</SavLabel>
+            <SavTitle>Boîte cadeau incluse</SavTitle>
             <SavDesc>
-              Chaque montre arrive dans sa boîte de présentation. Livraison gratuite à Saint-Denis et La Possession, 15 € partout à La Réunion.
+              Chaque montre est livrée dans sa boîte de présentation. Livraison à domicile 15 €, gratuite à Saint-Denis et La Possession.
+            </SavDesc>
+          </SavCard>
+          <SavCard>
+            <SavIcon>🔩</SavIcon>
+            <SavLabel>Service</SavLabel>
+            <SavTitle>Ajustement du bracelet</SavTitle>
+            <SavDesc>
+              On peut raccourcir ou rallonger votre bracelet pour l'adapter parfaitement à votre poignet, sans frais supplémentaires.
             </SavDesc>
           </SavCard>
         </SavGrid>
