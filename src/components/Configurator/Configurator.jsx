@@ -56,6 +56,27 @@ const Subtitle = styled.p`
   font-weight: 300; font-size: 16px; color: #78716C;
   max-width: 480px; margin: 0 auto;
 `
+const PromoBanner = styled.div`
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin: 20px auto 0; max-width: 480px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, rgba(202,138,4,0.12) 0%, rgba(202,138,4,0.06) 100%);
+  border: 1px solid rgba(202,138,4,0.35);
+  border-radius: 10px;
+  font-size: 13px; font-weight: 400; color: #E5C55A;
+  text-align: center; line-height: 1.4;
+  @media (max-width: 640px) { font-size: 12px; padding: 8px 14px; }
+`
+const PromoCode = styled.span`
+  font-family: 'Courier New', monospace;
+  font-weight: 700; font-size: 14px;
+  color: #F59E0B;
+  background: rgba(202,138,4,0.2);
+  border: 1px solid rgba(202,138,4,0.5);
+  border-radius: 5px;
+  padding: 1px 7px;
+  letter-spacing: 0.08em;
+`
 const Layout = styled.div`
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -936,6 +957,9 @@ export default function Configurator({ onCommander }) {
           <Eyebrow>Configurateur</Eyebrow>
           <H2>Construisez votre montre</H2>
           <Subtitle>Choisissez chaque pièce et commandez sur mesure.</Subtitle>
+          <PromoBanner>
+            🎁 <strong>-5% de réduction</strong> — envoyez le code&nbsp;<PromoCode>Juin5</PromoCode>&nbsp;dans votre message pour en bénéficier
+          </PromoBanner>
         </Header>
 
         <Layout>
@@ -949,9 +973,20 @@ export default function Configurator({ onCommander }) {
                 <PriceLabel>Prix indicatif</PriceLabel>
                 <PriceValue>
                   {modele.prix}
-                  {sel.cadranCouleur?.surcharge && <span style={{fontSize:16,color:'#CA8A04'}}> + {sel.cadranCouleur.surcharge} €</span>}
+                  {sel.cadranCouleur?.surcharge && <span style={{fontSize:16,color:'#FB923C'}}> + {sel.cadranCouleur.surcharge} €</span>}
                   {livraison === 'envoi' && <span style={{fontSize:16,color:'#CA8A04'}}> + 15 €</span>}
                 </PriceValue>
+                {(() => {
+                  const base = parseInt(modele.prix)
+                  const extra = (sel.cadranCouleur?.surcharge || 0) + (livraison === 'envoi' ? 15 : 0)
+                  const total = base + extra
+                  const reduit = Math.floor(total * 0.95)
+                  return (
+                    <p style={{fontSize:11,color:'#6B7280',fontWeight:300,margin:'4px 0 0',letterSpacing:'0.02em'}}>
+                      Avec code <span style={{color:'#F59E0B',fontWeight:600}}>Juin5</span> : {reduit} €
+                    </p>
+                  )
+                })()}
               </PriceBadge>
             )}
 
