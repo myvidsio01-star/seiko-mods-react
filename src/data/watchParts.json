@@ -138,34 +138,19 @@
       },
       "aiguilles": [
         {
-          "id": "mercedes-noir",
-          "nom": "Mercedes Noir",
+          "id": "argent",
+          "nom": "Argent",
+          "hex": "#C8CACA"
+        },
+        {
+          "id": "noir",
+          "nom": "Noir",
           "hex": "#1A1A1A"
         },
         {
-          "id": "mercedes-acier",
-          "nom": "Mercedes Acier",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "mercedes-or",
-          "nom": "Mercedes Or",
+          "id": "or-jaune",
+          "nom": "Or Jaune",
           "hex": "#D4A437"
-        },
-        {
-          "id": "baton-or",
-          "nom": "Bâton Or",
-          "hex": "#D4A437"
-        },
-        {
-          "id": "baton-acier",
-          "nom": "Bâton Acier",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "baton-acier-2",
-          "nom": "Bâton Acier II",
-          "hex": "#8B96A0"
         }
       ],
       "bracelets": [
