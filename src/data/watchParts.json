@@ -140,32 +140,32 @@
         {
           "id": "mercedes-noir",
           "nom": "Mercedes Noir",
-          "img": "/images/submariner/aiguilles/mercedes-noir.png"
+          "hex": "#1A1A1A"
         },
         {
           "id": "mercedes-acier",
           "nom": "Mercedes Acier",
-          "img": "/images/submariner/aiguilles/mercedes-acier.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "mercedes-or",
           "nom": "Mercedes Or",
-          "img": "/images/submariner/aiguilles/mercedes-or.png"
+          "hex": "#D4A437"
         },
         {
           "id": "baton-or",
           "nom": "Bâton Or",
-          "img": "/images/submariner/aiguilles/baton-or.png"
+          "hex": "#D4A437"
         },
         {
           "id": "baton-acier",
           "nom": "Bâton Acier",
-          "img": "/images/submariner/aiguilles/baton-acier.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "baton-acier-2",
           "nom": "Bâton Acier II",
-          "img": "/images/submariner/aiguilles/baton-acier-2.png"
+          "hex": "#8B96A0"
         }
       ],
       "bracelets": [
@@ -177,7 +177,8 @@
           "id": "jubilee",
           "nom": "Jubilé"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     },
     {
       "id": "gmt",
@@ -316,17 +317,17 @@
         {
           "id": "argent",
           "nom": "Argent",
-          "img": "/images/parts/gmt/aiguilles/argent.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "or-jaune",
           "nom": "Or Jaune",
-          "img": "/images/parts/gmt/aiguilles/or-jaune.png"
+          "hex": "#D4A437"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
-          "img": "/images/parts/gmt/aiguilles/or-rose.png"
+          "hex": "#C9856A"
         }
       ],
       "bracelets": [
@@ -350,17 +351,20 @@
         {
           "id": "bleue",
           "nom": "Bleue",
-          "img": "/images/parts/gmt/fuseau/bleue.png"
+          "img": "/images/parts/gmt/fuseau/bleue.png",
+          "hex": "#1D4ED8"
         },
         {
           "id": "rouge",
           "nom": "Rouge",
-          "img": "/images/parts/gmt/fuseau/rouge.png"
+          "img": "/images/parts/gmt/fuseau/rouge.png",
+          "hex": "#DC2626"
         },
         {
           "id": "verte",
           "nom": "Verte",
-          "img": "/images/parts/gmt/fuseau/verte.png"
+          "img": "/images/parts/gmt/fuseau/verte.png",
+          "hex": "#16A34A"
         }
       ],
       "lunettes": [
@@ -389,7 +393,8 @@
           "nom": "Sprite",
           "img": "/images/parts/gmt/lunettes/sprite.png"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     },
     {
       "id": "royaloak",
@@ -683,17 +688,17 @@
         {
           "id": "argent",
           "nom": "Argent",
-          "img": "/images/parts/royaloak/aiguilles/argent.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "noir",
           "nom": "Noir",
-          "img": "/images/parts/royaloak/aiguilles/noir.png"
+          "hex": "#1A1A1A"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
-          "img": "/images/parts/royaloak/aiguilles/or-rose.png"
+          "hex": "#C9856A"
         }
       ],
       "bracelets": [
@@ -717,7 +722,8 @@
           "nom": "Or Rose",
           "img": "/images/parts/royaloak/bracelets/or-rose.png"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     },
     {
       "id": "nautilus",
@@ -1062,17 +1068,17 @@
         {
           "id": "argent",
           "nom": "Argent",
-          "img": "/images/parts/nautilus/aiguilles/argent.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "noir",
           "nom": "Noir",
-          "img": "/images/parts/nautilus/aiguilles/noir.png"
+          "hex": "#1A1A1A"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
-          "img": "/images/parts/nautilus/aiguilles/or-rose.png"
+          "hex": "#C9856A"
         }
       ],
       "bracelets": [
@@ -1091,7 +1097,8 @@
           "nom": "Or Rose",
           "img": "/images/parts/nautilus/bracelets/or-rose.png"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     },
     {
       "id": "daytona",
@@ -1231,17 +1238,17 @@
         {
           "id": "argent",
           "nom": "Argent",
-          "img": "/images/parts/daytona/aiguilles/argent.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "or-jaune",
           "nom": "Or Jaune",
-          "img": "/images/parts/daytona/aiguilles/or-jaune.png"
+          "hex": "#D4A437"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
-          "img": "/images/parts/daytona/aiguilles/or-rose.png"
+          "hex": "#C9856A"
         }
       ],
       "bracelets": [
@@ -1260,7 +1267,8 @@
           "nom": "Or Rose",
           "img": "/images/parts/daytona/bracelets/or-rose.png"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     },
     {
       "id": "daydate",
@@ -1327,17 +1335,17 @@
         {
           "id": "argent",
           "nom": "Argent",
-          "img": "/images/parts/daydate/aiguilles/argent.png"
+          "hex": "#C8CACA"
         },
         {
           "id": "or-jaune",
           "nom": "Or Jaune",
-          "img": "/images/parts/daydate/aiguilles/or-jaune.png"
+          "hex": "#D4A437"
         },
         {
           "id": "or-rose",
           "nom": "Or Rose",
-          "img": "/images/parts/daydate/aiguilles/or-rose.png"
+          "hex": "#C9856A"
         }
       ],
       "bracelets": [
@@ -1356,7 +1364,8 @@
           "nom": "Or Rose",
           "img": "/images/parts/daydate/bracelets/or-rose.png"
         }
-      ]
+      ],
+      "aiguilleSrc": "/images/submariner/aiguilles/baton-acier.png"
     }
   ]
 }

@@ -477,9 +477,9 @@ function LayerPreview({ modele, sel, tab }) {
      - bracelet → image du bracelet sélectionné
      - sinon    → dernière sélection pertinente ou image du modèle        */
   let previewSrc
-  if (tab === 'boitier')   previewSrc = sel?.boitier?.img
+  if (tab === 'boitier')        previewSrc = sel?.boitier?.img
   else if (tab === 'cadran')    previewSrc = sel?.cadranCouleur?.img
-  else if (tab === 'aiguilles') previewSrc = sel?.aiguilles?.img
+  else if (tab === 'aiguilles') previewSrc = modele.aiguilleSrc || '/images/submariner/aiguilles/baton-acier.png'
   else if (tab === 'bracelet')  previewSrc = sel?.bracelet?.img
 
   // Fallback : priorité douce — boîtier puis cadran puis render
@@ -487,7 +487,6 @@ function LayerPreview({ modele, sel, tab }) {
     previewSrc =
       sel?.boitier?.img       ||
       sel?.cadranCouleur?.img ||
-      sel?.aiguilles?.img     ||
       modele.render           ||
       modele.image
   }
@@ -874,36 +873,36 @@ export default function Configurator({ onCommander }) {
               <>
                 <CatSection>
                   <CatLabel>Couleur des aiguilles</CatLabel>
-                  <PhotoCardsGrid>
+                  <BoitierGrid>
                     {modele.aiguilles.map(a => {
                       const compatible = !a.mouvements || a.mouvements.includes(sel.mouvement?.id)
                       return (
-                        <PhotoCard
+                        <BoitierItem
                           key={a.id}
                           $selected={sel.aiguilles?.id === a.id}
                           style={{ opacity: compatible ? 1 : 0.38, cursor: compatible ? 'pointer' : 'not-allowed' }}
                           onClick={compatible ? () => set('aiguilles', a) : undefined}
                         >
-                          {a.img && <PhotoThumb src={a.img} alt={a.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
-                          <CardName style={{ fontSize: 10 }}>{a.nom}</CardName>
-                          {!compatible && <CardSub>NH34 requis</CardSub>}
-                        </PhotoCard>
+                          <BoitierSwatch $hex={a.hex ?? '#C8CACA'} $selected={sel.aiguilles?.id === a.id} />
+                          <BoitierName $selected={sel.aiguilles?.id === a.id}>{a.nom}</BoitierName>
+                          {!compatible && <CardSub style={{fontSize:8}}>NH34 requis</CardSub>}
+                        </BoitierItem>
                       )
                     })}
-                  </PhotoCardsGrid>
+                  </BoitierGrid>
                 </CatSection>
                 {aiguilleFuseau.length > 0 && (
                   <CatSection>
                     <CatLabel>Aiguille 2ème fuseau <span style={{fontSize:'9px',color:'#78716C',letterSpacing:'0.05em',textTransform:'none',fontWeight:300}}>— NH34 requis</span></CatLabel>
-                    <PhotoCardsGrid>
+                    <BoitierGrid>
                       {aiguilleFuseau.map(f => (
-                        <PhotoCard key={f.id} $selected={sel.aiguilleFuseau?.id === f.id}
+                        <BoitierItem key={f.id} $selected={sel.aiguilleFuseau?.id === f.id}
                           onClick={() => set('aiguilleFuseau', f)}>
-                          {f.img && <PhotoThumb src={f.img} alt={f.nom} onError={e => { e.target.style.opacity = 0.3 }} />}
-                          <CardName style={{ fontSize: 10 }}>{f.nom}</CardName>
-                        </PhotoCard>
+                          <BoitierSwatch $hex={f.hex ?? '#C8CACA'} $selected={sel.aiguilleFuseau?.id === f.id} />
+                          <BoitierName $selected={sel.aiguilleFuseau?.id === f.id}>{f.nom}</BoitierName>
+                        </BoitierItem>
                       ))}
-                    </PhotoCardsGrid>
+                    </BoitierGrid>
                   </CatSection>
                 )}
               </>
