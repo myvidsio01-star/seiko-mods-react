@@ -361,7 +361,7 @@ export default function Testimonials() {
             <SavLabel>Présentation</SavLabel>
             <SavTitle>Boîte cadeau incluse</SavTitle>
             <SavDesc>
-              Chaque montre est livrée dans sa boîte de présentation. Livraison à domicile 15 €, gratuite à Saint-Denis et La Possession.
+              Chaque montre est livrée dans sa propre boîte de présentation, soignée et prête à offrir.
             </SavDesc>
           </SavCard>
           <SavCard>
