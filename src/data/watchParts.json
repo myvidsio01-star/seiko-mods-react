@@ -137,21 +137,12 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "noir",
-          "nom": "Noir",
-          "hex": "#1A1A1A"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "hex": "#D4A437"
-        }
+        { "id": "mercedes-acier",  "nom": "Mercedes Acier",   "hex": "#C8CACA", "img": "/images/submariner/aiguilles/mercedes-acier.png" },
+        { "id": "mercedes-noir",   "nom": "Mercedes Noir",    "hex": "#1A1A1A", "img": "/images/submariner/aiguilles/mercedes-noir.png" },
+        { "id": "mercedes-or",     "nom": "Mercedes Or",      "hex": "#D4A437", "img": "/images/submariner/aiguilles/mercedes-or.png" },
+        { "id": "baton-acier",     "nom": "Bâton Acier",      "hex": "#C8CACA", "img": "/images/submariner/aiguilles/baton-acier.png" },
+        { "id": "baton-acier-2",   "nom": "Bâton Acier II",   "hex": "#C8CACA", "img": "/images/submariner/aiguilles/baton-acier-2.png" },
+        { "id": "baton-or",        "nom": "Bâton Or",         "hex": "#D4A437", "img": "/images/submariner/aiguilles/baton-or.png" }
       ],
       "bracelets": [
         {
@@ -299,21 +290,13 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "hex": "#D4A437"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "hex": "#C9856A"
-        }
+        { "id": "gmt-acier",      "nom": "GMT Acier",       "hex": "#C8CACA", "img": "/images/gmt/aiguilles/gmt-acier.png",      "recommande": true },
+        { "id": "gmt-acier-2",    "nom": "GMT Acier II",    "hex": "#C8CACA", "img": "/images/gmt/aiguilles/gmt-acier-2.png",    "recommande": true },
+        { "id": "gmt-acier-bleu", "nom": "GMT Acier Bleu",  "hex": "#6699CC", "img": "/images/gmt/aiguilles/gmt-acier-bleu.png" },
+        { "id": "gmt-acier-vert", "nom": "GMT Acier Vert",  "hex": "#4A8C4F", "img": "/images/gmt/aiguilles/gmt-acier-vert.png" },
+        { "id": "gmt-or",         "nom": "GMT Or",          "hex": "#D4A437", "img": "/images/gmt/aiguilles/gmt-or.png" },
+        { "id": "gmt-or-rose",    "nom": "GMT Or Rose",     "hex": "#C9856A", "img": "/images/gmt/aiguilles/gmt-or-rose.png" },
+        { "id": "gmt-noir",       "nom": "GMT Noir",        "hex": "#1A1A1A", "img": "/images/gmt/aiguilles/gmt-noir.png" }
       ],
       "bracelets": [
         {
@@ -670,21 +653,9 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "noir",
-          "nom": "Noir",
-          "hex": "#1A1A1A"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "hex": "#C9856A"
-        }
+        { "id": "argent",   "nom": "Argent",   "hex": "#C8CACA", "img": "/images/parts/royaloak/aiguilles/argent.png" },
+        { "id": "noir",     "nom": "Noir",     "hex": "#1A1A1A", "img": "/images/parts/royaloak/aiguilles/noir.png" },
+        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/parts/royaloak/aiguilles/or-rose.png" }
       ],
       "bracelets": [
         {
@@ -1050,21 +1021,10 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "noir",
-          "nom": "Noir",
-          "hex": "#1A1A1A"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "hex": "#C9856A"
-        }
+        { "id": "baton-acier",    "nom": "Bâton Acier",    "hex": "#C8CACA", "img": "/images/nautilus/aiguilles/baton-acier.png" },
+        { "id": "baton-noir",     "nom": "Bâton Noir",     "hex": "#1A1A1A", "img": "/images/nautilus/aiguilles/baton-noir.png" },
+        { "id": "baton-or",       "nom": "Bâton Or",       "hex": "#D4A437", "img": "/images/nautilus/aiguilles/baton-or.png" },
+        { "id": "baton-or-rose",  "nom": "Bâton Or Rose",  "hex": "#C9856A", "img": "/images/nautilus/aiguilles/baton-or-rose.png" }
       ],
       "bracelets": [
         {
@@ -1220,21 +1180,10 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "hex": "#C8CACA"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "hex": "#D4A437"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "hex": "#C9856A"
-        }
+        { "id": "acier",    "nom": "Acier",    "hex": "#C8CACA", "img": "/images/daytona/aiguilles/daytona-acier.png" },
+        { "id": "noir",     "nom": "Noir",     "hex": "#1A1A1A", "img": "/images/daytona/aiguilles/daytona-noir.png" },
+        { "id": "or",       "nom": "Or",       "hex": "#D4A437", "img": "/images/daytona/aiguilles/daytona-or.png" },
+        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/daytona/aiguilles/daytona-or-rose.png" }
       ],
       "bracelets": [
         {
@@ -1351,21 +1300,9 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "img": "/images/parts/datejust/aiguilles/argent.png"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "img": "/images/parts/datejust/aiguilles/or-rose.png"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "img": "/images/parts/datejust/aiguilles/or-jaune.jpg"
-        }
+        { "id": "argent",   "nom": "Argent",   "hex": "#C0C8CA", "img": "/images/parts/datejust/aiguilles/argent.png" },
+        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/parts/datejust/aiguilles/or-rose.png" },
+        { "id": "or-jaune", "nom": "Or Jaune", "hex": "#D4A437", "img": "/images/parts/datejust/aiguilles/or-jaune.jpg" }
       ],
       "aiguilleSrc": "/images/parts/datejust/aiguilles/argent.png",
       "bracelets": [
@@ -1428,99 +1365,39 @@
             "id": "baton",
             "label": "Bâton",
             "couleurs": [
-              {
-                "id": "baton-acier",
-                "nom": "Bâton Acier",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-acier.jpg"
-              },
-              {
-                "id": "baton-noir",
-                "nom": "Bâton Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-noir.jpg"
-              },
-              {
-                "id": "baton-or",
-                "nom": "Bâton Or",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-or.jpg"
-              },
-              {
-                "id": "baton-or-rose",
-                "nom": "Bâton Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/baton-or-rose.jpg"
-              }
+              { "id": "baton-acier",    "nom": "Bâton Acier" },
+              { "id": "baton-noir",     "nom": "Bâton Noir" },
+              { "id": "baton-or",       "nom": "Bâton Or" },
+              { "id": "baton-or-rose",  "nom": "Bâton Or Rose" }
             ]
           },
           {
             "id": "benz",
             "label": "Benz",
             "couleurs": [
-              {
-                "id": "benz-noir",
-                "nom": "Benz Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-noir.jpg"
-              },
-              {
-                "id": "benz-noir-complet",
-                "nom": "Benz Noir Complet",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-noir-complet.jpg"
-              },
-              {
-                "id": "benz-or",
-                "nom": "Benz Or",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-or.jpg"
-              },
-              {
-                "id": "benz-or-rose",
-                "nom": "Benz Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-or-rose.jpg"
-              },
-              {
-                "id": "benz-skeleton",
-                "nom": "Benz Skeleton",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-skeleton.jpg"
-              },
-              {
-                "id": "benz-vintage-acier",
-                "nom": "Benz Vintage Acier",
-                "img": "/images/parts/daydate/cadrans/wmc/benz-vintage-acier.jpg"
-              }
+              { "id": "benz-noir",          "nom": "Benz Noir" },
+              { "id": "benz-noir-complet",  "nom": "Benz Noir Complet" },
+              { "id": "benz-or",            "nom": "Benz Or" },
+              { "id": "benz-or-rose",       "nom": "Benz Or Rose" },
+              { "id": "benz-skeleton",      "nom": "Benz Skeleton" },
+              { "id": "benz-vintage-acier", "nom": "Benz Vintage Acier" }
             ]
           },
           {
             "id": "index",
             "label": "Index",
             "couleurs": [
-              {
-                "id": "index-noir",
-                "nom": "Index Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/index-noir.jpg"
-              },
-              {
-                "id": "index-or",
-                "nom": "Index Or",
-                "img": "/images/parts/daydate/cadrans/wmc/index-or.jpg"
-              },
-              {
-                "id": "index-or-rose",
-                "nom": "Index Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/index-or-rose.jpg"
-              }
+              { "id": "index-noir",     "nom": "Index Noir" },
+              { "id": "index-or",       "nom": "Index Or" },
+              { "id": "index-or-rose",  "nom": "Index Or Rose" }
             ]
           },
           {
             "id": "snowflakes",
             "label": "Snowflakes",
             "couleurs": [
-              {
-                "id": "snowflakes-noir",
-                "nom": "Snowflakes Noir",
-                "img": "/images/parts/daydate/cadrans/wmc/snowflakes-noir.jpg"
-              },
-              {
-                "id": "snowflakes-or-rose",
-                "nom": "Snowflakes Or Rose",
-                "img": "/images/parts/daydate/cadrans/wmc/snowflakes-or-rose.jpg"
-              }
+              { "id": "snowflakes-noir",     "nom": "Snowflakes Noir" },
+              { "id": "snowflakes-or-rose",  "nom": "Snowflakes Or Rose" }
             ]
           },
           {
@@ -1547,21 +1424,9 @@
         ]
       },
       "aiguilles": [
-        {
-          "id": "argent",
-          "nom": "Argent",
-          "img": "/images/parts/daydate/aiguilles/argent.png"
-        },
-        {
-          "id": "or-rose",
-          "nom": "Or Rose",
-          "img": "/images/parts/daydate/aiguilles/or-rose.png"
-        },
-        {
-          "id": "or-jaune",
-          "nom": "Or Jaune",
-          "img": "/images/parts/daydate/aiguilles/or-jaune.jpg"
-        }
+        { "id": "argent",   "nom": "Argent",   "hex": "#C0C8CA", "img": "/images/daydate/aiguilles/daydate-acier.png" },
+        { "id": "or-rose",  "nom": "Or Rose",  "hex": "#C9856A", "img": "/images/daydate/aiguilles/daydate-or-rose.png" },
+        { "id": "or-jaune", "nom": "Or Jaune", "hex": "#D4A437", "img": "/images/daydate/aiguilles/daydate-or.png" }
       ],
       "bracelets": [
         {
