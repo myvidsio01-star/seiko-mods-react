@@ -151,9 +151,9 @@ export default function About() {
             Chaque mod est une déclaration d'élégance accessible, sans compromis sur la qualité.
           </Body>
           <Stats>
-            <Stat><div className="num">48h</div><div className="lbl">par montre</div></Stat>
+            <Stat><div className="num">Sur mesure</div><div className="lbl">à la demande</div></Stat>
             <Stat><div className="num">12</div><div className="lbl">composants</div></Stat>
-            <Stat><div className="num">∞</div><div className="lbl">style</div></Stat>
+            <Stat><div className="num">∞</div><div className="lbl">styles</div></Stat>
           </Stats>
         </TextSide>
       </Section>
