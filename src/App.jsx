@@ -69,9 +69,9 @@ export default function App() {
           <main>
             <Hero />
             <About />
-            <Testimonials />
             <Catalogue />
             <Configurator />
+            <Testimonials />
             <Process />
             <FAQ />
             <MapSection />
